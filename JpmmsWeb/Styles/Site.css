@@ -1,0 +1,1154 @@
+﻿/******************************************************************************/
+body, html
+{
+height: 100%;
+margin: 0px;
+padding: 0px;
+background-color: #E6E6E6; 
+font: normal 9pt tahoma;
+}
+
+table
+{
+font: normal 9pt tahoma;
+    text-align: inherit;
+}
+
+form{margin: 0px;}
+
+input, textarea, select
+{
+font: normal 8pt tahoma;
+    height: 21px;
+}
+
+a{
+   color: #2C92CD;
+   background-color : transparent;
+   font: normal 9pt tahoma; 
+   text-decoration: none;
+}
+
+a:hover{
+   color: #FF8000;
+   background-color : transparent;
+}
+
+font.path{
+    color:#FF8000;
+    font: normal 7pt tahoma;
+}
+
+p.body{
+    margin: 5px 8px 5px 5px;
+}
+
+p.title{
+   color: #2C92CD;
+   margin: 3px;
+   font: bold 10pt tahoma;
+}
+
+font.SearchResult{
+color:#FF0000;
+background-color:#FFE6A2;
+}
+
+p.ErrorMessage{
+  color: #FF0000;
+  background: #E0EEFB;
+  margin: 0px 0px 7px 0px;
+  padding: 5px; 
+}
+
+p.LineTitle{
+background: url('../images/Titles/LineTitle.png') no-repeat right bottom; 
+height:18px;
+width: 213px;
+color:#2C92CD;
+font-weight:bold;
+font-size: 9pt;
+font-family: tahoma;
+padding:0px 25px 3px 0px;
+margin:0px;
+}
+
+div.LineTitle{
+background: url('../images/Titles/LineTitle.jpg') no-repeat right bottom;
+height:18px;
+color:#2C92CD;
+font-weight:bold;
+font-size: 9pt;
+font-family: tahoma;
+padding:0px 25px 3px 0px;
+margin:0px;
+}
+
+div.LineTitleRepeat{
+background: url('../images/Titles/LineTitleRepeat.png') repeat-x bottom;
+padding:0px 0px 3px 0px;
+height:18px;
+}
+
+div.BoxTitleRepeat{
+background: url('../images/Titles/BoxTitleRepeat.jpg') repeat-x;
+height:21px;
+white-space:nowrap;
+}
+
+div.BoxTitleLeft{
+background: url('../images/Titles/BoxTitleLC.jpg') no-repeat left top;
+height:21px;
+white-space:nowrap;
+}
+
+div.BoxTitleRight{
+background: url('../images/Titles/BoxTitleRC.jpg') no-repeat right top;
+height:21px;
+width:17px;
+white-space:nowrap;
+padding: 3px 25px 0px 0px;
+font-weight: bold;
+font-family:tahoma;
+font-size: 9pt;
+color: #2C92CD; 
+}
+/******************************************************************************/
+a.WhiteLinks
+{
+ color: #FFFFFE;
+ text-decoration: none;
+ background-color : transparent;
+}
+
+a.WhiteLinks:hover
+{
+color: #B8F0FF;
+}
+
+a.PagesLink, a.PagesLinkNext
+{
+ display:block;
+ font-size: 9pt;
+ font-weight:normal;
+ font-family: Tahoma;
+ color: #2C92CD;
+ text-decoration: none;
+ background: url('../images/PagesNum/PageNumBG.png') no-repeat center top; 
+ padding: 4px 1px 5px 1px;
+ margin:1px 1px 1px 1px;
+width:24px;
+}
+
+a.PagesLink:hover, a.PagesLinkNext:hover{
+background: #CEEAFB;
+color: #FFFFFF;
+background: url('../images/PagesNum/CurrPageNumBG.png') no-repeat center top;
+}
+
+font.SmallOrange{
+font-size: 7pt;
+color:#FF8000; 
+}
+
+span.CurrentPage{
+ display:block;
+ font-size: 9pt;
+ font-weight:normal;
+ font-family: Tahoma;
+ color: #FFFFFF;
+ background: transparent url('../images/PagesNum/CurrPageNumBG.png') no-repeat center top;
+ padding: 4px 1px 5px 1px;
+ margin:1px;
+ width:24px;
+}
+
+a.PagesLinkNext
+{
+ background: url('../images/PagesNum/Next.png') no-repeat center top; 
+ width:70px;
+}
+
+a.PagesLinkNext:hover{
+background: url('../images/PagesNum/NextActive.png') no-repeat center top;
+}
+
+/******************************************************************************/
+
+/*Right Menu Start*************************************************************/
+div.Menu ul{
+list-style: none; 
+margin:0px;
+padding:0px;
+width: 100%;
+text-align: inherit;
+
+}
+
+div.Menu li {
+padding: 0px 0px 1px 0px;
+margin: 0px 0px 0px 0px;
+background: #F7F7F7 url('../images/RightMenu/LineBorder.jpg') no-repeat bottom;
+}
+
+div.Menu li a{
+font-size:8pt;
+font-weight: normal;
+font-family: Tahoma;
+display: block;
+height: 100%;
+color: #000000;
+text-decoration: none;
+padding: 3px 15px 7px 1px;
+margin: 0px 0px 0px 0px;
+background:  url('../images/RightMenu/OrangeSquare.gif') no-repeat right 7px; 
+}
+
+div.Menu li a:hover, div.Menu li a.current{
+background:  #FFE6A2 url('../images/RightMenu/BlueSquare.gif') no-repeat right 7px;
+}
+
+ 
+div.MenuTitle{
+height: 24px;
+padding: 5px 0px 5px 0px;
+}
+
+div.MenuTitle a{
+height: 22px; 
+display:block;
+color: #07659C;
+font: bold 9pt tahoma;
+padding: 4px 0px 0px 0px;
+margin: 0px 0px 0px 0px;
+background: url('../images/RightMenu/BlueTitleRepeat.jpg') repeat-x;
+}
+
+div.MenuHeader{
+padding:5px 0px 5px 0px; 
+height:29px;
+background:url('../images/RightMenu/BlueTitleRepeat.jpg') repeat-x 0px 8px;
+}
+
+div.MenuHeader a, div.CurrentMenuHeader a, div.MenuHeader div{
+display:block;
+color: #07659C;
+font: bold 9pt tahoma;
+padding:8px 5px 0px 0px;
+height:28px;
+text-align:right;
+}
+
+div.CurrentMenuHeader{
+padding:5px 0px 5px 0px;
+height:29px;
+background: url('../images/RightMenu/OrangeTitleRepeat.jpg') repeat-x 0px 8px;
+}
+
+div.MenuHeader a.current{
+color: #E17628;
+}
+ 
+
+div.MenuHeaderTitle{
+color: #07659C;
+font: bold 9pt tahoma;
+padding:12px 5px 0px 0px;
+height:29px;
+background:url('../images/RightMenu/BlueTitleRepeat.jpg') repeat-x 0px 8px;
+}
+
+div.MenuTitle a:hover{
+color: #E17628;
+background: url('../images/RightMenu/OrangeTitleRepeat.jpg') repeat-x;
+}
+
+td.MenuRightBorder{
+background: url('../images/RightMenu/RepeatRightBorder.jpg') repeat-y top left;
+}
+
+td.MenuLeftBorder{
+background: url('../images/RightMenu/RepeatLeftBorder.jpg') repeat-y top right; 
+}
+
+td.RightMenuHeader{
+width: 100%;
+height: 17px;
+background:   url('../images/RightMenu/MenuTop.jpg') no-repeat top center;
+}
+
+td.RightMenuFooter{
+width: 100%;
+height: 17px;
+background:   url('../images/RightMenu/MenuBottom.jpg') no-repeat bottom center;
+}
+
+td.MenuBGC{
+background-color: #F7F7F7;
+}
+
+/*Right Menu end***************************************************************/
+
+/*Main Header & Footer Start **************************************************/
+td.TopBar{
+    width:100%;
+    height:32px;
+    vertical-align : top ;
+    background: #0A549B url('../images/Header/TopBar.jpg') no-repeat center;
+}
+
+td.UpperBannerRepeat{
+     height: 100px;
+     width: 100%;
+     text-align: inherit;
+     vertical-align : top;
+     background: #0B78BD url('../images/Header/UpperBannerRepeat.jpg') repeat-x top right;
+}
+
+td.UpperBannerMainMenu{
+    width: 90%;
+    height: 24px;
+    vertical-align : bottom ; 
+    background: #0B78BD url('../images/Header/UpperBannerRepeat.jpg') repeat-x bottom right;
+}
+
+td.MainFooterUp{
+    vertical-align : top ; 
+    height:15px; 
+    background: #1075BD url('../images/Footer/FooterRepeatUp.jpg') repeat-x;
+}
+
+td.MainFooterRight{
+    height: 100px;
+    width:11px;  
+    background: #1075BD url('../images/Footer/FooterRightCorner.jpg') no-repeat bottom right; 
+}
+
+td.MainFooterLeft{
+    height: 100px;
+    width:11px;  
+    background: #1075BD url('../images/Footer/FooterLeftCorner.jpg') no-repeat bottom left; 
+}
+
+td.MainFooterRepeat{
+     height: 100px;
+     background: #1075BD url('../images/Footer/FooterRepeat.jpg') repeat-x bottom right;
+}
+
+/*Main Header & Footer End ***************************************************/
+
+
+/*UL and OL CSS Start *********************************************************/
+ul.standard, ol.standard{
+color: #2C92CD;
+margin-top: 5px;
+margin-bottom: 5px;
+font: bold 9pt tahoma;
+}
+
+ul.standard li, ol.standard li
+{
+margin: 0px;
+margin-bottom: 4px;
+}
+
+ul.standard font, ol.standard font{
+color: #000000;
+font: normal 9pt tahoma;
+}
+
+ul.standardL2, ol.standardL2{
+color: #9BD7F7;
+margin-top: 5px;
+margin-bottom: 10px;
+font: bold 9pt tahoma;
+}
+
+ul.standardL2 li, ol.standardL2 li
+{
+margin: 0px 14px 4px 0px;
+}
+/*UL and OL CSS End ***********************************************************/
+
+/*Standard Table CSS Start ****************************************************/
+table.Standard, table.StandardNormalTitle, table.StandardHigh 
+{
+border-collapse: collapse;
+border: 1px solid #AED2E6;
+font: normal 9pt tahoma;
+}
+
+table.Standard th, table.StandardNormalTitle th
+{
+height: 29px;
+background: transparent url('../images/Titles/HeaderRepeat.jpg') repeat-x;
+font: bold 9pt tahoma;
+border: 1px solid #CAE1EE;
+border-bottom-width : 0px ;
+color: #FFFFFF;
+vertical-align : middle ;
+padding:0px 2px 2px 2px;
+}
+
+table.StandardHigh th
+{
+height: 36px;
+background: transparent url('../images/Titles/HighHeaderRepeat.jpg') repeat-x;
+font: normal 9pt tahoma;
+border: 1px solid #CAE1EE;
+border-bottom-width : 0px ;
+color: #FFFFFF;
+vertical-align : middle ;
+padding:0px 2px 2px 2px;
+}
+
+table.StandardNormalTitle th
+{
+font: normal 9pt tahoma;
+}
+
+table.Standard td, table.StandardNormalTitle td, table.StandardHigh td
+{
+background-color: #F2F8FD;
+border: 1px solid #CAE1EE;
+vertical-align: top;
+padding: 5px;
+}
+
+table.Standard td.NormalTitle, table.StandardNormalTitle td.NormalTitle, table.StandardHigh td.NormalTitle
+{
+color: #2C92CD;
+}
+
+table.Standard td.NormalTitleBG, table.Standard td.BoldTitleBG, 
+table.StandardNormalTitle td.BoldTitleBG, table.StandardNormalTitle td.BoldTitleBG,
+table.StandardHigh td.NormalTitleBG, table.StandardHigh td.BoldTitleBG
+{
+border: 1px solid #AED2E6;
+background-color: #CEEAFB;
+color: #2C92CD;
+}
+
+table.Standard td.BoldTitleBG, table.StandardNormalTitle td.BoldTitleBG,
+table.StandardHigh td.BoldTitleBG
+{
+font-weight: bold;
+}
+
+
+table.Standard td.BoldTitle, table.StandardNormalTitle td.BoldTitle,  table.StandardHigh td.BoldTitle
+{
+color: #2C92CD;
+font-weight: bold;
+}
+
+table.Standard td.Dark, table.StandardNormalTitle td.Dark, table.StandardHigh td.Dark
+{
+background-color: #E1EFFB;
+}
+
+table.Standard p.BoldTitle, table.StandardNormalTitle p.BoldTitle, table.StandardHigh p.BoldTitle
+{
+color: #2C92CD;
+font-weight: bold;
+margin:0px;
+}
+
+table.Standard p, table.StandardNormalTitle p,  table.StandardHigh p{
+margin:0px;
+}
+/*Standard Table CSS End ******************************************************/
+
+/*UpperMenu Start *************************************************************/
+
+div.UpperMenu
+{
+padding: 0px;
+margin: 0px;
+}
+
+div.UpperMenu ul
+{
+list-style: none;
+padding: 0px;
+margin: 0px;
+margin-top: 7px;
+margin-right:10px;
+}
+
+div.UpperMenu li
+{
+display: inline;
+padding: 0px;
+margin: 0px;
+}
+
+div.UpperMenu li a
+{
+float:right;
+text-decoration:none;
+font-weight: bold;
+color: #A7E0E9;
+background: url('../images/Header/BlueSquare.jpg') no-repeat right;
+padding: 0px 16px 0px 12px;
+border: 0px red solid;
+}
+
+div.UpperMenu li a.current, div.UpperMenu li a:hover
+{
+color: #FFFFFF;
+background: transparent url('../images/Header/OrangeSquare.jpg') no-repeat right;
+}
+
+/*UpperMenu End ***************************************************************/
+
+/*Standard Form Start *********************************************************/
+
+form.StandardForm input[type=text], form.StandardForm input[type=password],
+form.StandardForm textarea, form.StandardForm select, form.StandardForm input[type=file]
+{
+background: #FFFFFF;
+border: 1px #AED2E6 solid;
+padding: 2px;
+}
+
+form.StandardForm input[type=text]:focus, form.StandardForm input[type=password]:focus, 
+form.StandardForm textarea:focus, form.StandardForm select:focus{
+background: #EEEEEE;
+color: #555555;
+border: 1px #3C91C7 solid;
+}
+
+form.StandardForm input[type=text].error, form.StandardForm input[type=text].error:focus,
+form.StandardForm input[type=password].error, form.StandardForm input[type=password].error:focus,
+form.StandardForm textarea.error, form.StandardForm textarea.error:focus,
+form.StandardForm select.error, form.StandardForm select.error:focus
+{
+	background: #FFE6A2;
+	border: 1px #FFB95D solid;
+}
+
+form.StandardForm input[type=checkbox].error, form.StandardForm input[type=radio].error
+{
+	background: #FFE6A2;
+}
+
+div.error{
+	color: #FF9600; 
+    background: #E0EEFB;
+    padding:0px 7px 4px 0px;   
+    margin: 0px;
+}
+
+ul.DBError{
+	color: #FF9600; 
+    padding:0px 10px 5px 0px;   
+    margin: 5px;
+}
+
+table.StandardForm{
+    border: 1px #AED2E6 solid;
+    border-top-width : 0px ;
+    border-bottom-width : 0px ;
+    background:#F2F8FD; 
+    font: normal 9pt tahoma;
+    border-collapse:separate;
+}
+
+table.StandardForm td.required{
+    height: 20px; 
+    padding-right:5px;
+}
+
+table.StandardForm td.SubTitle{
+   background : #97D0F2;
+   height : 25px;
+   color : #265184;
+   font-weight : bold;
+   padding-right : 5px; 
+}
+
+table.StandardForm td.FieldTitle, table.StandardForm td.InputField, 
+table.StandardForm td.InputFieldTextarea, table.StandardForm td.SecurityImageField{
+    vertical-align : top ;
+}
+
+table.StandardForm td.FieldTitle{
+    padding : 2px 0px 0px 1px;
+    color : #265184;
+}
+
+table.StandardForm td.InputField, table.StandardForm td.InputFieldTextarea,
+table.StandardForm td.SecurityImageField{
+    padding : 2px 0px 0px 0px;
+}
+
+table.StandardForm td.FieldTitle p, table.StandardForm td.InputField p, 
+table.StandardForm td.InputFieldTextarea p, table.StandardForm td.FieldTitle p.SecurityImage,
+table.StandardForm td.SecurityImageField p.SecurityImage{
+    margin : 0px ;
+    padding:3px;
+} 
+
+table.StandardForm td.FieldTitle p.SecurityImage, table.StandardForm td.SecurityImageField p.SecurityImage{
+height: 28px;
+}
+
+table.StandardForm td.FieldTitle p, table.StandardForm td.InputField p{
+    height : 21px ;
+}
+
+table.StandardForm td.FieldTitle p, table.StandardForm td.FieldTitle p.SecurityImage{
+    background : #C0E4FA ;
+}
+
+table.StandardForm td.InputField p, table.StandardForm td.InputFieldTextarea p, 
+table.StandardForm td.SecurityImageField p.SecurityImage{
+    background : #E0EEFB ;
+}
+
+table.FormFooter{ 
+   height: 32px;
+   background: transparent url('../images/StandardBoxes/FormFooterRepeat.jpg')  repeat-x;
+}
+
+table.FormFooter td.RightCorner{ 
+   width: 191px;
+   height: 32px;
+   background: transparent url('../images/StandardBoxes/FormFooterRightCorner.jpg') no-repeat right; 
+}
+
+table.FormFooter td.LeftCorner{
+   height: 32px;
+   background: transparent url('../images/StandardBoxes/FormFooterLeftCorner.jpg') no-repeat left;
+   padding-left : 10px ;
+   text-align : inherit;   
+   vertical-align : middle ;
+}
+
+font.required{
+  color: #FF0000;
+}
+
+/*Standard Form End ***********************************************************/
+
+/*Standard Boxes Start ********************************************************/
+table.StandardBox{ }
+table.StandardBox td.BoxHeaderRight 
+{  
+width: 8px;
+height: 32px;
+background: transparent url('../images/StandardBoxes/HeaderRightCorner.jpg') no-repeat right; 
+}
+
+
+table.StandardBox td.BoxHeaderLeft 
+{
+height: 32px;
+background: transparent url('../images/StandardBoxes/HeaderRepeat.jpg') repeat-x; 
+}
+
+table.StandardBox td.BoxHeaderLeft div
+{ 
+margin:0px;
+padding:0px;
+height: 32px;
+background: transparent url('../images/StandardBoxes/HeaderLeftCorner.jpg') no-repeat left;
+}
+
+
+
+table.StandardBox td.BoxHeaderLeft div p
+{ 
+margin:0px;
+padding:7px 0px 0px 0px;
+font: bold 10pt tahoma;
+color: #FFFFFF;
+background: transparent;
+}
+
+table.StandardBox td.BoxRightBorder{
+    width:8px;
+    height:100%;
+    border-right: 1px #DDEFF9 solid;
+ 
+}
+
+table.StandardBox td.BoxLeftBorder{
+    width:8px;
+    border-left: 1px #DDEFF9 solid;
+}
+
+table.StandardBox td.BoxFooterRight{ 
+   width:8px;
+   height:64px;
+   background: transparent url('../images/StandardBoxes/FooterRightCorner.jpg') no-repeat right bottom;
+}
+
+table.StandardBox td.BoxFooterLeft{ 
+   width:8px;
+   height:64px;
+   background: transparent url('../images/StandardBoxes/FooterLeftCorner.jpg') no-repeat left bottom;
+}
+
+table.StandardBox td.BoxBody{
+    width: 100%;
+    vertical-align : top; 
+    padding: 0px 0px 5px 0px;
+    background: transparent url('../images/StandardBoxes/FooterRepeat.jpg') repeat-x bottom;
+}    
+
+/*Standard Boxes End **********************************************************/
+
+
+
+/*Standard Header Start ********************************************************/
+table.StandardHeader
+{ 
+height: 32px;
+background: transparent url('../images/StandardBoxes/HeaderRepeat.jpg')  repeat-x;
+}
+
+table.StandardHeader td.RightCorner
+{ 
+width: 8px;
+height: 32px;
+background: transparent url('../images/StandardBoxes/HeaderRightCorner.jpg') no-repeat right; 
+}
+
+table.StandardHeader td.LeftCorner
+{
+height: 32px;
+background: transparent url('../images/StandardBoxes/HeaderLeftCorner.jpg') no-repeat left;
+font : bold 10pt Tahoma;
+color : #FFFFFF ;
+}
+/*Standard Header End **********************************************************/
+
+/*Body Box Start ***************************************************************/
+table.BodyBox{
+    width: 100%;
+    height:98%;
+}
+
+table.BodyBox td.HeaderRightCorner{
+width: 16px;
+height: 26px;
+background: transparent url('../images/PagesBodyBox/HeaderRightCorner.jpg') no-repeat left top;
+}
+
+table.BodyBox td.HeaderLeftCorner{
+width: 16px;
+height: 26px;
+background: transparent url('../images/PagesBodyBox/HeaderLeftCorner.jpg') no-repeat right top;
+}
+table.BodyBox td.HeaderRepeat{
+vertical-align : top ;
+height: 26px;
+background: #FFFFFF url('../images/PagesBodyBox/HeaderRepeat.jpg') repeat-x top;
+}
+
+table.BodyBox td.HeaderRepeat p{
+margin: 5px 0px 0px 0px;
+}
+
+
+table.BodyBox td.TitleRight{
+width: 16px;
+height: 33px;
+background: transparent url('../images/PagesBodyBox/TitleRightCorner.png') no-repeat right top;
+}
+
+table.BodyBox td.TitleLeft{
+width: 16px;
+height: 33px;
+background: transparent url('../images/PagesBodyBox/TitleLeft.png') no-repeat right top;
+}
+
+table.BodyBox table.Title{
+height: 33px;
+background: transparent url('../images/PagesBodyBox/TitleHeaderRepeat.jpg') repeat-x top;
+}
+
+table.BodyBox table.Title div.TitleBG{
+height: 28px;  
+background: #D3E8F9 url('../images/PagesBodyBox/TitleHeaderRepeat.jpg') repeat-x top;
+}
+
+table.BodyBox table.Title td.TitleRepeat{
+height: 33px;
+background: transparent url('../images/PagesBodyBox/TitleRepeat.jpg') repeat-x top;
+}
+
+table.BodyBox table.Title td.TitleRepeat div{
+height: 33px;
+background: transparent url('../images/PagesBodyBox/TitleLeftCorner.jpg') no-repeat left top;
+}
+
+
+table.BodyBox table.Title td.TitleRepeat p{
+white-space:nowrap;
+font: bold 10pt tahoma;
+color: #FFFFFF;
+background: transparent;
+margin:0px;
+padding: 5px 0px 0px 30px;
+}
+
+table.BodyBox td.FooterRightCorner{
+height: 10px;
+background: transparent url('../images/PagesBodyBox/FooterRightCorner.jpg') no-repeat left;
+}
+
+table.BodyBox td.FooterLeftCorner{
+height: 10px;
+background: transparent url('../images/PagesBodyBox/FooterLeftCorner.jpg') no-repeat right;
+}
+
+table.BodyBox td.FooterRepeat{
+height: 10px;
+background: transparent url('../images/PagesBodyBox/FooterRepeat.jpg') repeat-x bottom;
+}
+
+
+table.BodyBox td.BodyRightRepeat{
+background: transparent url('../images/PagesBodyBox/BodyRightRepeat.png') repeat-y left;
+}
+
+table.BodyBox td.BodyLeftRepeat{
+background: transparent url('../images/PagesBodyBox/BodyLeftRepeat.jpg') repeat-y center;
+}
+
+table.BodyBox td.Body{
+height: 100%;
+vertical-align : top ;
+}
+/*Body Box End *****************************************************************/
+
+/*Rounded Corners Start ********************************************************/
+table.RoundedCorners{
+color: #FF0000;
+font: normal 9pt tahoma;
+background-color: #FFE6A2;
+}
+
+table.RoundedCorners td.TopRight{
+background: url('../images/RoundedCorners/TopRight.gif') no-repeat right top;
+height: 4px;
+width: 4px;
+}
+
+table.RoundedCorners td.TopLeft{
+background: url('../images/RoundedCorners/TopLeft.gif') no-repeat left top;
+height: 4px;
+width: 4px;
+}
+
+table.RoundedCorners td.BottomRight{
+background: url('../images/RoundedCorners/BottomRight.gif') no-repeat right bottom;
+height: 4px;
+width: 4px;
+}
+ 
+table.RoundedCorners td.BottomLeft{
+background: url('../images/RoundedCorners/BottomLeft.gif') no-repeat left bottom;
+height: 4px;
+width: 4px;
+}
+/*Rounded Corners End **********************************************************/
+
+
+/* Menu CSS *******************************************************************/
+
+.headerbar{ /*header of 2nd demo*/
+cursor: pointer;
+display: block;
+height:100%;
+padding:0px;
+margin:0px;
+}
+.urbangreymenu{
+/*width of menu*/
+margin:0px;
+padding:0px; 
+}
+
+.urbangreymenu .openheader{
+background: white;
+/*width of menu*/
+}
+ 
+ 
+.urbangreymenu ul{
+list-style-type: none;
+margin: 0px;
+padding: 0px;
+
+}
+
+.urbangreymenu ul li{
+padding-bottom: 0px; /*bottom spacing between menu items*/
+margin: 5px;
+}
+.urbangreymenu ul li font{
+font: normal 12px Tahoma;
+color: black;
+
+}
+.urbangreymenu ul li a{
+font: bold 12px Tahoma;
+color: #2c92cd;
+display: block;
+padding: 0px; /*link text is indented 8px*/
+text-decoration: underline;
+}
+
+.urbangreymenu ul li a:hover{ /*hover state CSS*/
+color: #f58310;
+
+}
+
+table.MenuContent{
+border-collapse: collapse; 
+text-align: right; 
+width:967px;
+height:110px; 
+border-bottom: 2px solid #C3DDF4; 
+background: #FFF5E8 url('../images/MainMenu/Container.gif') no-repeat 60px 0px;
+}
+
+div.submenu{
+height:115px;
+margin:0px;
+padding:0px;
+width:967px; 
+}
+
+table.MenuContent td{
+vertical-align: top;
+}
+
+table.MenuContent p{
+padding:0px 8px 0px 0px;
+margin:7px 5px 5px 0px;
+background:url('../images/MainMenu/BlueBbullet.gif') no-repeat right 5px; 
+}
+
+table.MenuContent p.MainSectionsTitles{
+padding:0px 0px 0px 0px;
+margin:0px 0px 0px 0px;
+background:none; 
+}
+
+table.MenuContent p.MenuContentTitles1{
+font-weight:bold;
+padding:6px 15px 3px 0px;
+margin:0px 0px 0px 0px;
+color:#0F3A61;
+background:url('../images/Icons/BlueBullet.png') no-repeat right 7px; 
+}
+
+table.MenuContent p.MenuContentTitles{
+text-align:center;
+margin:0px;
+font-weight:bold;
+color:#0F3A61;
+padding:6px 0px 0px 0px;
+background:none;
+}
+
+table.MenuContent p.MenuContentTitles a{
+font-weight:bold;
+color:#0F3A61;
+}
+
+table.MenuContent p.MenuContentTitles a:hover{
+color:#0079d5;
+}
+
+
+          
+
+			#theList
+			{
+				border: 2px solid blue;
+				width: 400px;
+			}
+
+			#theList li
+			{
+				border: 1px solid #000;
+				padding: 8px;
+				margin: 30px;
+			}
+			
+a.MainMenuTitle{
+display:block;
+background: url('../images/Titles/SquareTitle.gif') no-repeat right 3px;
+text-align: inherit;
+margin:0px 15px 0px 0px;
+padding:3px 25px 0px 0px; 
+font-weight: BOLD;
+color: #2C92CD;
+height:27px;
+}			
+a.MainMenuTitle:hover{color: #FF8000;}
+/* END Menu CSS ***************************************************************/
+
+/*Right Menu Accordion start***************************************************************/
+.AccordionMenu{
+margin: 0px;
+padding: 0px;
+width: 100%; /*width of menu*/
+text-align:  inherit; /*  right; */
+}
+
+.AccordionMenu div.MainHeaders, .AccordionMenu div.MainHeadersCurr{
+height: 24px;
+padding:5px 0px 0px 0px;
+}
+
+.AccordionMenu div.MainHeaders a, .AccordionMenu div.MainHeadersCurr a{
+background: url(../images/RightMenu/BlueTitleRepeat.jpg) repeat-x;
+font: bold 8pt Tahoma;
+color: #0D5DB0;
+display: block;
+padding: 5px 0px 0px 0px;
+margin: 0px 0px 0px 0px;
+text-decoration: none;
+width: 100%;
+height: 19px;
+}
+
+.AccordionMenu div.MainHeadersCurr a{
+background: url(../images/RightMenu/OrangeTitleRepeat.jpg) repeat-x;
+}
+
+.AccordionMenu div.selected a, .AccordionMenu div.MainHeadersCurr a:hover{
+background: url(../images/RightMenu/OrangeTitleRepeat.jpg) repeat-x;
+}
+
+.AccordionMenu .StatusIcon{
+border:0px;
+vertical-align: top;
+padding:0px 2px 0px 0px;
+}
+
+.AccordionMenu div.SubMenusContent, .AccordionMenu div.SubMenusContentCurr{ /*DIV that contains each sub menu*/
+margin:5px 0px 0px 0px;
+padding:0px;
+width: 100%;
+text-align: inherit;
+} 
+
+.AccordionMenu div.SubMenusContent ul, .AccordionMenu div.SubMenusContentCurr ul{
+list-style: none; 
+margin:0px;
+padding:0px;
+width: 100%;
+}
+
+.AccordionMenu div.SubMenusContent li, .AccordionMenu div.SubMenusContentCurr li {
+padding: 0px 0px 1px 0px;
+margin: 0px 0px 0px 0px;
+background: #F7F7F7 url('../images/RightMenu/LineBorder.jpg') no-repeat bottom;
+}
+
+.AccordionMenu div.SubMenusContent li a, .AccordionMenu div.SubMenusContentCurr li a{
+display: block;
+height: 100%;
+color: #000000;
+text-decoration: none;
+padding: 3px 18px 6px 1px;
+margin: 0px 0px 0px 0px;
+font: normal 8pt tahoma;
+background:  url('../images/RightMenu/OrangeSquare.gif') no-repeat 137px 6px; 
+}
+
+.AccordionMenu div.SubMenusContent li a.current, .AccordionMenu div.SubMenusContent li a.current:hover,
+.AccordionMenu div.SubMenusContentCurr li a.current, .AccordionMenu div.SubMenusContentCurr li a.current:hover{
+background:  #FFE6A2 url('../images/RightMenu/BlueSquare.gif') no-repeat 137px 6px;
+}
+
+.AccordionMenu div.SubMenusContent li a:hover, .AccordionMenu div.SubMenusContentCurr li a:hover{
+background:  #E0EEFB url('../images/RightMenu/BlueSquare.gif') no-repeat 137px 6px;
+}
+/*Right Menu Accordion end***************************************************************/
+
+/*Tabs Start*****************************************************************************/
+.glowingtabs{
+float:right;
+width:100%;
+font: normal 9pt tahoma;
+line-height:normal;
+border-bottom: 1px solid #84CFF7; /*Add border strip to bottom of menu*/
+}
+
+.glowingtabs ul{
+list-style-type: none;
+margin:0px;
+padding:0px;
+}
+
+.glowingtabs li{
+display:inline;
+margin:0px;
+padding:0px;
+}
+
+.glowingtabs a{
+float:right;
+background:url(../images/Tabs/glowtab-left.gif) no-repeat left top;
+margin:0px;
+margin-left: 5px; /*spacing between each tab*/
+padding:0px 0px 0px 9px;
+text-decoration:none;
+text-align:center;
+}
+
+.glowingtabs a span{
+float:right;
+display:block;
+background: url(../images/Tabs/glowtab.gif) no-repeat right top;
+padding: 4px 12px 2px 3px;
+font-weight:normal;
+color:#2C92CD;
+}
+
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+.glowingtabs a span {float:none;}
+/* End IE5-Mac hack */
+
+.glowingtabs a:hover span {
+color: #044e78;
+}
+
+.glowingtabs li.selected a{ /*Selected Tab style*/
+background-position:0 -82px; /*Shift background image up to start of 2nd tab image*/
+}
+
+.glowingtabs li.selected a span{ /*Selected Tab style*/
+background-position:100% -82px; /*Shift background image up to start of 2nd tab image*/
+color: #044e78;
+}
+
+.glowingtabs a:hover, .glowingtabs li.selected a:hover{ /*onMouseover style*/
+background-position:0% -82px; /*Shift background image up to start of 2nd tab image*/
+}
+
+.glowingtabs a:hover span, .glowingtabs li.selected a:hover span{ /*onMouseover style*/
+background-position:100% -82px; /*Shift background image up to start of 2nd tab image*/
+}
+/*Tabs end*******************************************************************************/
+
+
+/************************ Add By Ali Alkaff For Eservices Only ***************************/
+
+.HeaderIservices
+{
+     height: 128px;
+    width: 150px;
+    background : url( '../Images/Header/eServices.jpg' )no-repeat left top;
+}
+
+/****************************************************************************************/

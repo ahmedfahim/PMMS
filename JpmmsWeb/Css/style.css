@@ -1,0 +1,61 @@
+ 
+			.list_carousel {
+				margin: 0px;
+				padding:0px 6px 0px 5px;
+				width:958px; 
+                height:108px;
+				overflow:hidden;
+				position:relative;
+			}
+			.list_carousel ul {
+				margin: 0px;
+				padding: 0px;
+				list-style: none;
+				display: block;
+			    overflow:hidden;
+			    width:860px;
+				height:68px;
+			}
+			.list_carousel li {
+                width:116px;
+                height:68px;
+				padding: 0;
+				margin: 0px 3px 0px 3px; 
+				display: block;
+				float: left;
+			}
+			.list_carousel.responsive {
+				width: auto;
+				margin-left: 0;
+			}
+			.clearfix {
+				float: none;
+				clear: both;
+			}
+			.prev {
+				float: right;
+			}
+			.next {
+				float: left;
+			}
+			.pager {
+				float: left;
+				width: 100%;
+				text-align: center;
+				background: url('images/NavBG.png') no-repeat center top;
+				padding:5px 0px 0px 0px;
+				margin:0px;
+				height:26px; 
+				position: relative;
+				top: -8px;
+			}
+			.pager a {
+				margin: 0px 0px 0px 10px;
+				text-decoration: none;
+				width:12px;
+				height:12px;
+				background: url('images/NotActive.png') no-repeat center top;
+			}
+			.pager a.selected {
+				background: url('images/Active.png') no-repeat center top;
+				}

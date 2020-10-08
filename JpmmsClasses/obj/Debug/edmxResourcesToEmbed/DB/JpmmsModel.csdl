@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2006/04/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="JpmmsModel" Alias="Self">
+  <EntityContainer Name="JpmmsModelContainer">
+    <EntitySet Name="INTERSECTION_SAMPLES" EntityType="JpmmsModel.INTERSECTION_SAMPLES" />
+    <EntitySet Name="INTERSECTIONS" EntityType="JpmmsModel.INTERSECTION" />
+    <EntitySet Name="LANEs" EntityType="JpmmsModel.LANE" />
+    <EntitySet Name="LANE_SAMPLES" EntityType="JpmmsModel.LANE_SAMPLES" />
+    <EntitySet Name="MAIN_STREETS" EntityType="JpmmsModel.MAIN_STREETS" />
+    <EntitySet Name="SECTIONS" EntityType="JpmmsModel.SECTION" />
+    <AssociationSet Name="SYS_C0015404" Association="JpmmsModel.SYS_C0015404">
+      <End Role="INTERSECTION" EntitySet="INTERSECTIONS" />
+      <End Role="INTERSECTION_SAMPLES" EntitySet="INTERSECTION_SAMPLES" />
+    </AssociationSet>
+    <AssociationSet Name="INTERSECTIONS_R01" Association="JpmmsModel.INTERSECTIONS_R01">
+      <End Role="MAIN_STREETS" EntitySet="MAIN_STREETS" />
+      <End Role="INTERSECTION" EntitySet="INTERSECTIONS" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0015471" Association="JpmmsModel.SYS_C0015471">
+      <End Role="LANE" EntitySet="LANEs" />
+      <End Role="LANE_SAMPLES" EntitySet="LANE_SAMPLES" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0015480" Association="JpmmsModel.SYS_C0015480">
+      <End Role="SECTION" EntitySet="SECTIONS" />
+      <End Role="LANE" EntitySet="LANEs" />
+    </AssociationSet>
+    <AssociationSet Name="SECTIONS_R01" Association="JpmmsModel.SECTIONS_R01">
+      <End Role="MAIN_STREETS" EntitySet="MAIN_STREETS" />
+      <End Role="SECTION" EntitySet="SECTIONS" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="INTERSECTION_SAMPLES">
+    <Key>
+      <PropertyRef Name="INTER_SAMP_ID" />
+    </Key>
+    <Property Type="String" Name="INTER_SAMP_NO" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="INTER_NO" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="INTERSEC_SAMP_AREA" Precision="38" Scale="0" />
+    <Property Type="String" Name="MAIN_NO" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="INTER_SAMP_ID" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="INTER_SAMP_NO_IRI" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="INTERSECTION" Relationship="JpmmsModel.SYS_C0015404" FromRole="INTERSECTION_SAMPLES" ToRole="INTERSECTION" />
+  </EntityType>
+  <EntityType Name="INTERSECTION">
+    <Key>
+      <PropertyRef Name="INTERSECTION_ID" />
+    </Key>
+    <Property Type="Decimal" Name="ID" Precision="38" Scale="0" />
+    <Property Type="String" Name="INTER_NO" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MUNIC_NO" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HOUSES" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COMMERIAL" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PUBLICS" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GARDENS" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REST_HOUSE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UNPAVED_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="UNPAVED_WIDTH" Precision="5" Scale="2" />
+    <Property Type="String" Name="MID_ISLAND_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="MID_ISLAND_WIDTH" Precision="5" Scale="2" />
+    <Property Type="String" Name="SIDE_CURB_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="SIDE_CURB_WIDTH" Precision="5" Scale="2" />
+    <Property Type="String" Name="LIGHTING_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PAV_MARKERS_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PAV_MARKERS_TYPE" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="INTERSECTION1" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BRDG_TUNEL_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BRDG_TUNEL_TYPE" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AG_MID_ISLAND_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AG_SID_ISLAND_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DRINAGE_MH_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="DRINAGE_MH_COUNT" Precision="38" Scale="0" />
+    <Property Type="String" Name="DRINAGE_CB_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="DRINAGE_CB_COUNT" Precision="38" Scale="0" />
+    <Property Type="String" Name="SEWAGE_MH_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ELECT_MH_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="ELECT_MH_COUNT" Precision="38" Scale="0" />
+    <Property Type="String" Name="STC_MH_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="STC_MH_COUNT" Precision="38" Scale="0" />
+    <Property Type="String" Name="WATER_VALVE_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="WATER_VALVE_COUNT" Precision="38" Scale="0" />
+    <Property Type="String" Name="MAIN_NO" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MAIN_NAME" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="UNPAVED_LENGTH" Precision="5" Scale="2" />
+    <Property Type="String" Name="SIDEISLAND_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="SIDEISLAND_WIDTH" Precision="5" Scale="2" />
+    <Property Type="Decimal" Name="SEWAGE_MH_COUNT" Precision="38" Scale="0" />
+    <Property Type="String" Name="AG_SEC_SIDE_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LIGHTING_LOC" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="INDISTERIAL" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="INTEREC_STREET1" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="INTEREC_STREET2" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SUBMUNIC_NAME" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="INTERSECTION_ORDER" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="INTERSECTION_LENGTH" Precision="5" Scale="2" />
+    <Property Type="Decimal" Name="INTERSECTION_ID" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="INTERSECT_CTRL_TYPE_ID" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="STREET1_FACTOR" Precision="38" Scale="0" />
+    <Property Type="String" Name="TUNNEL_INTERSECT_TRUE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PAVE_MARK_CERAMICS" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PAVE_MARK_CERAMICS_INTERSECT" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="INTERSECT_TYPE_ID" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="SEWAGE_MH_INTERSECT_COUNT" Precision="38" Scale="0" />
+    <Property Type="String" Name="MID_ISLAND_INTERSECT_TRUE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="STREET2_FACTOR" Precision="38" Scale="0" />
+    <Property Type="String" Name="UNPAVED_INTERSECT_TRUE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="DRINAGE_CB_INTERSECT_COUNT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="SIDEISLAND_WIDTH_INTERSECT" Precision="5" Scale="2" />
+    <Property Type="String" Name="ELECT_MH_INTERSECT_TRUE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="UNPAVED_INTERSECT_WIDTH" Precision="5" Scale="2" />
+    <Property Type="Decimal" Name="UNPAVED_INTERSECT_LENGTH" Precision="5" Scale="2" />
+    <Property Type="String" Name="AG_SID_ISLAND_INTERSECT_TRUE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="ELECT_MH_INTERSECT_COUNT" Precision="38" Scale="0" />
+    <Property Type="String" Name="SEWAGE_MH_INTERSECT_TRUE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LIGHTING_LOC_INTERSECT" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WATER_VALVE_INTERSECT_TRUE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="MID_ISLAND_WIDTH_INTERSECT" Precision="5" Scale="2" />
+    <Property Type="String" Name="AG_MID_ISLAND_INTERSECT_TRUE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="STC_MH_INTERSECT_TRUE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DRINAGE_MH_INTERSECT_TRUE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="DRINAGE_MH_INTERSECT_COUNT" Precision="38" Scale="0" />
+    <Property Type="String" Name="HAS_BRIDGES_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SIDEISLAND_INTERSECT_TRUE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AG_SEC_ISLAND_TRUE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="STC_MH_INTERSECT_COUNT" Precision="38" Scale="0" />
+    <Property Type="String" Name="HAS_BRIDGES" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PAVE_MARK_PAINT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PAVE_MARK_PAINT_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BRDG_TUNEL_TYPE_INTERSECT" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PAV_MARKERS_INTERSECT_TRUE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SIDE_CURB_INTERSECT_TRUE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="SIDE_CURB_WIDTH_INTERSECT" Precision="5" Scale="2" />
+    <Property Type="String" Name="LIGHTING_INTERSECT_TRUE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="WATER_VALVE_INTERSECT_COUNT" Precision="38" Scale="0" />
+    <Property Type="String" Name="DRINAGE_CB_INTERSECT_TRUE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AG_SEC_ISLAND_INTERSECT_TRUE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DRILLINGS_STC" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DRILLINGS_ELEC" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DRILLINGS_WATER" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DRILLINGS_SEWAGE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DRILLINGS_STC_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DRILLINGS_ELEC_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DRILLINGS_WATER_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DRILLINGS_SEWAGE_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="DRILLINGS_STC_LEN" Precision="8" Scale="2" />
+    <Property Type="Decimal" Name="DRILLINGS_STC_LEN_INTERSECT" Precision="8" Scale="2" />
+    <Property Type="Decimal" Name="DRILLINGS_ELEC_LEN" Precision="8" Scale="2" />
+    <Property Type="Decimal" Name="DRILLINGS_ELEC_LEN_INTERSECT" Precision="8" Scale="2" />
+    <Property Type="Decimal" Name="DRILLINGS_WATER_LEN" Precision="8" Scale="2" />
+    <Property Type="Decimal" Name="DRILLINGS_WATER_LEN_INTERSECT" Precision="8" Scale="2" />
+    <Property Type="Decimal" Name="DRILLINGS_SEWAG_LEN" Precision="8" Scale="2" />
+    <Property Type="Decimal" Name="DRILLINGS_SEWAG_LEN_INTERSECT" Precision="8" Scale="2" />
+    <Property Type="String" Name="CONCRETE_BLOCKS" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CONCRETE_BLOCKS_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="CONCRETE_BLOCKS_COUNT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="CONCRETE_BLOCKS_COUNT_INTERSEC" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="DRAIN_CB_FAIR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="DRAIN_CB_FAIR_INTERSECT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="DRAIN_CB_POOR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="DRAIN_CB_POOR_INTERSECT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="DRAIN_MH_FAIR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="DRAIN_MH_FAIR_INTERSECT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="DRAIN_MH_POOR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="DRAIN_MH_POOR_INTERSECT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="ELEC_MH_FAIR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="ELEC_MH_FAIR_INTERSECT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="ELEC_MH_POOR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="ELEC_MH_POOR_INTERSECT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="STC_MH_FAIR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="STC_MH_FAIR_INTERSECT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="STC_MH_POOR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="STC_MH_POOR_INTERSECT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="SEWAGE_MH_FAIR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="SEWAGE_MH_FAIR_INTERSECT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="SEWAGE_MH_POOR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="SEWAGE_MH_POOR_INTERSECT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="WATER_MH_FAIR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="WATER_MH_FAIR_INTERSECT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="WATER_MH_POOR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="WATER_MH_POOR_INTERSECT" Precision="38" Scale="0" />
+    <Property Type="String" Name="MID_ISLAND_GOOD" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MID_ISLAND_GOOD_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MID_ISLAND_FAIR" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MID_ISLAND_FAIR_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MID_ISLAND_POOR" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MID_ISLAND_POOR_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SIDE_CURB_GOOD" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SIDE_CURB_GOOD_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SIDE_CURB_FAIR" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SIDE_CURB_FAIR_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SIDE_CURB_POOR" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SIDE_CURB_POOR_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SERVICE_LANE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SERVICE_LANE_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OPENING_SERVICE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OPENING_SERVICE_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UTURN_MAIN" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UTURN_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SLOPE_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SLOPE_MAIN" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MULTILEVEL" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LIGHT_GOOD" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LIGHT_POOR" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LIGHT_INTERSECT_GOOD" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LIGHT_INTERSECT_POOR" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LIGHT_FAIR" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LIGHT_INTERSECT_FAIR" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="LIGHT_COUNT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="LIGHT_COUNT_INTERSECT" Precision="38" Scale="0" />
+    <Property Type="String" Name="SID_ISLAND_GOOD" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SID_ISLAND_FAIR" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SID_ISLAND_POOR" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SID_ISLAND_GOOD_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SID_ISLAND_FAIR_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SID_ISLAND_POOR_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HOUSES_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COMMERIAL_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GARDENS_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="INDISTERIAL_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PUBLICS_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REST_HOUSE_INTERSECT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="MEGACOM_COUNT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="MOBY_COUNT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="UNIPOLE_COUNT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="MEGACOM_COUNT_INTERSECT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="MOBY_COUNT_INTERSECT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="UNIPOLE_COUNT_INTERSECT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="SPEED_BUMP_TYPE_ID" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="SPEED_BUMP_TYPE_INTERSECT_ID" Precision="38" Scale="0" />
+    <NavigationProperty Name="INTERSECTION_SAMPLES" Relationship="JpmmsModel.SYS_C0015404" FromRole="INTERSECTION" ToRole="INTERSECTION_SAMPLES" />
+    <NavigationProperty Name="MAIN_STREETS" Relationship="JpmmsModel.INTERSECTIONS_R01" FromRole="INTERSECTION" ToRole="MAIN_STREETS" />
+  </EntityType>
+  <EntityType Name="LANE">
+    <Key>
+      <PropertyRef Name="LANE_ID" />
+    </Key>
+    <Property Type="Decimal" Name="ID1" Precision="38" Scale="0" />
+    <Property Type="String" Name="LANE_ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="LANE_LENGTH" Precision="38" Scale="0" />
+    <Property Type="String" Name="LANE_TYPE" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="LANE_WIDTH" Precision="38" Scale="0" />
+    <Property Type="String" Name="MAIN_NAME" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MAIN_NO" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SECTION_NO" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="SAMPLE_COUNT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="SAMPLE_AREA" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="GIS_LANE_WIDTH" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="LANE_IDD" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="GIS_LANE_LENGTH" Precision="38" Scale="0" />
+    <NavigationProperty Name="LANE_SAMPLES" Relationship="JpmmsModel.SYS_C0015471" FromRole="LANE" ToRole="LANE_SAMPLES" />
+    <NavigationProperty Name="SECTION" Relationship="JpmmsModel.SYS_C0015480" FromRole="LANE" ToRole="SECTION" />
+  </EntityType>
+  <EntityType Name="LANE_SAMPLES">
+    <Key>
+      <PropertyRef Name="SAMPLE_ID" />
+    </Key>
+    <Property Type="Decimal" Name="SAMPLE_ID" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="SAMPLE_NO" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="SAMPLE_LENGTH" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="SAMPLE_WIDTH" Precision="38" Scale="0" />
+    <Property Type="String" Name="MAIN_NO" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MAIN_NAME" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LANE_TYPE" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CLASS" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MAIN_EN_NAME" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="LANE_IDD" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="GIS_SAMPLE_WIDTH" Precision="2" Scale="0" />
+    <Property Type="Decimal" Name="MAIN_SRVC_OPENING_LENGTH" Precision="5" Scale="2" />
+    <Property Type="String" Name="SIDEWALK_PAINT_TRUE" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="PARKING_METHOD" Precision="38" Scale="0" />
+    <Property Type="String" Name="MAIN_SRVC_OPENING_TRUE" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="PEDESTRIAN_GOOD" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="CONCRETE_BLOCKS" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HANDICAPPED_SLOPE_GOOD" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="MAIN_SRVC_OPENING_WIDTH" Precision="5" Scale="2" />
+    <Property Type="String" Name="SIDEWALK_PAINT_GOOD" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="HANDICAPPED_SLOPE_TRUE" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="SPEED_BUMPS_ILLEGAL" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="SPEED_BUMPS_LEGAL" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="SPEED_BUMPS_COUNT" Precision="38" Scale="0" />
+    <Property Type="String" Name="PEDESTRIAN" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IS_PARKING" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="SPEED_BUMPS_TRUE" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="U_TURN_LENGTH" Precision="5" Scale="2" />
+    <Property Type="String" Name="U_TURN_TRUE" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="CONCRETE_BLOCKS_COUNT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="U_TURN_WIDTH" Precision="5" Scale="2" />
+    <Property Type="Decimal" Name="SPEED_BUMP_TYPE_ID" Precision="38" Scale="0" />
+    <NavigationProperty Name="LANE" Relationship="JpmmsModel.SYS_C0015471" FromRole="LANE_SAMPLES" ToRole="LANE" />
+  </EntityType>
+  <EntityType Name="MAIN_STREETS">
+    <Key>
+      <PropertyRef Name="MAIN_ST_ID" />
+    </Key>
+    <Property Type="Decimal" Name="ID" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="ENABLED" Precision="38" Scale="0" />
+    <Property Type="DateTime" Name="DATEMODIFI" />
+    <Property Type="Decimal" Name="ID3" Precision="38" Scale="0" />
+    <Property Type="String" Name="MAIN_NO" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MAIN_NAME" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CLASS" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="OWLENGTH" Precision="38" Scale="0" />
+    <Property Type="String" Name="MAIN_EN_NAME" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="ONESIDE_WIDTH" Precision="5" Scale="2" />
+    <Property Type="String" Name="STREETNUM" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="MAIN_ST_ID" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="CONTRACTOR_ID" Precision="38" Scale="0" />
+    <Property Type="String" Name="IS_R4" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="OFFICIAL_MUNIC_NUM" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="MAINST_CATEGORY_ID" Precision="38" Scale="0" />
+    <Property Type="String" Name="OWNERSHIP_DETAILS" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="FULLY_MUNIC_OWNED" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="PARTIALLY_MUNIC_OWNED" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="NOT_MUNIC_OWNED" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="ALL_INTERSAMP_OWNED_MUNIC" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="INTERSECTIONS" Relationship="JpmmsModel.INTERSECTIONS_R01" FromRole="MAIN_STREETS" ToRole="INTERSECTION" />
+    <NavigationProperty Name="SECTIONS" Relationship="JpmmsModel.SECTIONS_R01" FromRole="MAIN_STREETS" ToRole="SECTION" />
+  </EntityType>
+  <EntityType Name="SECTION">
+    <Key>
+      <PropertyRef Name="SECTION_ID" />
+    </Key>
+    <Property Type="Decimal" Name="ID" Precision="38" Scale="0" />
+    <Property Type="String" Name="MAIN_NAME" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SECTION_NO" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FROM_STREET" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TO_STREET" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MAIN_NO" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="SEC_ORDER" />
+    <Property Type="String" Name="REGION_NO" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SUBDIST_ID" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="UNPAVED_WIDTH" />
+    <Property Type="Int16" Name="MID_ISLAND_WIDTH" />
+    <Property Type="Int16" Name="DRINAGE_MH_COUNT" />
+    <Property Type="Int16" Name="DRINAGE_CB_COUNT" />
+    <Property Type="Int16" Name="SEWAGE_MH_COUNT" />
+    <Property Type="Int16" Name="ELECT_MH_COUNT" />
+    <Property Type="Int16" Name="STC_MH_COUNT" />
+    <Property Type="Int16" Name="WATER_VALVE_COUNT" />
+    <Property Type="String" Name="LIGHTING_LOC" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PAV_MARKERS_TYPE" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COMMERIAL" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GARDENS" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="INDISTERIAL" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REST_HOUSE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UNPAVED_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MID_ISLAND_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SIDE_CURB_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LIGHTING_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PAV_MARKERS_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="INTERSECTION" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PUBLICS" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AG_MID_ISLAND_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AG_SID_ISLAND_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DRINAGE_CB_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEWAGE_MH_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ELECT_MH_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="STC_MH_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WATER_VALVE_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HOUSES" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BRDG_TUNEL_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="UNPAVED_LENGTH" Precision="5" Scale="2" />
+    <Property Type="String" Name="SIDEISLAND_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="SIDEISLAND_WIDTH" Precision="5" Scale="2" />
+    <Property Type="String" Name="DRINAGE_MH_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BRDG_TUNEL_TYPE" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="SIDE_CURB_WIDTH" Precision="5" Scale="2" />
+    <Property Type="String" Name="AG_SEC_ISLAND_TRUE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEC_DIRECTION" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MUNICIPALITY" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DISTRICT" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SUBDISTRICT" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="SEC_LENGTH" Precision="8" Scale="2" />
+    <Property Type="Decimal" Name="SEC_WIDTH" Precision="8" Scale="2" />
+    <Property Type="Decimal" Name="SECTION_ID" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="NTERSECTION_TRAFFIC_LIGHT" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="INTERSECTION_OPEN_ISLAND" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="POP_FACTOR" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="TOURISM_FACTOR" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="ENTRANCE_FACTOR" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="TRAFFIC_FACTOR" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COMPLETE_FACTOR" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="GIS_SECTION_WIDTH" Precision="8" Scale="2" />
+    <Property Type="String" Name="INTERSECTION_TRAFFIC_LIGHT" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="PARKING_METHOD_ID" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="ENTRANCE" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="REGION_ID" Precision="38" Scale="0" />
+    <Property Type="String" Name="DRILLINGS_STC" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DRILLINGS_ELEC" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DRILLINGS_WATER" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DRILLINGS_SEWAGE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="DRILLINGS_STC_LENGTH" Precision="8" Scale="2" />
+    <Property Type="Decimal" Name="DRILLINGS_ELEC_LENGTH" Precision="8" Scale="2" />
+    <Property Type="Decimal" Name="DRILLINGS_WATER_LENGTH" Precision="8" Scale="2" />
+    <Property Type="Decimal" Name="DRILLINGS_SEWAG_LENGTH" Precision="8" Scale="2" />
+    <Property Type="String" Name="IS_R4" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IS_R3" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="R4_DATE" />
+    <Property Type="DateTime" Name="R3_DATE" />
+    <Property Type="DateTime" Name="NO_PERMIT_TILL_DATE" />
+    <Property Type="Decimal" Name="DRAIN_CB_FAIR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="DRAIN_CB_POOR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="DRAIN_MH_FAIR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="DRAIN_MH_POOR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="ELEC_MH_FAIR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="ELEC_MH_POOR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="STC_MH_FAIR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="STC_MH_POOR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="SEWAGE_MH_FAIR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="SEWAGE_MH_POOR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="WATER_MH_FAIR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="WATER_MH_POOR" Precision="38" Scale="0" />
+    <Property Type="String" Name="MID_ISLAND_GOOD" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MID_ISLAND_FAIR" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MID_ISLAND_POOR" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SIDE_CURB_GOOD" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SIDE_CURB_FAIR" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SIDE_CURB_POOR" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="LIGHTING_COUNT" Precision="38" Scale="0" />
+    <Property Type="String" Name="LIGHTING_GOOD" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LIGHTING_PROPERTY_CONFLICT" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="MEGACOM_COUNT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="MOBY_COUNT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="UNIPOLE_COUNT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="LIGHTING_CONTROLS_COUNT" Precision="38" Scale="0" />
+    <Property Type="String" Name="MULTILEVEL" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MARKER_CERAMIC" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MARKER_PAINT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SID_ISLAND_GOOD" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SID_ISLAND_FAIR" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SID_ISLAND_POOR" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PAVED_BY_MUNIC" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOT_PAVED_BY_DETAILS" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OWNED_BY_MUNIC" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OWNED_DETAILS" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LIGHT_FAIR" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LIGHT_POOR" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="LANEs" Relationship="JpmmsModel.SYS_C0015480" FromRole="SECTION" ToRole="LANE" />
+    <NavigationProperty Name="MAIN_STREETS" Relationship="JpmmsModel.SECTIONS_R01" FromRole="SECTION" ToRole="MAIN_STREETS" />
+  </EntityType>
+  <Association Name="SYS_C0015404">
+    <End Type="JpmmsModel.INTERSECTION" Role="INTERSECTION" Multiplicity="0..1" />
+    <End Type="JpmmsModel.INTERSECTION_SAMPLES" Role="INTERSECTION_SAMPLES" Multiplicity="*" />
+  </Association>
+  <Association Name="INTERSECTIONS_R01">
+    <End Type="JpmmsModel.MAIN_STREETS" Role="MAIN_STREETS" Multiplicity="0..1" />
+    <End Type="JpmmsModel.INTERSECTION" Role="INTERSECTION" Multiplicity="*" />
+  </Association>
+  <Association Name="SYS_C0015471">
+    <End Type="JpmmsModel.LANE" Role="LANE" Multiplicity="0..1" />
+    <End Type="JpmmsModel.LANE_SAMPLES" Role="LANE_SAMPLES" Multiplicity="*" />
+  </Association>
+  <Association Name="SYS_C0015480">
+    <End Type="JpmmsModel.SECTION" Role="SECTION" Multiplicity="0..1" />
+    <End Type="JpmmsModel.LANE" Role="LANE" Multiplicity="*" />
+  </Association>
+  <Association Name="SECTIONS_R01">
+    <End Type="JpmmsModel.MAIN_STREETS" Role="MAIN_STREETS" Multiplicity="0..1" />
+    <End Type="JpmmsModel.SECTION" Role="SECTION" Multiplicity="*" />
+  </Association>
+</Schema>

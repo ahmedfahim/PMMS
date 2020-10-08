@@ -1,0 +1,122 @@
+﻿//public DataTable GetMaintenancePrioritiesForRegionsReport(int surveyNo)
+        //{
+        //    if (surveyNo == 0)
+        //        return new DataTable();
+
+        //    string sql = string.Format("select * from VW_MAINT_PRIO_REGIONS where REGION_NO is not null and SURVEY_NO={0} order by MAINT_PRIO desc ", surveyNo);
+        //    return db.ExecuteQuery(sql);
+        //}
+
+        //public DataTable GetMaintenancePrioritiesForRegionsReport(int regionNo, int surveyNo, bool udiDesc, bool udiAsc, bool priority)
+        //{
+        //    if (surveyNo == 0)
+        //    {
+        //        DataTable dt = survey.GetLastSurveyForRoadsNetwork(regionNo, "", "", "", true, false, false, false, 0, false, false);
+        //        if (dt.Rows.Count == 0)
+        //            return new DataTable();
+
+        //        surveyNo = int.Parse(dt.Rows[0]["SURVEY_NO"].ToString());
+        //    }
+
+
+        //    string orderByPart = GetOrderByPriorityPart(udiDesc, udiAsc, priority);
+        //    string regionIdPart = (regionNo == 0) ? "" : string.Format(" and REGION_ID={0} ", regionNo);
+        //    string sql = string.Format("select * from VW_MAINT_PRIO_REGIONS where SURVEY_NO={0} {1} {2}  ", surveyNo, regionIdPart, orderByPart);
+        //    return db.ExecuteQuery(sql);
+        //}
+
+
+        //public DataTable GetMaintenancePrioritiesForRegionNameReport(string regions, int surveyNo, bool udiDesc, bool udiAsc, bool priority)
+        //{
+        //    if (surveyNo == 0)
+        //    {
+        //        DataTable dt = survey.GetLastSurveyForRoadsNetwork(0, regions, "", "", false, true, false, false, 0, false, false);
+        //        if (dt.Rows.Count == 0)
+        //            return new DataTable();
+
+        //        surveyNo = int.Parse(dt.Rows[0]["SURVEY_NO"].ToString());
+        //    }
+
+        //    string orderByPart = GetOrderByPriorityPart(udiDesc, udiAsc, priority);
+        //    string regionPart = (regions == "0" || string.IsNullOrEmpty(regions)) ? "" : string.Format(" and SUBDISTRICT='{0}' ", regions);
+        //    string sql = string.Format("select * from VW_MAINT_PRIO_REGIONS where SURVEY_NO={0} {1} {2}  ", surveyNo, regionPart, orderByPart);
+        //    return db.ExecuteQuery(sql);
+        //}
+
+        //public DataTable GetMaintenancePrioritiesForDistrictReport(string district, int surveyNo, bool udiDesc, bool udiAsc, bool priority)
+        //{
+        //    if (surveyNo == 0)
+        //    {
+        //        DataTable dt = survey.GetLastSurveyForRoadsNetwork(0, "", district, "", false, false, true, false, 0, false, false);
+        //        if (dt.Rows.Count == 0)
+        //            return new DataTable();
+
+        //        surveyNo = int.Parse(dt.Rows[0]["SURVEY_NO"].ToString());
+        //    }
+
+        //    string orderByPart = GetOrderByPriorityPart(udiDesc, udiAsc, priority);
+        //    string regionPart = (district == "0" || string.IsNullOrEmpty(district)) ? "" : string.Format(" and DIST_NAME='{0}' ", district);
+        //    string sql = string.Format("select * from VW_MAINT_PRIO_REGIONS where SURVEY_NO={0} {1} {2}  ", surveyNo, regionPart, orderByPart);
+        //    return db.ExecuteQuery(sql);
+        //}
+
+        //public DataTable GetMaintenancePrioritiesForMunicipalityReport(string municName, int surveyNo, bool udiDesc, bool udiAsc, bool priority)
+        //{
+        //    if (surveyNo == 0)
+        //    {
+        //        DataTable dt = survey.GetLastSurveyForRoadsNetwork(0, "", "", municName, false, false, false, true, 0, false, false);
+        //        if (dt.Rows.Count == 0)
+        //            return new DataTable();
+
+        //        surveyNo = int.Parse(dt.Rows[0]["SURVEY_NO"].ToString());
+        //    }
+
+
+        //    string orderByPart = GetOrderByPriorityPart(udiDesc, udiAsc, priority);
+        //    string regionPart = (municName == "0" || string.IsNullOrEmpty(municName)) ? "" : string.Format(" and MUNIC_NAME='{0}' ", municName);
+        //    string sql = string.Format("select * from VW_MAINT_PRIO_REGIONS where SURVEY_NO={0} {1} {2}  ", surveyNo, regionPart, orderByPart);
+        //    return db.ExecuteQuery(sql);
+        //}
+        //public DataTable GetMaintenancePrioritiesForMainStreetReport(int mainStID, int surveyNo, bool udiDesc, bool udiAsc, bool priority)
+        //{
+        //    if (surveyNo == 0)
+        //    {
+        //        DataTable dt = survey.GetLastSurveyForRoadsNetwork(0, "", "", "", false, false, false, false, mainStID, true, false);
+        //        if (dt.Rows.Count == 0)
+        //            return new DataTable();
+
+        //        surveyNo = int.Parse(dt.Rows[0]["SURVEY_NO"].ToString());
+        //    }
+
+        //    string orderByPart = GetOrderByPriorityPart(udiDesc, udiAsc, priority);
+        //    string mainStPart = (mainStID == 0) ? "" : string.Format(" and STREET_ID={0}  ", mainStID); // MAIN_STREET_ID
+        //    string sql = string.Format("select * from VW_MAINT_PRIO_LANES where SECTION_ID is not null {0} and SURVEY_NO={1} {2} ", mainStPart, surveyNo, orderByPart);
+        //    return db.ExecuteQuery(sql);
+        //}
+
+        //public DataTable GetMaintenancePrioritiesForSectionSurroundingRegionReport(int regionID, int surveyNo, bool udiDesc, bool udiAsc, bool priority)
+        //{
+        //    string regionNum = region.GetRegionNum(regionID);
+        //    string orderByPart = GetOrderByPriorityPart(udiDesc, udiAsc, priority);
+
+        //    string sql = string.Format("select * from VW_MAINT_PRIO_LANES where SECTION_ID is not null and section_no like '{0}%' and SURVEY_NO={1} {2} ", regionNum, surveyNo, orderByPart);
+        //    return db.ExecuteQuery(sql);
+        //}
+        //public DataTable GetMaintenancePrioritiesForMainStreetIntersectReport(int mainStID, int surveyNo, bool udiDesc, bool udiAsc, bool priority)
+        //{
+        //    if (surveyNo == 0)
+        //    {
+        //        DataTable dt = survey.GetLastSurveyForRoadsNetwork(0, "", "", "", false, false, false, false, mainStID, false, true);
+        //        if (dt.Rows.Count == 0)
+        //            return new DataTable();
+
+        //        surveyNo = int.Parse(dt.Rows[0]["SURVEY_NO"].ToString());
+        //    }
+
+        //    string orderByPart = GetOrderByPriorityPart(udiDesc, udiAsc, priority);
+        //    string mainStPart = (mainStID == 0) ? "" : string.Format(" and STREET_ID={0}  ", mainStID); // MAIN_STREET_ID
+        //    string sql = string.Format("select * from VW_MAINT_PRIO_INTERSECT where INTERSECTION_ID is not null {0} and SURVEY_NO={1} {2} ", mainStPart, surveyNo, orderByPart);
+        //    return db.ExecuteQuery(sql);
+        //}
+-------------------------------
+

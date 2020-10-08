@@ -1,0 +1,6 @@
+﻿MemberType:SYSTEM_USERS 	 MemberCode:10 	 Description:User login 	 EventDate:12/01/2014 	 EventTime: 11:30 	 User:data 
+MemberType:SYSTEM_USERS 	 MemberCode:10 	 Description:User login 	 EventDate:13/01/2014 	 EventTime: 10:44 	 User:data 
+MemberType:SYSTEM_USERS 	 MemberCode:10 	 Description:User login 	 EventDate:13/01/2014 	 EventTime: 11:06 	 User:data 
+MemberType:SYSTEM_USERS 	 MemberCode:10 	 Description:User login 	 EventDate:13/01/2014 	 EventTime: 12:40 	 User:data 
+MemberType:SYSTEM_USERS 	 MemberCode:10 	 Description:User login 	 EventDate:13/01/2014 	 EventTime: 12:54 	 User:data 
+MemberType:SYSTEM_USERS 	 MemberCode:10 	 Description:User login 	 EventDate:13/01/2014 	 EventTime: 13:27 	 User:data 

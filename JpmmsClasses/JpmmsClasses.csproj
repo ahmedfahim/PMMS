@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9014136C-BB3B-41D5-861E-18DEF002216A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JpmmsClasses</RootNamespace>
+    <AssemblyName>JpmmsClasses</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Oracle.DataAccess, Version=2.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\AhmedYousif\CMaint_Decisions.cs" />
+    <Compile Include="BL\AhmedYousif\C_Equipment_Data.cs" />
+    <Compile Include="BL\AhmedYousif\DB_Connection.cs" />
+    <Compile Include="BL\AhmedYousif\SampleMaintDecision.cs" />
+    <Compile Include="BL\ArrayBind.cs" />
+    <Compile Include="BL\DT_EVENT_DATE.cs" />
+    <Compile Include="BL\DT_EVENT_DEPRESSION_AREA.cs" />
+    <Compile Include="BL\DT_EVENT_LANE_NO.cs" />
+    <Compile Include="BL\DT_EVENT_LANE_WIDTH.cs" />
+    <Compile Include="BL\DT_EVENT_PATCHING_AREA.cs" />
+    <Compile Include="BL\DT_EVENT_POLISHING_AREA.cs" />
+    <Compile Include="BL\DT_EVENT_RAVELLING_AREA.cs" />
+    <Compile Include="BL\DT_EVENT_RUTTING_AREA.cs" />
+    <Compile Include="BL\DT_EVENT_SECTION_NO.cs" />
+    <Compile Include="BL\DT_EVENT_SHOVING_AREA.cs" />
+    <Compile Include="BL\DT_LCMS_BLEEDING_LEFT.cs" />
+    <Compile Include="BL\DT_LCMS_CRACK_PROCESSED.cs" />
+    <Compile Include="BL\DT_LCMS_POTHOLES_PROCESSED.cs" />
+    <Compile Include="BL\DT_PROFILER_IRI.cs" />
+    <Compile Include="BL\Feedbacks.cs" />
+    <Compile Include="BL\Lookups\Contract.cs" />
+    <Compile Include="BL\Lookups\DistrictSubdistrict.cs" />
+    <Compile Include="BL\Lookups\MaintDeciding.cs" />
+    <Compile Include="BL\Lookups\MaintDecision.cs" />
+    <Compile Include="BL\Lookups\MaintPriorityWeights.cs" />
+    <Compile Include="BL\Lookups\Projects.cs" />
+    <Compile Include="BL\Lookups\UdiRating.cs" />
+    <Compile Include="BL\MachineSurveyRoadNetworkReports.cs" />
+    <Compile Include="BL\MaintenanceDecisionsBudgeting.cs" />
+    <Compile Include="BL\Bridge.cs" />
+    <Compile Include="BL\BridgeTunnelEvaluation.cs" />
+    <Compile Include="BL\ImagesGallery.cs" />
+    <Compile Include="BL\Lookups\BridgeTunnelLookups.cs" />
+    <Compile Include="BL\Lookups\Distress.cs" />
+    <Compile Include="BL\DistressEntry\DistressEntry.cs" />
+    <Compile Include="BL\DistressEntry\DistressShared.cs" />
+    <Compile Include="BL\DistressEntry\DistressSurvey.cs" />
+    <Compile Include="BL\FwdReport.cs" />
+    <Compile Include="BL\GprReport.cs" />
+    <Compile Include="BL\Intersection.cs" />
+    <Compile Include="BL\IntersectionSamples.cs" />
+    <Compile Include="BL\IriReport.cs" />
+    <Compile Include="BL\Lane.cs" />
+    <Compile Include="BL\LaneSample.cs" />
+    <Compile Include="BL\Lookups\Contractor.cs" />
+    <Compile Include="BL\Lookups\DistressSeverity.cs" />
+    <Compile Include="BL\Lookups\IntersectControlType.cs" />
+    <Compile Include="BL\Lookups\IntersectType.cs" />
+    <Compile Include="BL\Lookups\ParkingMethods.cs" />
+    <Compile Include="BL\Lookups\SubMuniciplaity.cs" />
+    <Compile Include="BL\Lookups\SystemUsers.cs" />
+    <Compile Include="BL\Lookups\Unit.cs" />
+    <Compile Include="BL\MaintDecisionCosting.cs" />
+    <Compile Include="BL\MaintenanceFeedback.cs" />
+    <Compile Include="BL\MaintenancePriorities.cs" />
+    <Compile Include="BL\Municpiality.cs" />
+    <Compile Include="BL\QcCheck.cs" />
+    <Compile Include="BL\R4Streets.cs" />
+    <Compile Include="BL\RuttingReport.cs" />
+    <Compile Include="BL\SharedClass.cs" />
+    <Compile Include="BL\TrafficEnhances.cs" />
+    <Compile Include="BL\Utils\Charting.cs" />
+    <Compile Include="BL\Tunnel.cs" />
+    <Compile Include="BL\DT_LCMS_BLEEDING_RIGHT.cs" />
+    <Compile Include="BL\Utils\GeneralReporting.cs" />
+    <Compile Include="BL\RomdasEquipment.cs" />
+    <Compile Include="BL\Utils\TunnelBridges.cs" />
+    <Compile Include="DB\DatabaseClass.cs" />
+    <Compile Include="Shared\ThreadResults.cs" />
+    <Compile Include="BL\MainStreet.cs" />
+    <Compile Include="BL\MaintenanceDecisions.cs" />
+    <Compile Include="BL\MaintenanceOrders.cs" />
+    <Compile Include="BL\Region.cs" />
+    <Compile Include="BL\SecondaryStreets.cs" />
+    <Compile Include="BL\MainStreetSection.cs" />
+    <Compile Include="BL\SkidReport.cs" />
+    <Compile Include="BL\Lookups\Surveyor.cs" />
+    <Compile Include="BL\SurveyorSubmitJob.cs" />
+    <Compile Include="BL\TrafficCounting.cs" />
+    <Compile Include="BL\UDI\IntersectionUDI.cs" />
+    <Compile Include="BL\UDI\RegionSecondaryStUDI.cs" />
+    <Compile Include="BL\UDI\SectionsUDI.cs" />
+    <Compile Include="BL\UDI\UdiShared.cs" />
+    <Compile Include="DB\OracleDatabaseClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shared\Dates.cs" />
+    <Compile Include="Shared\EncryptionClass.cs" />
+    <Compile Include="Shared\Feedback.cs" />
+    <Compile Include="Shared\ImagesClass.cs" />
+    <Compile Include="Shared\Policy.cs" />
+    <Compile Include="Shared\Shared.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

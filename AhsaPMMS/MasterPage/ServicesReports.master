@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ServicesReports.master.cs"
+    Inherits="MasterPage_ServicesReports" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<%@ Register Src="../Controls/Footer.ascx" TagName="Footer" TagPrefix="uc2" %>
+<%@ Register Src="../Controls/HeaderForReports.ascx" TagName="Header" TagPrefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="rtl" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <%--windows-1256--%>
+    </asp:ContentPlaceHolder>
+    <link href="../Css/GeneralStyle.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../Css/style.css" type="text/css" />
+    <script type="text/javascript" language="javascript">
+        function checkIE() {
+        var thestart = parseFloat(navigator.appVersion.indexOf("MSIE"))+1;
+        if(navigator.appName=="Microsoft Internet Explorer" && parseFloat(navigator.appVersion.substring(thestart+4,thestart+7))<=6)
+            
+        }
+
+        function openwin(str) {
+            var win = '';
+            win = window.open(str, "mywindow", "location=0,status=no,scrollbars=1,width=950,");
+        }
+    </script>
+</head>
+<body>
+    <form id="form2" runat="server">
+    <!--Header Table Start -->
+    <uc1:Header ID="Header1" runat="server" />
+    <!--Header Table End -->
+    <!--Page Body Table Start -->
+    <div>
+    </div>
+    <table align="center" cellpadding="0" cellspacing="0" style="width: 100%; height: 500px;
+        background-color: #FFFFFF; border-collapse: collapse;">
+        <!--Page Body Row Start -->
+        <tr>
+            <td width="7px" style="background-color: #E6E6E6">
+            </td>
+            <td valign="top" align="right" style="width: 967px; height: 100%;">
+                <br />
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+                <br />
+            </td>
+            <td width="6px" style="background-color: #E6E6E6">
+            </td>
+        </tr>
+        <!--Page Body Row End -->
+    </table>
+    <!--Page Body Table End -->
+    <!--Footer Table Start -->
+    <uc2:Footer ID="Footer1" runat="server" />
+    <!--Footer Table End -->
+    </form>
+</body>
+</html>

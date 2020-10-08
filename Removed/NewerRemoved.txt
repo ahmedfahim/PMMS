@@ -1,0 +1,191 @@
+  //radBySection.Checked = true;
+
+        //radbyMainStreet.Checked = false;
+        //radByStreetDistressArea.Checked = false;
+        //radByStreetDistressAreaTotal.Checked = false;
+        //radByStreetAreaTotal.Checked = false;
+        //radBySection_CheckedChanged(sender, e);
+
+        //ddlMainStreets.SelectedValue = "0";
+        //ddlMainStreets_SelectedIndexChanged(sender, e);
+        //ddlMainStreetSection.SelectedValue = "0";
+        //ddlDistresses.SelectedValue = "0";
+
+        //raddtpFrom.Enabled = false;
+        //raddtpTo.Enabled = false;
+-------------------
+
+  //radlOldSurveys.DataBind();
+            //radlOldSurveys.SelectedIndex = (radlOldSurveys.Items.Count >= 1) ? 0 : -1;
+            //radlOldSurveys.Visible = false;
+---------
+
+ //ddlMainStreets.SelectedValue = "0";
+        //ddlMainStreets_SelectedIndexChanged(sender, e);
+
+        //radbyStreet.Checked = false;
+        //radByIntersect.Checked = true;
+        //radByIntersect_CheckedChanged(sender, e);
+-------------
+
+ //else if (radlOldSurveys.SelectedIndex == -1)
+                //    throw new Exception(Feedback.NoSurveyNum());
+                //int.Parse(radlOldSurveys.SelectedValue),
+------------
+
+ //DataTable dt = db.ExecuteQuery(sql);
+            //if (dt.Rows.Count > 0)
+            //    return dt;
+            //else
+            //{
+            //    sql = string.Format("SELECT * FROM VW_LATEST_MD_INTERSECTIONS where STREET_ID={0} ORDER BY MAIN_NO, INTER_NO ", mainStID);
+            //    return db.ExecuteQuery(sql);
+            //}
+------------
+
+//int surveyNum = int.Parse(ddlOldSurveys.SelectedValue);   //string.IsNullOrEmpty(radlOldSurveys.SelectedValue) ? 0 : int.Parse(radlOldSurveys.SelectedValue);
+//private void BindSurveyNumDropDown()
+    //{
+    //    //ddlOldSurveys.Items.Clear();
+    //    //ddlOldSurveys.Items.Add(new ListItem("«·„”Õ «·√ŒÌ—", "0"));
+    //    //ddlOldSurveys.DataBind();
+    //}
+	//BindSurveyNumDropDown();
+            // , int.Parse(ddlOldSurveys.SelectedValue)
+ //BindSurveyNumDropDown();
+
+            //rntxtTotalAmount.Value = new MaintDecisionCosting().GetMunicipalitySecondaryStreetsMaintenanceDecisionsCost(ddlMunic.SelectedValue);
+            //rntxtTotalAmount_TextChanged(sender, e); // , int.Parse(ddlOldSurveys.SelectedValue)
+----------
+
+  // int surveyNum, surveyNum, 
+            //DataTable dt;
+            //if (surveyNum == 0)
+            //{
+            //    dt = survey.GetLastSurveyForRoadsNetwork(0, "", "", "", false, false, false, false, mainStID, true, false);
+            //    if (dt.Rows.Count == 0)
+            //        return new DataTable();
+
+            //    surveyNum = int.Parse(dt.Rows[0]["SURVEY_NO"].ToString());
+            //}
+--------------
+
+ //  , int surveyNum where SURVEY_NO={0} surveyNum,  VW_SECTIONS_MAINT_COST  
+            //if (surveyNum == 0)
+            //{
+            //    DataTable dt = survey.GetLastSurveyForRoadsNetwork(0, "", "", "", false, false, false, false, mainStID, true, false);
+            //    if (dt.Rows.Count == 0)
+            //        return 0;
+            //    else
+            //        surveyNum = int.Parse(dt.Rows[0]["SURVEY_NO"].ToString());
+            //}
+
+            // SECTION_NO in (select section_no from sections where
+
+			 // where SURVEY_NO={0} , int surveyNum surveyNum, VW_INTERSECTS_MAINT_COST  
+            //if (surveyNum == 0)
+            //{
+            //    DataTable dt = survey.GetLastSurveyForRoadsNetwork(0, "", "", "", false, false, false, false, mainStID, true, false);
+            //    if (dt.Rows.Count == 0)
+            //        return 0;
+            //    else
+            //        surveyNum = int.Parse(dt.Rows[0]["SURVEY_NO"].ToString());
+            //}
+
+  // , int surveyNum surveyNum,  where SURVEY_NO={0}  VW_REGION_MAINT_COST
+            //if (surveyNum == 0)
+            //{
+            //    DataTable dt = survey.GetLastSurveyForRoadsNetwork(regionID, "", "", "", true, false, false, false, 0, false, false);
+            //    if (dt.Rows.Count == 0)
+            //        return 0;
+            //    else
+            //        surveyNum = int.Parse(dt.Rows[0]["SURVEY_NO"].ToString());
+            //}
+
+  // , int surveyNum surveyNum,   where SURVEY_NO={0} VW_REGION_MAINT_COST
+            //if (surveyNum == 0)
+            //{
+            //    DataTable dt = survey.GetLastSurveyForRoadsNetwork(0, subDist, "", "", false, true, false, false, 0, false, false);
+            //    if (dt.Rows.Count == 0)
+            //        return 0;
+            //    else
+            //        surveyNum = int.Parse(dt.Rows[0]["SURVEY_NO"].ToString());
+            //}
+
+
+            // region_id IN (select region_id from regions where 
+
+			  // , int surveyNum surveyNum,  where SURVEY_NO={0}  VW_REGION_MAINT_COST  
+            //if (surveyNum == 0)
+            //{
+            //    DataTable dt = survey.GetLastSurveyForRoadsNetwork(0, "", distName, "", false, false, true, false, 0, false, false);
+            //    if (dt.Rows.Count == 0)
+            //        return 0;
+            //    else
+            //        surveyNum = int.Parse(dt.Rows[0]["SURVEY_NO"].ToString());
+            //}
+
+// , int surveyNum surveyNum, where SURVEY_NO={0} VW_REGION_MAINT_COST
+            //if (surveyNum == 0)
+            //{
+            //    DataTable dt = survey.GetLastSurveyForRoadsNetwork(0, "", "", municName, false, false, false, true, 0, false, false);
+            //    if (dt.Rows.Count == 0)
+            //        return 0;
+            //    else
+            //        surveyNum = int.Parse(dt.Rows[0]["SURVEY_NO"].ToString());
+            //}
+--------------------------
+
+//else if (allRoads && surveyNo == 0)
+            //    return new DataTable();
+            // AND SURVEY_NO=(select max(survey_no) from IRI_INTERSECTION where main_no='{0}')
+            //  AND SURVEY_NO=(select max(survey_no) from IRI_LANE where main_no='{0}') 
+            
+---------------
+
+// AND SURVEY_NO=(select max(survey_no) as survey_no from RUTTING_INTERSECTIONS MAIN_No='{0}')
+            // AND SURVEY_NO=(select max(survey_no) as survey_no from RUTTING_SECTIONS) 
+------------
+
+ //if (string.IsNullOrEmpty(sql))
+            //    return new DataTable();
+            //else
+            //    return db.ExecuteQuery(sql);
+
+-------------
+ //radlOldSurveys.DataBind();
+            //radlOldSurveys.SelectedIndex = (radlOldSurveys.Items.Count == 0) ? -1 : 0;
+
+   //radlOldSurveys.DataBind();
+            //radlOldSurveys.SelectedIndex = (radlOldSurveys.Items.Count == 0) ? -1 : 0;
+            //if (radlOldSurveys.Items.Count == 1)
+            //radlOldSurveys.SelectedIndex = 0;
+        }
+        catch (Exception ex)
+        {
+            lblFeedback.Text = ex.Message;
+        }
+--------------
+
+//protected void radDistricts_CheckedChanged(object sender, EventArgs e)
+    //{
+    //    ddlMainStreets.Visible = false;
+    //    ddlMainStreetSection.Visible = false;
+    //    ddlMainStreetIntersection.Visible = false;
+    //    ddlRegions.Visible = false;
+    //    ddlRegionSecondaryStreets.Visible = false;
+    //    ddlRegionNames.Visible = true;
+    //    ddlMunic.Visible = false;
+    //}
+
+    //protected void radMunics_CheckedChanged(object sender, EventArgs e)
+    //{
+    //    ddlMainStreets.Visible = false;
+    //    ddlMainStreetSection.Visible = false;
+    //    ddlMainStreetIntersection.Visible = false;
+    //    ddlRegions.Visible = false;
+    //    ddlRegionSecondaryStreets.Visible = false;
+    //    ddlRegionNames.Visible = false;
+    //    ddlMunic.Visible = true;
+    //}
+---------------------

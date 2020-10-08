@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS" Space="C-S">
+  <Alias Key="Model" Value="JpmmsModel" />
+  <Alias Key="Target" Value="JpmmsModel.Store" />
+  <EntityContainerMapping CdmEntityContainer="JpmmsModelContainer" StorageEntityContainer="JpmmsModelStoreContainer">
+    <EntitySetMapping Name="INTERSECTION_SAMPLES">
+      <EntityTypeMapping TypeName="JpmmsModel.INTERSECTION_SAMPLES">
+        <MappingFragment StoreEntitySet="INTERSECTION_SAMPLES">
+          <ScalarProperty Name="INTER_SAMP_NO_IRI" ColumnName="INTER_SAMP_NO_IRI" />
+          <ScalarProperty Name="INTER_SAMP_ID" ColumnName="INTER_SAMP_ID" />
+          <ScalarProperty Name="MAIN_NO" ColumnName="MAIN_NO" />
+          <ScalarProperty Name="INTERSEC_SAMP_AREA" ColumnName="INTERSEC_SAMP_AREA" />
+          <ScalarProperty Name="INTER_NO" ColumnName="INTER_NO" />
+          <ScalarProperty Name="INTER_SAMP_NO" ColumnName="INTER_SAMP_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INTERSECTIONS">
+      <EntityTypeMapping TypeName="JpmmsModel.INTERSECTION">
+        <MappingFragment StoreEntitySet="INTERSECTIONS">
+          <ScalarProperty Name="SPEED_BUMP_TYPE_INTERSECT_ID" ColumnName="SPEED_BUMP_TYPE_INTERSECT_ID" />
+          <ScalarProperty Name="SPEED_BUMP_TYPE_ID" ColumnName="SPEED_BUMP_TYPE_ID" />
+          <ScalarProperty Name="UNIPOLE_COUNT_INTERSECT" ColumnName="UNIPOLE_COUNT_INTERSECT" />
+          <ScalarProperty Name="MOBY_COUNT_INTERSECT" ColumnName="MOBY_COUNT_INTERSECT" />
+          <ScalarProperty Name="MEGACOM_COUNT_INTERSECT" ColumnName="MEGACOM_COUNT_INTERSECT" />
+          <ScalarProperty Name="UNIPOLE_COUNT" ColumnName="UNIPOLE_COUNT" />
+          <ScalarProperty Name="MOBY_COUNT" ColumnName="MOBY_COUNT" />
+          <ScalarProperty Name="MEGACOM_COUNT" ColumnName="MEGACOM_COUNT" />
+          <ScalarProperty Name="REST_HOUSE_INTERSECT" ColumnName="REST_HOUSE_INTERSECT" />
+          <ScalarProperty Name="PUBLICS_INTERSECT" ColumnName="PUBLICS_INTERSECT" />
+          <ScalarProperty Name="INDISTERIAL_INTERSECT" ColumnName="INDISTERIAL_INTERSECT" />
+          <ScalarProperty Name="GARDENS_INTERSECT" ColumnName="GARDENS_INTERSECT" />
+          <ScalarProperty Name="COMMERIAL_INTERSECT" ColumnName="COMMERIAL_INTERSECT" />
+          <ScalarProperty Name="HOUSES_INTERSECT" ColumnName="HOUSES_INTERSECT" />
+          <ScalarProperty Name="SID_ISLAND_POOR_INTERSECT" ColumnName="SID_ISLAND_POOR_INTERSECT" />
+          <ScalarProperty Name="SID_ISLAND_FAIR_INTERSECT" ColumnName="SID_ISLAND_FAIR_INTERSECT" />
+          <ScalarProperty Name="SID_ISLAND_GOOD_INTERSECT" ColumnName="SID_ISLAND_GOOD_INTERSECT" />
+          <ScalarProperty Name="SID_ISLAND_POOR" ColumnName="SID_ISLAND_POOR" />
+          <ScalarProperty Name="SID_ISLAND_FAIR" ColumnName="SID_ISLAND_FAIR" />
+          <ScalarProperty Name="SID_ISLAND_GOOD" ColumnName="SID_ISLAND_GOOD" />
+          <ScalarProperty Name="LIGHT_COUNT_INTERSECT" ColumnName="LIGHT_COUNT_INTERSECT" />
+          <ScalarProperty Name="LIGHT_COUNT" ColumnName="LIGHT_COUNT" />
+          <ScalarProperty Name="LIGHT_INTERSECT_FAIR" ColumnName="LIGHT_INTERSECT_FAIR" />
+          <ScalarProperty Name="LIGHT_FAIR" ColumnName="LIGHT_FAIR" />
+          <ScalarProperty Name="LIGHT_INTERSECT_POOR" ColumnName="LIGHT_INTERSECT_POOR" />
+          <ScalarProperty Name="LIGHT_INTERSECT_GOOD" ColumnName="LIGHT_INTERSECT_GOOD" />
+          <ScalarProperty Name="LIGHT_POOR" ColumnName="LIGHT_POOR" />
+          <ScalarProperty Name="LIGHT_GOOD" ColumnName="LIGHT_GOOD" />
+          <ScalarProperty Name="MULTILEVEL" ColumnName="MULTILEVEL" />
+          <ScalarProperty Name="SLOPE_MAIN" ColumnName="SLOPE_MAIN" />
+          <ScalarProperty Name="SLOPE_INTERSECT" ColumnName="SLOPE_INTERSECT" />
+          <ScalarProperty Name="UTURN_INTERSECT" ColumnName="UTURN_INTERSECT" />
+          <ScalarProperty Name="UTURN_MAIN" ColumnName="UTURN_MAIN" />
+          <ScalarProperty Name="OPENING_SERVICE_INTERSECT" ColumnName="OPENING_SERVICE_INTERSECT" />
+          <ScalarProperty Name="OPENING_SERVICE" ColumnName="OPENING_SERVICE" />
+          <ScalarProperty Name="SERVICE_LANE_INTERSECT" ColumnName="SERVICE_LANE_INTERSECT" />
+          <ScalarProperty Name="SERVICE_LANE" ColumnName="SERVICE_LANE" />
+          <ScalarProperty Name="SIDE_CURB_POOR_INTERSECT" ColumnName="SIDE_CURB_POOR_INTERSECT" />
+          <ScalarProperty Name="SIDE_CURB_POOR" ColumnName="SIDE_CURB_POOR" />
+          <ScalarProperty Name="SIDE_CURB_FAIR_INTERSECT" ColumnName="SIDE_CURB_FAIR_INTERSECT" />
+          <ScalarProperty Name="SIDE_CURB_FAIR" ColumnName="SIDE_CURB_FAIR" />
+          <ScalarProperty Name="SIDE_CURB_GOOD_INTERSECT" ColumnName="SIDE_CURB_GOOD_INTERSECT" />
+          <ScalarProperty Name="SIDE_CURB_GOOD" ColumnName="SIDE_CURB_GOOD" />
+          <ScalarProperty Name="MID_ISLAND_POOR_INTERSECT" ColumnName="MID_ISLAND_POOR_INTERSECT" />
+          <ScalarProperty Name="MID_ISLAND_POOR" ColumnName="MID_ISLAND_POOR" />
+          <ScalarProperty Name="MID_ISLAND_FAIR_INTERSECT" ColumnName="MID_ISLAND_FAIR_INTERSECT" />
+          <ScalarProperty Name="MID_ISLAND_FAIR" ColumnName="MID_ISLAND_FAIR" />
+          <ScalarProperty Name="MID_ISLAND_GOOD_INTERSECT" ColumnName="MID_ISLAND_GOOD_INTERSECT" />
+          <ScalarProperty Name="MID_ISLAND_GOOD" ColumnName="MID_ISLAND_GOOD" />
+          <ScalarProperty Name="WATER_MH_POOR_INTERSECT" ColumnName="WATER_MH_POOR_INTERSECT" />
+          <ScalarProperty Name="WATER_MH_POOR" ColumnName="WATER_MH_POOR" />
+          <ScalarProperty Name="WATER_MH_FAIR_INTERSECT" ColumnName="WATER_MH_FAIR_INTERSECT" />
+          <ScalarProperty Name="WATER_MH_FAIR" ColumnName="WATER_MH_FAIR" />
+          <ScalarProperty Name="SEWAGE_MH_POOR_INTERSECT" ColumnName="SEWAGE_MH_POOR_INTERSECT" />
+          <ScalarProperty Name="SEWAGE_MH_POOR" ColumnName="SEWAGE_MH_POOR" />
+          <ScalarProperty Name="SEWAGE_MH_FAIR_INTERSECT" ColumnName="SEWAGE_MH_FAIR_INTERSECT" />
+          <ScalarProperty Name="SEWAGE_MH_FAIR" ColumnName="SEWAGE_MH_FAIR" />
+          <ScalarProperty Name="STC_MH_POOR_INTERSECT" ColumnName="STC_MH_POOR_INTERSECT" />
+          <ScalarProperty Name="STC_MH_POOR" ColumnName="STC_MH_POOR" />
+          <ScalarProperty Name="STC_MH_FAIR_INTERSECT" ColumnName="STC_MH_FAIR_INTERSECT" />
+          <ScalarProperty Name="STC_MH_FAIR" ColumnName="STC_MH_FAIR" />
+          <ScalarProperty Name="ELEC_MH_POOR_INTERSECT" ColumnName="ELEC_MH_POOR_INTERSECT" />
+          <ScalarProperty Name="ELEC_MH_POOR" ColumnName="ELEC_MH_POOR" />
+          <ScalarProperty Name="ELEC_MH_FAIR_INTERSECT" ColumnName="ELEC_MH_FAIR_INTERSECT" />
+          <ScalarProperty Name="ELEC_MH_FAIR" ColumnName="ELEC_MH_FAIR" />
+          <ScalarProperty Name="DRAIN_MH_POOR_INTERSECT" ColumnName="DRAIN_MH_POOR_INTERSECT" />
+          <ScalarProperty Name="DRAIN_MH_POOR" ColumnName="DRAIN_MH_POOR" />
+          <ScalarProperty Name="DRAIN_MH_FAIR_INTERSECT" ColumnName="DRAIN_MH_FAIR_INTERSECT" />
+          <ScalarProperty Name="DRAIN_MH_FAIR" ColumnName="DRAIN_MH_FAIR" />
+          <ScalarProperty Name="DRAIN_CB_POOR_INTERSECT" ColumnName="DRAIN_CB_POOR_INTERSECT" />
+          <ScalarProperty Name="DRAIN_CB_POOR" ColumnName="DRAIN_CB_POOR" />
+          <ScalarProperty Name="DRAIN_CB_FAIR_INTERSECT" ColumnName="DRAIN_CB_FAIR_INTERSECT" />
+          <ScalarProperty Name="DRAIN_CB_FAIR" ColumnName="DRAIN_CB_FAIR" />
+          <ScalarProperty Name="CONCRETE_BLOCKS_COUNT_INTERSEC" ColumnName="CONCRETE_BLOCKS_COUNT_INTERSEC" />
+          <ScalarProperty Name="CONCRETE_BLOCKS_COUNT" ColumnName="CONCRETE_BLOCKS_COUNT" />
+          <ScalarProperty Name="CONCRETE_BLOCKS_INTERSECT" ColumnName="CONCRETE_BLOCKS_INTERSECT" />
+          <ScalarProperty Name="CONCRETE_BLOCKS" ColumnName="CONCRETE_BLOCKS" />
+          <ScalarProperty Name="DRILLINGS_SEWAG_LEN_INTERSECT" ColumnName="DRILLINGS_SEWAG_LEN_INTERSECT" />
+          <ScalarProperty Name="DRILLINGS_SEWAG_LEN" ColumnName="DRILLINGS_SEWAG_LEN" />
+          <ScalarProperty Name="DRILLINGS_WATER_LEN_INTERSECT" ColumnName="DRILLINGS_WATER_LEN_INTERSECT" />
+          <ScalarProperty Name="DRILLINGS_WATER_LEN" ColumnName="DRILLINGS_WATER_LEN" />
+          <ScalarProperty Name="DRILLINGS_ELEC_LEN_INTERSECT" ColumnName="DRILLINGS_ELEC_LEN_INTERSECT" />
+          <ScalarProperty Name="DRILLINGS_ELEC_LEN" ColumnName="DRILLINGS_ELEC_LEN" />
+          <ScalarProperty Name="DRILLINGS_STC_LEN_INTERSECT" ColumnName="DRILLINGS_STC_LEN_INTERSECT" />
+          <ScalarProperty Name="DRILLINGS_STC_LEN" ColumnName="DRILLINGS_STC_LEN" />
+          <ScalarProperty Name="DRILLINGS_SEWAGE_INTERSECT" ColumnName="DRILLINGS_SEWAGE_INTERSECT" />
+          <ScalarProperty Name="DRILLINGS_WATER_INTERSECT" ColumnName="DRILLINGS_WATER_INTERSECT" />
+          <ScalarProperty Name="DRILLINGS_ELEC_INTERSECT" ColumnName="DRILLINGS_ELEC_INTERSECT" />
+          <ScalarProperty Name="DRILLINGS_STC_INTERSECT" ColumnName="DRILLINGS_STC_INTERSECT" />
+          <ScalarProperty Name="DRILLINGS_SEWAGE" ColumnName="DRILLINGS_SEWAGE" />
+          <ScalarProperty Name="DRILLINGS_WATER" ColumnName="DRILLINGS_WATER" />
+          <ScalarProperty Name="DRILLINGS_ELEC" ColumnName="DRILLINGS_ELEC" />
+          <ScalarProperty Name="DRILLINGS_STC" ColumnName="DRILLINGS_STC" />
+          <ScalarProperty Name="AG_SEC_ISLAND_INTERSECT_TRUE" ColumnName="AG_SEC_ISLAND_INTERSECT_TRUE" />
+          <ScalarProperty Name="DRINAGE_CB_INTERSECT_TRUE" ColumnName="DRINAGE_CB_INTERSECT_TRUE" />
+          <ScalarProperty Name="WATER_VALVE_INTERSECT_COUNT" ColumnName="WATER_VALVE_INTERSECT_COUNT" />
+          <ScalarProperty Name="LIGHTING_INTERSECT_TRUE" ColumnName="LIGHTING_INTERSECT_TRUE" />
+          <ScalarProperty Name="SIDE_CURB_WIDTH_INTERSECT" ColumnName="SIDE_CURB_WIDTH_INTERSECT" />
+          <ScalarProperty Name="SIDE_CURB_INTERSECT_TRUE" ColumnName="SIDE_CURB_INTERSECT_TRUE" />
+          <ScalarProperty Name="PAV_MARKERS_INTERSECT_TRUE" ColumnName="PAV_MARKERS_INTERSECT_TRUE" />
+          <ScalarProperty Name="BRDG_TUNEL_TYPE_INTERSECT" ColumnName="BRDG_TUNEL_TYPE_INTERSECT" />
+          <ScalarProperty Name="PAVE_MARK_PAINT_INTERSECT" ColumnName="PAVE_MARK_PAINT_INTERSECT" />
+          <ScalarProperty Name="PAVE_MARK_PAINT" ColumnName="PAVE_MARK_PAINT" />
+          <ScalarProperty Name="HAS_BRIDGES" ColumnName="HAS_BRIDGES" />
+          <ScalarProperty Name="STC_MH_INTERSECT_COUNT" ColumnName="STC_MH_INTERSECT_COUNT" />
+          <ScalarProperty Name="AG_SEC_ISLAND_TRUE" ColumnName="AG_SEC_ISLAND_TRUE" />
+          <ScalarProperty Name="SIDEISLAND_INTERSECT_TRUE" ColumnName="SIDEISLAND_INTERSECT_TRUE" />
+          <ScalarProperty Name="HAS_BRIDGES_INTERSECT" ColumnName="HAS_BRIDGES_INTERSECT" />
+          <ScalarProperty Name="DRINAGE_MH_INTERSECT_COUNT" ColumnName="DRINAGE_MH_INTERSECT_COUNT" />
+          <ScalarProperty Name="DRINAGE_MH_INTERSECT_TRUE" ColumnName="DRINAGE_MH_INTERSECT_TRUE" />
+          <ScalarProperty Name="STC_MH_INTERSECT_TRUE" ColumnName="STC_MH_INTERSECT_TRUE" />
+          <ScalarProperty Name="AG_MID_ISLAND_INTERSECT_TRUE" ColumnName="AG_MID_ISLAND_INTERSECT_TRUE" />
+          <ScalarProperty Name="MID_ISLAND_WIDTH_INTERSECT" ColumnName="MID_ISLAND_WIDTH_INTERSECT" />
+          <ScalarProperty Name="WATER_VALVE_INTERSECT_TRUE" ColumnName="WATER_VALVE_INTERSECT_TRUE" />
+          <ScalarProperty Name="LIGHTING_LOC_INTERSECT" ColumnName="LIGHTING_LOC_INTERSECT" />
+          <ScalarProperty Name="SEWAGE_MH_INTERSECT_TRUE" ColumnName="SEWAGE_MH_INTERSECT_TRUE" />
+          <ScalarProperty Name="ELECT_MH_INTERSECT_COUNT" ColumnName="ELECT_MH_INTERSECT_COUNT" />
+          <ScalarProperty Name="AG_SID_ISLAND_INTERSECT_TRUE" ColumnName="AG_SID_ISLAND_INTERSECT_TRUE" />
+          <ScalarProperty Name="UNPAVED_INTERSECT_LENGTH" ColumnName="UNPAVED_INTERSECT_LENGTH" />
+          <ScalarProperty Name="UNPAVED_INTERSECT_WIDTH" ColumnName="UNPAVED_INTERSECT_WIDTH" />
+          <ScalarProperty Name="ELECT_MH_INTERSECT_TRUE" ColumnName="ELECT_MH_INTERSECT_TRUE" />
+          <ScalarProperty Name="SIDEISLAND_WIDTH_INTERSECT" ColumnName="SIDEISLAND_WIDTH_INTERSECT" />
+          <ScalarProperty Name="DRINAGE_CB_INTERSECT_COUNT" ColumnName="DRINAGE_CB_INTERSECT_COUNT" />
+          <ScalarProperty Name="UNPAVED_INTERSECT_TRUE" ColumnName="UNPAVED_INTERSECT_TRUE" />
+          <ScalarProperty Name="STREET2_FACTOR" ColumnName="STREET2_FACTOR" />
+          <ScalarProperty Name="MID_ISLAND_INTERSECT_TRUE" ColumnName="MID_ISLAND_INTERSECT_TRUE" />
+          <ScalarProperty Name="SEWAGE_MH_INTERSECT_COUNT" ColumnName="SEWAGE_MH_INTERSECT_COUNT" />
+          <ScalarProperty Name="INTERSECT_TYPE_ID" ColumnName="INTERSECT_TYPE_ID" />
+          <ScalarProperty Name="PAVE_MARK_CERAMICS_INTERSECT" ColumnName="PAVE_MARK_CERAMICS_INTERSECT" />
+          <ScalarProperty Name="PAVE_MARK_CERAMICS" ColumnName="PAVE_MARK_CERAMICS" />
+          <ScalarProperty Name="TUNNEL_INTERSECT_TRUE" ColumnName="TUNNEL_INTERSECT_TRUE" />
+          <ScalarProperty Name="STREET1_FACTOR" ColumnName="STREET1_FACTOR" />
+          <ScalarProperty Name="INTERSECT_CTRL_TYPE_ID" ColumnName="INTERSECT_CTRL_TYPE_ID" />
+          <ScalarProperty Name="INTERSECTION_ID" ColumnName="INTERSECTION_ID" />
+          <ScalarProperty Name="INTERSECTION_LENGTH" ColumnName="INTERSECTION_LENGTH" />
+          <ScalarProperty Name="INTERSECTION_ORDER" ColumnName="INTERSECTION_ORDER" />
+          <ScalarProperty Name="SUBMUNIC_NAME" ColumnName="SUBMUNIC_NAME" />
+          <ScalarProperty Name="INTEREC_STREET2" ColumnName="INTEREC_STREET2" />
+          <ScalarProperty Name="INTEREC_STREET1" ColumnName="INTEREC_STREET1" />
+          <ScalarProperty Name="INDISTERIAL" ColumnName="INDISTERIAL" />
+          <ScalarProperty Name="LIGHTING_LOC" ColumnName="LIGHTING_LOC" />
+          <ScalarProperty Name="AG_SEC_SIDE_TRUE" ColumnName="AG_SEC_SIDE_TRUE" />
+          <ScalarProperty Name="SEWAGE_MH_COUNT" ColumnName="SEWAGE_MH_COUNT" />
+          <ScalarProperty Name="SIDEISLAND_WIDTH" ColumnName="SIDEISLAND_WIDTH" />
+          <ScalarProperty Name="SIDEISLAND_TRUE" ColumnName="SIDEISLAND_TRUE" />
+          <ScalarProperty Name="UNPAVED_LENGTH" ColumnName="UNPAVED_LENGTH" />
+          <ScalarProperty Name="MAIN_NAME" ColumnName="MAIN_NAME" />
+          <ScalarProperty Name="MAIN_NO" ColumnName="MAIN_NO" />
+          <ScalarProperty Name="WATER_VALVE_COUNT" ColumnName="WATER_VALVE_COUNT" />
+          <ScalarProperty Name="WATER_VALVE_TRUE" ColumnName="WATER_VALVE_TRUE" />
+          <ScalarProperty Name="STC_MH_COUNT" ColumnName="STC_MH_COUNT" />
+          <ScalarProperty Name="STC_MH_TRUE" ColumnName="STC_MH_TRUE" />
+          <ScalarProperty Name="ELECT_MH_COUNT" ColumnName="ELECT_MH_COUNT" />
+          <ScalarProperty Name="ELECT_MH_TRUE" ColumnName="ELECT_MH_TRUE" />
+          <ScalarProperty Name="SEWAGE_MH_TRUE" ColumnName="SEWAGE_MH_TRUE" />
+          <ScalarProperty Name="DRINAGE_CB_COUNT" ColumnName="DRINAGE_CB_COUNT" />
+          <ScalarProperty Name="DRINAGE_CB_TRUE" ColumnName="DRINAGE_CB_TRUE" />
+          <ScalarProperty Name="DRINAGE_MH_COUNT" ColumnName="DRINAGE_MH_COUNT" />
+          <ScalarProperty Name="DRINAGE_MH_TRUE" ColumnName="DRINAGE_MH_TRUE" />
+          <ScalarProperty Name="AG_SID_ISLAND_TRUE" ColumnName="AG_SID_ISLAND_TRUE" />
+          <ScalarProperty Name="AG_MID_ISLAND_TRUE" ColumnName="AG_MID_ISLAND_TRUE" />
+          <ScalarProperty Name="BRDG_TUNEL_TYPE" ColumnName="BRDG_TUNEL_TYPE" />
+          <ScalarProperty Name="BRDG_TUNEL_TRUE" ColumnName="BRDG_TUNEL_TRUE" />
+          <ScalarProperty Name="INTERSECTION1" ColumnName="INTERSECTION" />
+          <ScalarProperty Name="PAV_MARKERS_TYPE" ColumnName="PAV_MARKERS_TYPE" />
+          <ScalarProperty Name="PAV_MARKERS_TRUE" ColumnName="PAV_MARKERS_TRUE" />
+          <ScalarProperty Name="LIGHTING_TRUE" ColumnName="LIGHTING_TRUE" />
+          <ScalarProperty Name="SIDE_CURB_WIDTH" ColumnName="SIDE_CURB_WIDTH" />
+          <ScalarProperty Name="SIDE_CURB_TRUE" ColumnName="SIDE_CURB_TRUE" />
+          <ScalarProperty Name="MID_ISLAND_WIDTH" ColumnName="MID_ISLAND_WIDTH" />
+          <ScalarProperty Name="MID_ISLAND_TRUE" ColumnName="MID_ISLAND_TRUE" />
+          <ScalarProperty Name="UNPAVED_WIDTH" ColumnName="UNPAVED_WIDTH" />
+          <ScalarProperty Name="UNPAVED_TRUE" ColumnName="UNPAVED_TRUE" />
+          <ScalarProperty Name="REST_HOUSE" ColumnName="REST_HOUSE" />
+          <ScalarProperty Name="GARDENS" ColumnName="GARDENS" />
+          <ScalarProperty Name="PUBLICS" ColumnName="PUBLICS" />
+          <ScalarProperty Name="COMMERIAL" ColumnName="COMMERIAL" />
+          <ScalarProperty Name="HOUSES" ColumnName="HOUSES" />
+          <ScalarProperty Name="MUNIC_NO" ColumnName="MUNIC_NO" />
+          <ScalarProperty Name="INTER_NO" ColumnName="INTER_NO" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LANEs">
+      <EntityTypeMapping TypeName="JpmmsModel.LANE">
+        <MappingFragment StoreEntitySet="LANE">
+          <ScalarProperty Name="GIS_LANE_LENGTH" ColumnName="GIS_LANE_LENGTH" />
+          <ScalarProperty Name="LANE_IDD" ColumnName="LANE_IDD" />
+          <ScalarProperty Name="GIS_LANE_WIDTH" ColumnName="GIS_LANE_WIDTH" />
+          <ScalarProperty Name="SAMPLE_AREA" ColumnName="SAMPLE_AREA" />
+          <ScalarProperty Name="SAMPLE_COUNT" ColumnName="SAMPLE_COUNT" />
+          <ScalarProperty Name="SECTION_NO" ColumnName="SECTION_NO" />
+          <ScalarProperty Name="MAIN_NO" ColumnName="MAIN_NO" />
+          <ScalarProperty Name="MAIN_NAME" ColumnName="MAIN_NAME" />
+          <ScalarProperty Name="LANE_WIDTH" ColumnName="LANE_WIDTH" />
+          <ScalarProperty Name="LANE_TYPE" ColumnName="LANE_TYPE" />
+          <ScalarProperty Name="LANE_LENGTH" ColumnName="LANE_LENGTH" />
+          <ScalarProperty Name="LANE_ID" ColumnName="LANE_ID" />
+          <ScalarProperty Name="ID1" ColumnName="ID1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LANE_SAMPLES">
+      <EntityTypeMapping TypeName="JpmmsModel.LANE_SAMPLES">
+        <MappingFragment StoreEntitySet="LANE_SAMPLES">
+          <ScalarProperty Name="SPEED_BUMP_TYPE_ID" ColumnName="SPEED_BUMP_TYPE_ID" />
+          <ScalarProperty Name="U_TURN_WIDTH" ColumnName="U_TURN_WIDTH" />
+          <ScalarProperty Name="CONCRETE_BLOCKS_COUNT" ColumnName="CONCRETE_BLOCKS_COUNT" />
+          <ScalarProperty Name="U_TURN_TRUE" ColumnName="U_TURN_TRUE" />
+          <ScalarProperty Name="U_TURN_LENGTH" ColumnName="U_TURN_LENGTH" />
+          <ScalarProperty Name="SPEED_BUMPS_TRUE" ColumnName="SPEED_BUMPS_TRUE" />
+          <ScalarProperty Name="IS_PARKING" ColumnName="IS_PARKING" />
+          <ScalarProperty Name="PEDESTRIAN" ColumnName="PEDESTRIAN" />
+          <ScalarProperty Name="SPEED_BUMPS_COUNT" ColumnName="SPEED_BUMPS_COUNT" />
+          <ScalarProperty Name="SPEED_BUMPS_LEGAL" ColumnName="SPEED_BUMPS_LEGAL" />
+          <ScalarProperty Name="SPEED_BUMPS_ILLEGAL" ColumnName="SPEED_BUMPS_ILLEGAL" />
+          <ScalarProperty Name="HANDICAPPED_SLOPE_TRUE" ColumnName="HANDICAPPED_SLOPE_TRUE" />
+          <ScalarProperty Name="SIDEWALK_PAINT_GOOD" ColumnName="SIDEWALK_PAINT_GOOD" />
+          <ScalarProperty Name="MAIN_SRVC_OPENING_WIDTH" ColumnName="MAIN_SRVC_OPENING_WIDTH" />
+          <ScalarProperty Name="HANDICAPPED_SLOPE_GOOD" ColumnName="HANDICAPPED_SLOPE_GOOD" />
+          <ScalarProperty Name="CONCRETE_BLOCKS" ColumnName="CONCRETE_BLOCKS" />
+          <ScalarProperty Name="PEDESTRIAN_GOOD" ColumnName="PEDESTRIAN_GOOD" />
+          <ScalarProperty Name="MAIN_SRVC_OPENING_TRUE" ColumnName="MAIN_SRVC_OPENING_TRUE" />
+          <ScalarProperty Name="PARKING_METHOD" ColumnName="PARKING_METHOD" />
+          <ScalarProperty Name="SIDEWALK_PAINT_TRUE" ColumnName="SIDEWALK_PAINT_TRUE" />
+          <ScalarProperty Name="MAIN_SRVC_OPENING_LENGTH" ColumnName="MAIN_SRVC_OPENING_LENGTH" />
+          <ScalarProperty Name="GIS_SAMPLE_WIDTH" ColumnName="GIS_SAMPLE_WIDTH" />
+          <ScalarProperty Name="LANE_IDD" ColumnName="LANE_IDD" />
+          <ScalarProperty Name="MAIN_EN_NAME" ColumnName="MAIN_EN_NAME" />
+          <ScalarProperty Name="CLASS" ColumnName="CLASS" />
+          <ScalarProperty Name="LANE_TYPE" ColumnName="LANE_TYPE" />
+          <ScalarProperty Name="MAIN_NAME" ColumnName="MAIN_NAME" />
+          <ScalarProperty Name="MAIN_NO" ColumnName="MAIN_NO" />
+          <ScalarProperty Name="SAMPLE_WIDTH" ColumnName="SAMPLE_WIDTH" />
+          <ScalarProperty Name="SAMPLE_LENGTH" ColumnName="SAMPLE_LENGTH" />
+          <ScalarProperty Name="SAMPLE_NO" ColumnName="SAMPLE_NO" />
+          <ScalarProperty Name="SAMPLE_ID" ColumnName="SAMPLE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAIN_STREETS">
+      <EntityTypeMapping TypeName="JpmmsModel.MAIN_STREETS">
+        <MappingFragment StoreEntitySet="MAIN_STREETS">
+          <ScalarProperty Name="ALL_INTERSAMP_OWNED_MUNIC" ColumnName="ALL_INTERSAMP_OWNED_MUNIC" />
+          <ScalarProperty Name="NOT_MUNIC_OWNED" ColumnName="NOT_MUNIC_OWNED" />
+          <ScalarProperty Name="PARTIALLY_MUNIC_OWNED" ColumnName="PARTIALLY_MUNIC_OWNED" />
+          <ScalarProperty Name="FULLY_MUNIC_OWNED" ColumnName="FULLY_MUNIC_OWNED" />
+          <ScalarProperty Name="OWNERSHIP_DETAILS" ColumnName="OWNERSHIP_DETAILS" />
+          <ScalarProperty Name="MAINST_CATEGORY_ID" ColumnName="MAINST_CATEGORY_ID" />
+          <ScalarProperty Name="OFFICIAL_MUNIC_NUM" ColumnName="OFFICIAL_MUNIC_NUM" />
+          <ScalarProperty Name="IS_R4" ColumnName="IS_R4" />
+          <ScalarProperty Name="CONTRACTOR_ID" ColumnName="CONTRACTOR_ID" />
+          <ScalarProperty Name="MAIN_ST_ID" ColumnName="MAIN_ST_ID" />
+          <ScalarProperty Name="STREETNUM" ColumnName="STREETNUM" />
+          <ScalarProperty Name="ONESIDE_WIDTH" ColumnName="ONESIDE_WIDTH" />
+          <ScalarProperty Name="MAIN_EN_NAME" ColumnName="MAIN_EN_NAME" />
+          <ScalarProperty Name="OWLENGTH" ColumnName="OWLENGTH" />
+          <ScalarProperty Name="CLASS" ColumnName="CLASS" />
+          <ScalarProperty Name="MAIN_NAME" ColumnName="MAIN_NAME" />
+          <ScalarProperty Name="MAIN_NO" ColumnName="MAIN_NO" />
+          <ScalarProperty Name="ID3" ColumnName="ID3" />
+          <ScalarProperty Name="DATEMODIFI" ColumnName="DATEMODIFI" />
+          <ScalarProperty Name="ENABLED" ColumnName="ENABLED" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SECTIONS">
+      <EntityTypeMapping TypeName="JpmmsModel.SECTION">
+        <MappingFragment StoreEntitySet="SECTIONS">
+          <ScalarProperty Name="LIGHT_POOR" ColumnName="LIGHT_POOR" />
+          <ScalarProperty Name="LIGHT_FAIR" ColumnName="LIGHT_FAIR" />
+          <ScalarProperty Name="OWNED_DETAILS" ColumnName="OWNED_DETAILS" />
+          <ScalarProperty Name="OWNED_BY_MUNIC" ColumnName="OWNED_BY_MUNIC" />
+          <ScalarProperty Name="NOT_PAVED_BY_DETAILS" ColumnName="NOT_PAVED_BY_DETAILS" />
+          <ScalarProperty Name="PAVED_BY_MUNIC" ColumnName="PAVED_BY_MUNIC" />
+          <ScalarProperty Name="SID_ISLAND_POOR" ColumnName="SID_ISLAND_POOR" />
+          <ScalarProperty Name="SID_ISLAND_FAIR" ColumnName="SID_ISLAND_FAIR" />
+          <ScalarProperty Name="SID_ISLAND_GOOD" ColumnName="SID_ISLAND_GOOD" />
+          <ScalarProperty Name="MARKER_PAINT" ColumnName="MARKER_PAINT" />
+          <ScalarProperty Name="MARKER_CERAMIC" ColumnName="MARKER_CERAMIC" />
+          <ScalarProperty Name="MULTILEVEL" ColumnName="MULTILEVEL" />
+          <ScalarProperty Name="LIGHTING_CONTROLS_COUNT" ColumnName="LIGHTING_CONTROLS_COUNT" />
+          <ScalarProperty Name="UNIPOLE_COUNT" ColumnName="UNIPOLE_COUNT" />
+          <ScalarProperty Name="MOBY_COUNT" ColumnName="MOBY_COUNT" />
+          <ScalarProperty Name="MEGACOM_COUNT" ColumnName="MEGACOM_COUNT" />
+          <ScalarProperty Name="LIGHTING_PROPERTY_CONFLICT" ColumnName="LIGHTING_PROPERTY_CONFLICT" />
+          <ScalarProperty Name="LIGHTING_GOOD" ColumnName="LIGHTING_GOOD" />
+          <ScalarProperty Name="LIGHTING_COUNT" ColumnName="LIGHTING_COUNT" />
+          <ScalarProperty Name="SIDE_CURB_POOR" ColumnName="SIDE_CURB_POOR" />
+          <ScalarProperty Name="SIDE_CURB_FAIR" ColumnName="SIDE_CURB_FAIR" />
+          <ScalarProperty Name="SIDE_CURB_GOOD" ColumnName="SIDE_CURB_GOOD" />
+          <ScalarProperty Name="MID_ISLAND_POOR" ColumnName="MID_ISLAND_POOR" />
+          <ScalarProperty Name="MID_ISLAND_FAIR" ColumnName="MID_ISLAND_FAIR" />
+          <ScalarProperty Name="MID_ISLAND_GOOD" ColumnName="MID_ISLAND_GOOD" />
+          <ScalarProperty Name="WATER_MH_POOR" ColumnName="WATER_MH_POOR" />
+          <ScalarProperty Name="WATER_MH_FAIR" ColumnName="WATER_MH_FAIR" />
+          <ScalarProperty Name="SEWAGE_MH_POOR" ColumnName="SEWAGE_MH_POOR" />
+          <ScalarProperty Name="SEWAGE_MH_FAIR" ColumnName="SEWAGE_MH_FAIR" />
+          <ScalarProperty Name="STC_MH_POOR" ColumnName="STC_MH_POOR" />
+          <ScalarProperty Name="STC_MH_FAIR" ColumnName="STC_MH_FAIR" />
+          <ScalarProperty Name="ELEC_MH_POOR" ColumnName="ELEC_MH_POOR" />
+          <ScalarProperty Name="ELEC_MH_FAIR" ColumnName="ELEC_MH_FAIR" />
+          <ScalarProperty Name="DRAIN_MH_POOR" ColumnName="DRAIN_MH_POOR" />
+          <ScalarProperty Name="DRAIN_MH_FAIR" ColumnName="DRAIN_MH_FAIR" />
+          <ScalarProperty Name="DRAIN_CB_POOR" ColumnName="DRAIN_CB_POOR" />
+          <ScalarProperty Name="DRAIN_CB_FAIR" ColumnName="DRAIN_CB_FAIR" />
+          <ScalarProperty Name="NO_PERMIT_TILL_DATE" ColumnName="NO_PERMIT_TILL_DATE" />
+          <ScalarProperty Name="R3_DATE" ColumnName="R3_DATE" />
+          <ScalarProperty Name="R4_DATE" ColumnName="R4_DATE" />
+          <ScalarProperty Name="IS_R3" ColumnName="IS_R3" />
+          <ScalarProperty Name="IS_R4" ColumnName="IS_R4" />
+          <ScalarProperty Name="DRILLINGS_SEWAG_LENGTH" ColumnName="DRILLINGS_SEWAG_LENGTH" />
+          <ScalarProperty Name="DRILLINGS_WATER_LENGTH" ColumnName="DRILLINGS_WATER_LENGTH" />
+          <ScalarProperty Name="DRILLINGS_ELEC_LENGTH" ColumnName="DRILLINGS_ELEC_LENGTH" />
+          <ScalarProperty Name="DRILLINGS_STC_LENGTH" ColumnName="DRILLINGS_STC_LENGTH" />
+          <ScalarProperty Name="DRILLINGS_SEWAGE" ColumnName="DRILLINGS_SEWAGE" />
+          <ScalarProperty Name="DRILLINGS_WATER" ColumnName="DRILLINGS_WATER" />
+          <ScalarProperty Name="DRILLINGS_ELEC" ColumnName="DRILLINGS_ELEC" />
+          <ScalarProperty Name="DRILLINGS_STC" ColumnName="DRILLINGS_STC" />
+          <ScalarProperty Name="REGION_ID" ColumnName="REGION_ID" />
+          <ScalarProperty Name="ENTRANCE" ColumnName="ENTRANCE" />
+          <ScalarProperty Name="PARKING_METHOD_ID" ColumnName="PARKING_METHOD_ID" />
+          <ScalarProperty Name="INTERSECTION_TRAFFIC_LIGHT" ColumnName="INTERSECTION_TRAFFIC_LIGHT" />
+          <ScalarProperty Name="GIS_SECTION_WIDTH" ColumnName="GIS_SECTION_WIDTH" />
+          <ScalarProperty Name="COMPLETE_FACTOR" ColumnName="COMPLETE_FACTOR" />
+          <ScalarProperty Name="TRAFFIC_FACTOR" ColumnName="TRAFFIC_FACTOR" />
+          <ScalarProperty Name="ENTRANCE_FACTOR" ColumnName="ENTRANCE_FACTOR" />
+          <ScalarProperty Name="TOURISM_FACTOR" ColumnName="TOURISM_FACTOR" />
+          <ScalarProperty Name="POP_FACTOR" ColumnName="POP_FACTOR" />
+          <ScalarProperty Name="INTERSECTION_OPEN_ISLAND" ColumnName="INTERSECTION_OPEN_ISLAND" />
+          <ScalarProperty Name="NTERSECTION_TRAFFIC_LIGHT" ColumnName="NTERSECTION_TRAFFIC_LIGHT" />
+          <ScalarProperty Name="SECTION_ID" ColumnName="SECTION_ID" />
+          <ScalarProperty Name="SEC_WIDTH" ColumnName="SEC_WIDTH" />
+          <ScalarProperty Name="SEC_LENGTH" ColumnName="SEC_LENGTH" />
+          <ScalarProperty Name="SUBDISTRICT" ColumnName="SUBDISTRICT" />
+          <ScalarProperty Name="DISTRICT" ColumnName="DISTRICT" />
+          <ScalarProperty Name="MUNICIPALITY" ColumnName="MUNICIPALITY" />
+          <ScalarProperty Name="SEC_DIRECTION" ColumnName="SEC_DIRECTION" />
+          <ScalarProperty Name="AG_SEC_ISLAND_TRUE" ColumnName="AG_SEC_ISLAND_TRUE" />
+          <ScalarProperty Name="SIDE_CURB_WIDTH" ColumnName="SIDE_CURB_WIDTH" />
+          <ScalarProperty Name="BRDG_TUNEL_TYPE" ColumnName="BRDG_TUNEL_TYPE" />
+          <ScalarProperty Name="DRINAGE_MH_TRUE" ColumnName="DRINAGE_MH_TRUE" />
+          <ScalarProperty Name="SIDEISLAND_WIDTH" ColumnName="SIDEISLAND_WIDTH" />
+          <ScalarProperty Name="SIDEISLAND_TRUE" ColumnName="SIDEISLAND_TRUE" />
+          <ScalarProperty Name="UNPAVED_LENGTH" ColumnName="UNPAVED_LENGTH" />
+          <ScalarProperty Name="BRDG_TUNEL_TRUE" ColumnName="BRDG_TUNEL_TRUE" />
+          <ScalarProperty Name="HOUSES" ColumnName="HOUSES" />
+          <ScalarProperty Name="WATER_VALVE_TRUE" ColumnName="WATER_VALVE_TRUE" />
+          <ScalarProperty Name="STC_MH_TRUE" ColumnName="STC_MH_TRUE" />
+          <ScalarProperty Name="ELECT_MH_TRUE" ColumnName="ELECT_MH_TRUE" />
+          <ScalarProperty Name="SEWAGE_MH_TRUE" ColumnName="SEWAGE_MH_TRUE" />
+          <ScalarProperty Name="DRINAGE_CB_TRUE" ColumnName="DRINAGE_CB_TRUE" />
+          <ScalarProperty Name="AG_SID_ISLAND_TRUE" ColumnName="AG_SID_ISLAND_TRUE" />
+          <ScalarProperty Name="AG_MID_ISLAND_TRUE" ColumnName="AG_MID_ISLAND_TRUE" />
+          <ScalarProperty Name="PUBLICS" ColumnName="PUBLICS" />
+          <ScalarProperty Name="INTERSECTION" ColumnName="INTERSECTION" />
+          <ScalarProperty Name="PAV_MARKERS_TRUE" ColumnName="PAV_MARKERS_TRUE" />
+          <ScalarProperty Name="LIGHTING_TRUE" ColumnName="LIGHTING_TRUE" />
+          <ScalarProperty Name="SIDE_CURB_TRUE" ColumnName="SIDE_CURB_TRUE" />
+          <ScalarProperty Name="MID_ISLAND_TRUE" ColumnName="MID_ISLAND_TRUE" />
+          <ScalarProperty Name="UNPAVED_TRUE" ColumnName="UNPAVED_TRUE" />
+          <ScalarProperty Name="REST_HOUSE" ColumnName="REST_HOUSE" />
+          <ScalarProperty Name="INDISTERIAL" ColumnName="INDISTERIAL" />
+          <ScalarProperty Name="GARDENS" ColumnName="GARDENS" />
+          <ScalarProperty Name="COMMERIAL" ColumnName="COMMERIAL" />
+          <ScalarProperty Name="PAV_MARKERS_TYPE" ColumnName="PAV_MARKERS_TYPE" />
+          <ScalarProperty Name="LIGHTING_LOC" ColumnName="LIGHTING_LOC" />
+          <ScalarProperty Name="WATER_VALVE_COUNT" ColumnName="WATER_VALVE_COUNT" />
+          <ScalarProperty Name="STC_MH_COUNT" ColumnName="STC_MH_COUNT" />
+          <ScalarProperty Name="ELECT_MH_COUNT" ColumnName="ELECT_MH_COUNT" />
+          <ScalarProperty Name="SEWAGE_MH_COUNT" ColumnName="SEWAGE_MH_COUNT" />
+          <ScalarProperty Name="DRINAGE_CB_COUNT" ColumnName="DRINAGE_CB_COUNT" />
+          <ScalarProperty Name="DRINAGE_MH_COUNT" ColumnName="DRINAGE_MH_COUNT" />
+          <ScalarProperty Name="MID_ISLAND_WIDTH" ColumnName="MID_ISLAND_WIDTH" />
+          <ScalarProperty Name="UNPAVED_WIDTH" ColumnName="UNPAVED_WIDTH" />
+          <ScalarProperty Name="SUBDIST_ID" ColumnName="SUBDIST_ID" />
+          <ScalarProperty Name="REGION_NO" ColumnName="REGION_NO" />
+          <ScalarProperty Name="SEC_ORDER" ColumnName="SEC_ORDER" />
+          <ScalarProperty Name="MAIN_NO" ColumnName="MAIN_NO" />
+          <ScalarProperty Name="TO_STREET" ColumnName="TO_STREET" />
+          <ScalarProperty Name="FROM_STREET" ColumnName="FROM_STREET" />
+          <ScalarProperty Name="SECTION_NO" ColumnName="SECTION_NO" />
+          <ScalarProperty Name="MAIN_NAME" ColumnName="MAIN_NAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="SYS_C0015404" TypeName="JpmmsModel.SYS_C0015404" StoreEntitySet="INTERSECTION_SAMPLES">
+      <EndProperty Name="INTERSECTION_SAMPLES">
+        <ScalarProperty Name="INTER_SAMP_ID" ColumnName="INTER_SAMP_ID" />
+      </EndProperty>
+      <EndProperty Name="INTERSECTION">
+        <ScalarProperty Name="INTERSECTION_ID" ColumnName="INTERSECTION_ID" />
+      </EndProperty>
+      <Condition ColumnName="INTERSECTION_ID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="INTERSECTIONS_R01" TypeName="JpmmsModel.INTERSECTIONS_R01" StoreEntitySet="INTERSECTIONS">
+      <EndProperty Name="INTERSECTION">
+        <ScalarProperty Name="INTERSECTION_ID" ColumnName="INTERSECTION_ID" />
+      </EndProperty>
+      <EndProperty Name="MAIN_STREETS">
+        <ScalarProperty Name="MAIN_ST_ID" ColumnName="MAIN_STREET_ID" />
+      </EndProperty>
+      <Condition ColumnName="MAIN_STREET_ID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SYS_C0015471" TypeName="JpmmsModel.SYS_C0015471" StoreEntitySet="LANE_SAMPLES">
+      <EndProperty Name="LANE_SAMPLES">
+        <ScalarProperty Name="SAMPLE_ID" ColumnName="SAMPLE_ID" />
+      </EndProperty>
+      <EndProperty Name="LANE">
+        <ScalarProperty Name="LANE_ID" ColumnName="LANE_ID" />
+      </EndProperty>
+      <Condition ColumnName="LANE_ID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SYS_C0015480" TypeName="JpmmsModel.SYS_C0015480" StoreEntitySet="LANE">
+      <EndProperty Name="LANE">
+        <ScalarProperty Name="LANE_ID" ColumnName="LANE_ID" />
+      </EndProperty>
+      <EndProperty Name="SECTION">
+        <ScalarProperty Name="SECTION_ID" ColumnName="SECTION_ID" />
+      </EndProperty>
+      <Condition ColumnName="SECTION_ID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SECTIONS_R01" TypeName="JpmmsModel.SECTIONS_R01" StoreEntitySet="SECTIONS">
+      <EndProperty Name="SECTION">
+        <ScalarProperty Name="SECTION_ID" ColumnName="SECTION_ID" />
+      </EndProperty>
+      <EndProperty Name="MAIN_STREETS">
+        <ScalarProperty Name="MAIN_ST_ID" ColumnName="MAIN_STREET_ID" />
+      </EndProperty>
+      <Condition ColumnName="MAIN_STREET_ID" IsNull="false" />
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

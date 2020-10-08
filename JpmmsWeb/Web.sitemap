@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode>
+    <siteMapNode url="" title="إدارة النظام"  description="">
+      <siteMapNode url="~/ASPX/Security/Users.aspx" title="الصلاحيات والمستخدمين"  description="" />
+      <siteMapNode url="~/ASPX/Security/ChangePassword.aspx" title="تغيير كلمة السر"  description="" />
+      <siteMapNode url="" title="إعدادات النظام"  description="">
+        <siteMapNode url="~/ASPX/Lookups/DistressTypes.aspx" title="انواع العيوب" />
+        <siteMapNode url="~/ASPX/Lookups/MaintDeciding.aspx" title="قرارات الصيانة للعيوب" />
+        <siteMapNode url="~/ASPX/Lookups/Surveyors.aspx" title="المساحين" />
+        <siteMapNode url="~/ASPX/Lookups/Contractors.aspx" title="المقاولين" />
+      </siteMapNode>
+      <siteMapNode url="~/ASPX/Home/logout.aspx" title="الخروج من النظام" />
+    </siteMapNode>
+    <siteMapNode url="" title="البيانات العامة للطرق"  description="">
+      <siteMapNode title="البيانات العامة للطرق الرئيسية" url="~/ASPX/Sections/MainStreets.aspx" />
+      <siteMapNode title="البيانات الوصفية للطرق ">
+        <siteMapNode title="مقاطع الطرق الرئيسية" url="~/ASPX/Sections/SectionInfo.aspx" />
+        <siteMapNode title="تقاطعات الطرق الرئيسية" url="~/ASPX/Intersections/IntersectionInfo.aspx" />
+        <siteMapNode title="المناطق والطرق الفرعية" url="~/ASPX/Regions/RegionInfo.aspx" />
+      </siteMapNode>
+      <siteMapNode title="بيانات عيوب الطرق">
+        <siteMapNode title="مقاطع الطرق الرئيسية" url="~/ASPX/Sections/SectionDistresses.aspx" />
+        <siteMapNode title="تقاطعات الطرق الرئيسية" url="~/ASPX/Intersections/IntersectionDistresses.aspx" />
+        <siteMapNode title="المناطق والطرق الفرعية" url="~/ASPX/Regions/Regiondistresses.aspx" />
+      </siteMapNode>
+      <siteMapNode title="بيانات الطرق المستحدثة *" url="~/ASPX/Sections/R4StreetsInfo.aspx" />
+    </siteMapNode>
+    <siteMapNode url="" title="العمليات"  description="">
+      <siteMapNode title="حدود التدخل لمعايير التقييم" url="~/ASPX/Lookups/MaintDecLimits.aspx" />
+      <siteMapNode title="وحدة تكلفة قرارات الصيانة " url="~/ASPX/Lookups/MaintDecisions.aspx" />
+      <siteMapNode title="أوزان معاملات اولويات الصيانة" url="~/ASPX/Lookups/MaintPrioWeights.aspx" />
+    </siteMapNode>
+    <siteMapNode url="" title="تقييم حالة الرصف"  description="">
+      <siteMapNode title="معاملات تقييم حالة الرصف" url="~/ASPX/Lookups/UdiRates.aspx" />
+      <siteMapNode title="حساب حالة الرصف" url="~/ASPX/Operations/PavementStatusCalc.aspx" />
+    </siteMapNode>
+    <siteMapNode url="" title="قرارات الصيانة"  description="">
+      <siteMapNode title="قرارات الصيانة لعناصر شبكة الطرق" url="~/ASPX/Operations/MaintenanceDecisionCalc.aspx" />
+    </siteMapNode>
+    <siteMapNode url="" title="ميزانية وتكاليف الصيانة"  description="">
+      <siteMapNode title="ميزانية تكاليف كامل الشبكة" url="" />
+      <siteMapNode title="ميزانية الصيانة بدون اوامر العمل الصادرة" url ="" />
+      <siteMapNode title="تحديد أولويات الصيانة لميزانية محدودة" url ="" />
+    </siteMapNode>
+    <siteMapNode url="" title="وسائط عرض مرئية"  description="">
+      <siteMapNode title="معرض الفيديو" url="" />
+      <siteMapNode url="~/ASPX/Operations/ImagesGallery.aspx" title="معرض الصور" />
+    </siteMapNode>
+    <siteMapNode url="" title="التقارير"  description="">
+      <siteMapNode  title="تقارير البيانات الوصفية">        
+        <siteMapNode  title="دليل عناصر شبكة الطرق" url="~/ASPX/Reports/ReportIntersectionInfo.aspx" />
+        <siteMapNode  title="المقاطع" url="~/ASPX/Reports/SectionsInfoReport.aspx" />
+        <siteMapNode  title="التقاطعات" url="~/ASPX/Reports/IntersectInfoReport.aspx" />
+        <siteMapNode  title="مناطق الشوارع الفرعية" url="~/ASPX/Reports/SecondaryStInfoReport.aspx" />
+        <siteMapNode  title="العينات" url="~/ASPX/Reports/LaneSamplesInfoReport.aspx" />
+        <siteMapNode  title="الجسور والأنفاق" url="~/ASPX/Reports/BridgesTunnelsInfoReport.aspx" />
+        <siteMapNode  title="إجمالي العلامات الوصفية" url="~/ASPX/Reports/RoadPartsCountReport.aspx" />
+        <siteMapNode  title="الجولات الرقابية *" url="~/ASPX/Reports/MonitoringRoundsReport.aspx" />
+      </siteMapNode>
+      <siteMapNode  title="المقاطع">
+        <siteMapNode  title=" العيوب" url="~/ASPX/Reports/SectionDistresses.aspx" />
+        <siteMapNode  title="تقييم حالة الرصف" url="~/ASPX/Reports/PavementEvalSectionsReport.aspx" />
+        <siteMapNode  title="نتائج العد المروري" url="~/ASPX/Reports/TrafficCountingOnSectionsReport.aspx" />
+        <siteMapNode  title="نتائج قياس الحمل الساقط للشارع" url="~/ASPX/Reports/FWD_Reports.aspx" />
+        <siteMapNode  title="قرارات الصيانة" url="~/ASPX/Reports/MaintenanceDecisionsReport.aspx" />
+        <siteMapNode  title="أولويات الصيانة" url="~/ASPX/Reports/MaintenancePrioritiesReport.aspx" />
+        <siteMapNode  title="تكلفة تنفيذ قرارات الصيانة" url="~/ASPX/Reports/MaintDecisionsCostingReport.aspx" />
+        <siteMapNode  title="حالة الوعورة" url="~/ASPX/Reports/IRI_Report.aspx" />
+        <siteMapNode  title="قياس تخدد طبقة الرصف" url="~/ASPX/Reports/RuttingReport.aspx" />
+        <siteMapNode  title="اختبارات مقاومة الانزلاق" url="~/ASPX/Reports/SkidReport.aspx" />
+        <siteMapNode  title="قياس سماكات طبقات الرصف" url="~/ASPX/Reports/GPR_Report.aspx" />
+      </siteMapNode>
+      <siteMapNode  title="التقاطعات">
+        <siteMapNode  title=" العيوب" url="~/ASPX/Reports/IntersectionDistresses.aspx" />
+        <siteMapNode  title="تقييم حالة الرصف" url="~/ASPX/Reports/PavementEvalIntersectionsReport.aspx" />
+      </siteMapNode>
+      <siteMapNode  title="المناطق والشوارع الفرعية">
+        <siteMapNode  title=" العيوب" url="~/ASPX/Reports/RegionDistressesReport.aspx" />
+        <siteMapNode  title="تقييم حالة الرصف" url="~/ASPX/Reports/PavementEvalRegionReport.aspx" />
+      </siteMapNode>
+      <siteMapNode  title="تقارير الرسوم البيانية">
+        <siteMapNode  title="حالة رصف المساحات المسطحة لشبكة الطرق" url="~/ASPX/Reports/PavementStatus.aspx" />
+        <siteMapNode  title="حالة رصف المساحات المسطحة للشوارع" url="~/ASPX/Reports/ChartedPavementStatus.aspx" />
+      </siteMapNode>
+      <siteMapNode  title="نماذج المسح" url="~/ASPX/Reports/SurveyingFormsReport.aspx" />
+      <siteMapNode  title="ضبط جودة المسوحات" url="~/ASPX/Reports/QcReports.aspx" />
+      <siteMapNode  title="التحسينات المرورية *" url="~/ASPX/Reports/TrafficEnhancesMaintOrdersReport.aspx" />
+      <siteMapNode  title="كميات المساحين">
+        <siteMapNode  title="المسح المتأخر على المساحين - مقاطع، تقاطعات، مناطق" url="~/ASPX/Reports/SurveyorsLateWorkReport.aspx" />
+        <siteMapNode  title="إنتاج المساحين - مقاطع، تقاطعات، مناطق" url="~/ASPX/Reports/SurveyorsProductionReport.aspx" />
+        <siteMapNode  title="المسوحات ذات الملاحظات  - مقاطع، تقاطعات، مناطق" url="~/ASPX/Reports/SurveyorsNotesReport.aspx" />
+      </siteMapNode>
+      <siteMapNode  title="الشوارع الممسوحة" url="~/ASPX/Reports/FinishedSurveyingReport.aspx" />
+      <siteMapNode title="كميات العيوب على عناصر شبكة الطرق" url="~/ASPX/Reports/DistressQuantities.aspx" />
+      <siteMapNode  title="تقييم حالة الرصف لكامل شبكة الطرق" url="~/ASPX/Reports/PavementStatusAllRoads.aspx" />
+      <siteMapNode  title="ميزانية تنفيذ قرارات الصيانة" url="~/ASPX/Reports/BudgetMaintDecisions.aspx" />
+      <siteMapNode title="عمليات صيانة عناصر شبكة الطرق " url="~/ASPX/Reports/FeedbackReports.aspx" />
+      <siteMapNode title ="مقارنة حالة الرصف عبر المسوحات" url ="~/ASPX/Reports/UdiCompareReport.aspx" />
+      <siteMapNode title="تقارير أخرى متنوعة" url="~/ASPX/Reports/ReportingOthers.aspx" />
+    </siteMapNode>
+    <siteMapNode  title="تقارير الخرائط">
+      <siteMapNode  url="~/ASPX/Reports/MapReports/MainStreetsUdiMap.aspx" title="حالة رصف الشوارع الرئيسية" />
+      <siteMapNode  url="~/ASPX/Reports/MapReports/RegionsUdiMap.aspx" title="حالة رصف مناطق الشوارع الفرعية" />
+      <siteMapNode  url="~/ASPX/Reports/MapReports/MainStMaintDecisionsMap.aspx" title="قرارات الصيانة للطرق الرئيسية" />
+      <siteMapNode  url="~/ASPX/Reports/MapReports/RegionsSecondStMaintdecisionMap.aspx" title="قرارات الصيانة للشوارع الفرعية" />
+      <siteMapNode  url="~/ASPX/Reports/MapReports/FwdMaps.aspx" title="حالة التقييم الإنشائي للطرق الرئيسية" />
+      <siteMapNode  url="~/ASPX/Reports/MapReports/IriMaps.aspx" title="حالة وعورة الطرق الرئيسية" />
+      <siteMapNode  url="~/ASPX/Reports/MapReports/SkidMaps.aspx" title=" مقاومة الانزلاق للشوارع الرئيسية" />
+      <siteMapNode  url="~/ASPX/Reports/MapReports/TrafficCountingMaps.aspx" title="العد المروري للشوارع الرئيسية" />
+    </siteMapNode>
+    <siteMapNode  title="...">
+      <siteMapNode title="أولويات الصيانة">
+        <siteMapNode  title="الطرق الرئيسية">
+          <siteMapNode  url="~/ASPX/Sections/SectionMaintenancePriorities.aspx" title="مقاطع " />
+          <siteMapNode  url="~/ASPX/Intersections/IntersectMaintenancePriorities.aspx" title="تقاطعات " />
+        </siteMapNode>
+        <siteMapNode url="~/ASPX/Regions/RegionMaintenancePriorities.aspx" title="أولويات  الصيانة لمناطق الطرق الفرعية" />
+        <siteMapNode  url="~/ASPX/Operations/MaintPriority.aspx" title="أولويات الصيانة لكامل شبكة الطرق" />
+      </siteMapNode>
+      <siteMapNode  title="ضبط الجودة">
+        <siteMapNode  url="~/ASPX/QC/SectionsQC.aspx" title="مقاطع طرق رئيسية" />
+        <siteMapNode  url="~/ASPX/QC/IntersectQC.aspx" title="تقاطعات طرق رئيسية" />
+        <siteMapNode  url="~/ASPX/QC/RegionQC.aspx" title="مناطق شوارع فرعية" />
+      </siteMapNode>
+      <siteMapNode  title="بيانات المسح">
+        <siteMapNode  url="~/ASPX/SurveyingInfo/SurveyingInfo.aspx" title="معلومات المسح"/>
+        <siteMapNode  url="~/ASPX/SurveyingInfo/SyurveyQty.aspx" title="كمية المسح"/>
+      </siteMapNode>
+      <siteMapNode  url="~/ASPX/Operations/MaintenanceOrders.aspx" title="اوامر الصيانة *"/>
+      <siteMapNode  url="~/ASPX/Operations/TrafficEnhances/SearchTrafficEnhances.aspx" title="التحسينات المرورية *"/>
+      <siteMapNode  url="~/ASPX/Sections/DrillingPermitsIssue.aspx" title="رخص الحفريات على المقاطع *"/>
+      <siteMapNode title="البلاغات - حالة الرصف وقرارات الصيانة" url ="~/ASPX/Operations/MaintDecUdi.aspx" />
+      <siteMapNode title="عمليات صيانة عناصر شبكة الطرق" url ="~/ASPX/Operations/Feedbacks.aspx" />
+      <siteMapNode title ="مقارنة حالة رصف عناصر شبكة الطرق عبر المسوحات" url="~/ASPX/Operations/UdiCompare.aspx"/>
+    </siteMapNode>
+    <siteMapNode title="المساعدة">
+      <siteMapNode  title="دليل المستخدم" url="" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

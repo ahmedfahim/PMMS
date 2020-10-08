@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="JpmmsWeb">
+</Property><Property Name="Solution File" Value="E:\inetpub\wwwroot\Source Codes\JpmmsWeb\JpmmsWeb.sln">
+</Property><Property Name="Date" Value="Sunday, December 8, 2019">
+</Property><Property Name="Time" Value="8:27:28 AM">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="DotNetSources.Web.UI.Buttons" Source="DotNetSources.Web.UI.Buttons\DotNetSources.Web.UI.Buttons.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="DotNetSources.Web.UI.Buttons" Source="DotNetSources.Web.UI.Buttons\DotNetSources.Web.UI.Buttons.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DotNetSources.Web.UI.Buttons" Source="DotNetSources.Web.UI.Buttons\DotNetSources.Web.UI.Buttons.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JpmmsModel.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="10.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+  <EntityContainer Name="JpmmsModelStoreContainer">
+    <EntitySet Name="INTERSECTION_SAMPLES" EntityType="JpmmsModel.Store.INTERSECTION_SAMPLES" store:Type="Tables" Schema="JPMMS" />
+    <EntitySet Name="INTERSECTIONS" EntityType="JpmmsModel.Store.INTERSECTIONS" store:Type="Tables" Schema="JPMMS" />
+    <EntitySet Name="LANE" EntityType="JpmmsModel.Store.LANE" store:Type="Tables" Schema="JPMMS" />
+    <EntitySet Name="LANE_SAMPLES" EntityType="JpmmsModel.Store.LANE_SAMPLES" store:Type="Tables" Schema="JPMMS" />
+    <EntitySet Name="MAIN_STREETS" EntityType="JpmmsModel.Store.MAIN_STREETS" store:Type="Tables" Schema="JPMMS" />
+    <EntitySet Name="SECTIONS" EntityType="JpmmsModel.Store.SECTIONS" store:Type="Tables" Schema="JPMMS" />
+    <AssociationSet Name="INTERSECTIONS_R01" Association="JpmmsModel.Store.INTERSECTIONS_R01">
+      <End Role="MAIN_STREETS" EntitySet="MAIN_STREETS" />
+      <End Role="INTERSECTIONS" EntitySet="INTERSECTIONS" />
+    </AssociationSet>
+    <AssociationSet Name="SECTIONS_R01" Association="JpmmsModel.Store.SECTIONS_R01">
+      <End Role="MAIN_STREETS" EntitySet="MAIN_STREETS" />
+      <End Role="SECTIONS" EntitySet="SECTIONS" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0015404" Association="JpmmsModel.Store.SYS_C0015404">
+      <End Role="INTERSECTIONS" EntitySet="INTERSECTIONS" />
+      <End Role="INTERSECTION_SAMPLES" EntitySet="INTERSECTION_SAMPLES" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0015471" Association="JpmmsModel.Store.SYS_C0015471">
+      <End Role="LANE" EntitySet="LANE" />
+      <End Role="LANE_SAMPLES" EntitySet="LANE_SAMPLES" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0015480" Association="JpmmsModel.Store.SYS_C0015480">
+      <End Role="SECTIONS" EntitySet="SECTIONS" />
+      <End Role="LANE" EntitySet="LANE" />
+    </AssociationSet>
+  </EntityContainer>
+  <!--Errors Found During Generation:
+      warning 6005: The data type 'sdo_geometry' is currently not supported for the target .NET Framework version; the column 'GEOMETRY' in table 'JPMMS.INTERSECTION_SAMPLES' was excluded.
+      -->
+  <EntityType Name="INTERSECTION_SAMPLES">
+    <Key>
+      <PropertyRef Name="INTER_SAMP_ID" />
+    </Key>
+    <Property Name="INTER_SAMP_NO" Type="varchar2" MaxLength="2" />
+    <Property Name="INTER_NO" Type="varchar2" MaxLength="8" />
+    <Property Name="INTERSEC_SAMP_AREA" Type="float" Precision="126" />
+    <Property Name="MAIN_NO" Type="varchar2" MaxLength="3" />
+    <Property Name="INTER_SAMP_ID" Type="number" Nullable="false" />
+    <Property Name="INTER_SAMP_NO_IRI" Type="varchar2" MaxLength="10" />
+    <Property Name="INTERSECTION_ID" Type="number" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6005: The data type 'sdo_geometry' is currently not supported for the target .NET Framework version; the column 'GEOMETRY' in table 'JPMMS.INTERSECTIONS' was excluded.
+      -->
+  <EntityType Name="INTERSECTIONS">
+    <Key>
+      <PropertyRef Name="INTERSECTION_ID" />
+    </Key>
+    <Property Name="ID" Type="number" />
+    <Property Name="INTER_NO" Type="varchar2" MaxLength="8" />
+    <Property Name="MUNIC_NO" Type="varchar2" MaxLength="2" />
+    <Property Name="HOUSES" Type="varchar2" MaxLength="1" />
+    <Property Name="COMMERIAL" Type="varchar2" MaxLength="1" />
+    <Property Name="PUBLICS" Type="varchar2" MaxLength="1" />
+    <Property Name="GARDENS" Type="varchar2" MaxLength="1" />
+    <Property Name="REST_HOUSE" Type="varchar2" MaxLength="1" />
+    <Property Name="UNPAVED_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="UNPAVED_WIDTH" Type="number" Precision="5" Scale="2" />
+    <Property Name="MID_ISLAND_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="MID_ISLAND_WIDTH" Type="number" Precision="5" Scale="2" />
+    <Property Name="SIDE_CURB_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="SIDE_CURB_WIDTH" Type="number" Precision="5" Scale="2" />
+    <Property Name="LIGHTING_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="PAV_MARKERS_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="PAV_MARKERS_TYPE" Type="varchar2" MaxLength="10" />
+    <Property Name="INTERSECTION" Type="varchar2" MaxLength="1" />
+    <Property Name="BRDG_TUNEL_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="BRDG_TUNEL_TYPE" Type="varchar2" MaxLength="10" />
+    <Property Name="AG_MID_ISLAND_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="AG_SID_ISLAND_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="DRINAGE_MH_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="DRINAGE_MH_COUNT" Type="number" />
+    <Property Name="DRINAGE_CB_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="DRINAGE_CB_COUNT" Type="number" />
+    <Property Name="SEWAGE_MH_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="ELECT_MH_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="ELECT_MH_COUNT" Type="number" />
+    <Property Name="STC_MH_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="STC_MH_COUNT" Type="number" />
+    <Property Name="WATER_VALVE_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="WATER_VALVE_COUNT" Type="number" />
+    <Property Name="MAIN_NO" Type="varchar2" MaxLength="3" />
+    <Property Name="MAIN_NAME" Type="varchar2" MaxLength="150" />
+    <Property Name="UNPAVED_LENGTH" Type="number" Precision="5" Scale="2" />
+    <Property Name="SIDEISLAND_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="SIDEISLAND_WIDTH" Type="number" Precision="5" Scale="2" />
+    <Property Name="SEWAGE_MH_COUNT" Type="number" />
+    <Property Name="AG_SEC_SIDE_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="LIGHTING_LOC" Type="varchar2" MaxLength="50" />
+    <Property Name="INDISTERIAL" Type="varchar2" MaxLength="1" />
+    <Property Name="INTEREC_STREET1" Type="varchar2" MaxLength="150" />
+    <Property Name="INTEREC_STREET2" Type="varchar2" MaxLength="150" />
+    <Property Name="SUBMUNIC_NAME" Type="varchar2" MaxLength="75" />
+    <Property Name="INTERSECTION_ORDER" Type="number" />
+    <Property Name="INTERSECTION_LENGTH" Type="number" Precision="5" Scale="2" />
+    <Property Name="INTERSECTION_ID" Type="number" Nullable="false" />
+    <Property Name="MAIN_STREET_ID" Type="number" />
+    <Property Name="INTERSECT_CTRL_TYPE_ID" Type="number" />
+    <Property Name="STREET1_FACTOR" Type="number" />
+    <Property Name="TUNNEL_INTERSECT_TRUE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="PAVE_MARK_CERAMICS" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="PAVE_MARK_CERAMICS_INTERSECT" Type="varchar2" MaxLength="1" />
+    <Property Name="INTERSECT_TYPE_ID" Type="number" />
+    <Property Name="SEWAGE_MH_INTERSECT_COUNT" Type="number" />
+    <Property Name="MID_ISLAND_INTERSECT_TRUE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="STREET2_FACTOR" Type="number" />
+    <Property Name="UNPAVED_INTERSECT_TRUE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="DRINAGE_CB_INTERSECT_COUNT" Type="number" />
+    <Property Name="SIDEISLAND_WIDTH_INTERSECT" Type="number" Precision="5" Scale="2" />
+    <Property Name="ELECT_MH_INTERSECT_TRUE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="UNPAVED_INTERSECT_WIDTH" Type="number" Precision="5" Scale="2" />
+    <Property Name="UNPAVED_INTERSECT_LENGTH" Type="number" Precision="5" Scale="2" />
+    <Property Name="AG_SID_ISLAND_INTERSECT_TRUE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="ELECT_MH_INTERSECT_COUNT" Type="number" />
+    <Property Name="SEWAGE_MH_INTERSECT_TRUE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="LIGHTING_LOC_INTERSECT" Type="varchar2" MaxLength="50" />
+    <Property Name="WATER_VALVE_INTERSECT_TRUE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="MID_ISLAND_WIDTH_INTERSECT" Type="number" Precision="5" Scale="2" />
+    <Property Name="AG_MID_ISLAND_INTERSECT_TRUE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="STC_MH_INTERSECT_TRUE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="DRINAGE_MH_INTERSECT_TRUE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="DRINAGE_MH_INTERSECT_COUNT" Type="number" />
+    <Property Name="HAS_BRIDGES_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SIDEISLAND_INTERSECT_TRUE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="AG_SEC_ISLAND_TRUE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="STC_MH_INTERSECT_COUNT" Type="number" />
+    <Property Name="HAS_BRIDGES" Type="varchar2" MaxLength="1" />
+    <Property Name="PAVE_MARK_PAINT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="PAVE_MARK_PAINT_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="BRDG_TUNEL_TYPE_INTERSECT" Type="varchar2" MaxLength="150" />
+    <Property Name="PAV_MARKERS_INTERSECT_TRUE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SIDE_CURB_INTERSECT_TRUE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SIDE_CURB_WIDTH_INTERSECT" Type="number" Precision="5" Scale="2" />
+    <Property Name="LIGHTING_INTERSECT_TRUE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="WATER_VALVE_INTERSECT_COUNT" Type="number" />
+    <Property Name="DRINAGE_CB_INTERSECT_TRUE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="AG_SEC_ISLAND_INTERSECT_TRUE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="DRILLINGS_STC" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="DRILLINGS_ELEC" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="DRILLINGS_WATER" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="DRILLINGS_SEWAGE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="DRILLINGS_STC_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="DRILLINGS_ELEC_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="DRILLINGS_WATER_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="DRILLINGS_SEWAGE_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="DRILLINGS_STC_LEN" Type="number" Precision="8" Scale="2" />
+    <Property Name="DRILLINGS_STC_LEN_INTERSECT" Type="number" Precision="8" Scale="2" />
+    <Property Name="DRILLINGS_ELEC_LEN" Type="number" Precision="8" Scale="2" />
+    <Property Name="DRILLINGS_ELEC_LEN_INTERSECT" Type="number" Precision="8" Scale="2" />
+    <Property Name="DRILLINGS_WATER_LEN" Type="number" Precision="8" Scale="2" />
+    <Property Name="DRILLINGS_WATER_LEN_INTERSECT" Type="number" Precision="8" Scale="2" />
+    <Property Name="DRILLINGS_SEWAG_LEN" Type="number" Precision="8" Scale="2" />
+    <Property Name="DRILLINGS_SEWAG_LEN_INTERSECT" Type="number" Precision="8" Scale="2" />
+    <Property Name="CONCRETE_BLOCKS" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="CONCRETE_BLOCKS_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="CONCRETE_BLOCKS_COUNT" Type="number" />
+    <Property Name="CONCRETE_BLOCKS_COUNT_INTERSEC" Type="number" />
+    <Property Name="DRAIN_CB_FAIR" Type="number" />
+    <Property Name="DRAIN_CB_FAIR_INTERSECT" Type="number" />
+    <Property Name="DRAIN_CB_POOR" Type="number" />
+    <Property Name="DRAIN_CB_POOR_INTERSECT" Type="number" />
+    <Property Name="DRAIN_MH_FAIR" Type="number" />
+    <Property Name="DRAIN_MH_FAIR_INTERSECT" Type="number" />
+    <Property Name="DRAIN_MH_POOR" Type="number" />
+    <Property Name="DRAIN_MH_POOR_INTERSECT" Type="number" />
+    <Property Name="ELEC_MH_FAIR" Type="number" />
+    <Property Name="ELEC_MH_FAIR_INTERSECT" Type="number" />
+    <Property Name="ELEC_MH_POOR" Type="number" />
+    <Property Name="ELEC_MH_POOR_INTERSECT" Type="number" />
+    <Property Name="STC_MH_FAIR" Type="number" />
+    <Property Name="STC_MH_FAIR_INTERSECT" Type="number" />
+    <Property Name="STC_MH_POOR" Type="number" />
+    <Property Name="STC_MH_POOR_INTERSECT" Type="number" />
+    <Property Name="SEWAGE_MH_FAIR" Type="number" />
+    <Property Name="SEWAGE_MH_FAIR_INTERSECT" Type="number" />
+    <Property Name="SEWAGE_MH_POOR" Type="number" />
+    <Property Name="SEWAGE_MH_POOR_INTERSECT" Type="number" />
+    <Property Name="WATER_MH_FAIR" Type="number" />
+    <Property Name="WATER_MH_FAIR_INTERSECT" Type="number" />
+    <Property Name="WATER_MH_POOR" Type="number" />
+    <Property Name="WATER_MH_POOR_INTERSECT" Type="number" />
+    <Property Name="MID_ISLAND_GOOD" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="MID_ISLAND_GOOD_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="MID_ISLAND_FAIR" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="MID_ISLAND_FAIR_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="MID_ISLAND_POOR" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="MID_ISLAND_POOR_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SIDE_CURB_GOOD" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SIDE_CURB_GOOD_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SIDE_CURB_FAIR" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SIDE_CURB_FAIR_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SIDE_CURB_POOR" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SIDE_CURB_POOR_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SERVICE_LANE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SERVICE_LANE_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="OPENING_SERVICE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="OPENING_SERVICE_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="UTURN_MAIN" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="UTURN_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SLOPE_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SLOPE_MAIN" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="MULTILEVEL" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="LIGHT_GOOD" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="LIGHT_POOR" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="LIGHT_INTERSECT_GOOD" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="LIGHT_INTERSECT_POOR" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="LIGHT_FAIR" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="LIGHT_INTERSECT_FAIR" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="LIGHT_COUNT" Type="number" />
+    <Property Name="LIGHT_COUNT_INTERSECT" Type="number" />
+    <Property Name="SID_ISLAND_GOOD" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SID_ISLAND_FAIR" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SID_ISLAND_POOR" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SID_ISLAND_GOOD_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SID_ISLAND_FAIR_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SID_ISLAND_POOR_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="HOUSES_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="COMMERIAL_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="GARDENS_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="INDISTERIAL_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="PUBLICS_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="REST_HOUSE_INTERSECT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="MEGACOM_COUNT" Type="number" />
+    <Property Name="MOBY_COUNT" Type="number" />
+    <Property Name="UNIPOLE_COUNT" Type="number" />
+    <Property Name="MEGACOM_COUNT_INTERSECT" Type="number" />
+    <Property Name="MOBY_COUNT_INTERSECT" Type="number" />
+    <Property Name="UNIPOLE_COUNT_INTERSECT" Type="number" />
+    <Property Name="SPEED_BUMP_TYPE_ID" Type="number" />
+    <Property Name="SPEED_BUMP_TYPE_INTERSECT_ID" Type="number" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6005: The data type 'sdo_geometry' is currently not supported for the target .NET Framework version; the column 'GEOMETRY' in table 'JPMMS.LANE' was excluded.
+      -->
+  <EntityType Name="LANE">
+    <Key>
+      <PropertyRef Name="LANE_ID" />
+    </Key>
+    <Property Name="ID1" Type="number" />
+    <Property Name="LANE_ID" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="LANE_LENGTH" Type="float" Precision="126" />
+    <Property Name="LANE_TYPE" Type="varchar2" MaxLength="2" />
+    <Property Name="LANE_WIDTH" Type="float" Precision="126" />
+    <Property Name="MAIN_NAME" Type="varchar2" MaxLength="100" />
+    <Property Name="MAIN_NO" Type="varchar2" MaxLength="3" />
+    <Property Name="SECTION_NO" Type="varchar2" MaxLength="9" />
+    <Property Name="SAMPLE_COUNT" Type="number" />
+    <Property Name="SAMPLE_AREA" Type="number" Precision="10" Scale="2" />
+    <Property Name="SECTION_ID" Type="number" />
+    <Property Name="GIS_LANE_WIDTH" Type="float" Precision="126" />
+    <Property Name="LANE_IDD" Type="number" />
+    <Property Name="GIS_LANE_LENGTH" Type="float" Precision="126" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6005: The data type 'sdo_geometry' is currently not supported for the target .NET Framework version; the column 'GEOMETRY' in table 'JPMMS.LANE_SAMPLES' was excluded.
+      -->
+  <EntityType Name="LANE_SAMPLES">
+    <Key>
+      <PropertyRef Name="SAMPLE_ID" />
+    </Key>
+    <Property Name="SAMPLE_ID" Type="number" Nullable="false" />
+    <Property Name="SAMPLE_NO" Type="varchar2" MaxLength="2" />
+    <Property Name="SAMPLE_LENGTH" Type="float" Precision="126" />
+    <Property Name="SAMPLE_WIDTH" Type="float" Precision="126" />
+    <Property Name="LANE_ID" Type="varchar2" MaxLength="50" />
+    <Property Name="MAIN_NO" Type="varchar2" MaxLength="3" />
+    <Property Name="MAIN_NAME" Type="varchar2" MaxLength="100" />
+    <Property Name="LANE_TYPE" Type="varchar2" MaxLength="2" />
+    <Property Name="CLASS" Type="varchar2" MaxLength="1" />
+    <Property Name="MAIN_EN_NAME" Type="varchar2" MaxLength="75" />
+    <Property Name="LANE_IDD" Type="number" />
+    <Property Name="GIS_SAMPLE_WIDTH" Type="float" Precision="4" />
+    <Property Name="MAIN_SRVC_OPENING_LENGTH" Type="number" Precision="5" Scale="2" />
+    <Property Name="SIDEWALK_PAINT_TRUE" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="PARKING_METHOD" Type="number" />
+    <Property Name="MAIN_SRVC_OPENING_TRUE" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="PEDESTRIAN_GOOD" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CONCRETE_BLOCKS" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="HANDICAPPED_SLOPE_GOOD" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="MAIN_SRVC_OPENING_WIDTH" Type="number" Precision="5" Scale="2" />
+    <Property Name="SIDEWALK_PAINT_GOOD" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="HANDICAPPED_SLOPE_TRUE" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="SPEED_BUMPS_ILLEGAL" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="SPEED_BUMPS_LEGAL" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="SPEED_BUMPS_COUNT" Type="number" />
+    <Property Name="PEDESTRIAN" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="IS_PARKING" Type="char" MaxLength="1" />
+    <Property Name="SPEED_BUMPS_TRUE" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="U_TURN_LENGTH" Type="number" Precision="5" Scale="2" />
+    <Property Name="U_TURN_TRUE" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CONCRETE_BLOCKS_COUNT" Type="number" />
+    <Property Name="U_TURN_WIDTH" Type="number" Precision="5" Scale="2" />
+    <Property Name="SPEED_BUMP_TYPE_ID" Type="number" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6005: The data type 'sdo_geometry' is currently not supported for the target .NET Framework version; the column 'GEOMETRY' in table 'JPMMS.MAIN_STREETS' was excluded.
+      -->
+  <EntityType Name="MAIN_STREETS">
+    <Key>
+      <PropertyRef Name="MAIN_ST_ID" />
+    </Key>
+    <Property Name="ID" Type="float" Precision="126" />
+    <Property Name="ENABLED" Type="number" />
+    <Property Name="DATEMODIFI" Type="date" />
+    <Property Name="ID3" Type="number" />
+    <Property Name="MAIN_NO" Type="varchar2" MaxLength="3" />
+    <Property Name="MAIN_NAME" Type="varchar2" MaxLength="100" />
+    <Property Name="CLASS" Type="varchar2" MaxLength="1" />
+    <Property Name="OWLENGTH" Type="float" Precision="126" />
+    <Property Name="MAIN_EN_NAME" Type="varchar2" MaxLength="75" />
+    <Property Name="ONESIDE_WIDTH" Type="number" Precision="5" Scale="2" />
+    <Property Name="STREETNUM" Type="varchar2" MaxLength="6" />
+    <Property Name="MAIN_ST_ID" Type="number" Nullable="false" />
+    <Property Name="CONTRACTOR_ID" Type="number" />
+    <Property Name="IS_R4" Type="char" MaxLength="1" />
+    <Property Name="OFFICIAL_MUNIC_NUM" Type="varchar2" MaxLength="10" />
+    <Property Name="MAINST_CATEGORY_ID" Type="number" />
+    <Property Name="OWNERSHIP_DETAILS" Type="varchar2" MaxLength="250" />
+    <Property Name="FULLY_MUNIC_OWNED" Type="number" Nullable="false" />
+    <Property Name="PARTIALLY_MUNIC_OWNED" Type="number" Nullable="false" />
+    <Property Name="NOT_MUNIC_OWNED" Type="number" Nullable="false" />
+    <Property Name="ALL_INTERSAMP_OWNED_MUNIC" Type="number" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6005: The data type 'sdo_geometry' is currently not supported for the target .NET Framework version; the column 'GEOMETRY' in table 'JPMMS.SECTIONS' was excluded.
+      -->
+  <EntityType Name="SECTIONS">
+    <Key>
+      <PropertyRef Name="SECTION_ID" />
+    </Key>
+    <Property Name="ID" Type="number" />
+    <Property Name="MAIN_NAME" Type="varchar2" MaxLength="150" />
+    <Property Name="SECTION_NO" Type="varchar2" MaxLength="9" />
+    <Property Name="FROM_STREET" Type="varchar2" MaxLength="150" />
+    <Property Name="TO_STREET" Type="varchar2" MaxLength="150" />
+    <Property Name="MAIN_NO" Type="varchar2" MaxLength="3" />
+    <Property Name="SEC_ORDER" Type="number" Precision="2" />
+    <Property Name="REGION_NO" Type="varchar2" MaxLength="6" />
+    <Property Name="SUBDIST_ID" Type="varchar2" MaxLength="2" />
+    <Property Name="UNPAVED_WIDTH" Type="number" Precision="5" />
+    <Property Name="MID_ISLAND_WIDTH" Type="number" Precision="5" />
+    <Property Name="DRINAGE_MH_COUNT" Type="number" Precision="3" />
+    <Property Name="DRINAGE_CB_COUNT" Type="number" Precision="3" />
+    <Property Name="SEWAGE_MH_COUNT" Type="number" Precision="3" />
+    <Property Name="ELECT_MH_COUNT" Type="number" Precision="3" />
+    <Property Name="STC_MH_COUNT" Type="number" Precision="3" />
+    <Property Name="WATER_VALVE_COUNT" Type="number" Precision="3" />
+    <Property Name="LIGHTING_LOC" Type="varchar2" MaxLength="75" />
+    <Property Name="PAV_MARKERS_TYPE" Type="varchar2" MaxLength="10" />
+    <Property Name="COMMERIAL" Type="varchar2" MaxLength="1" />
+    <Property Name="GARDENS" Type="varchar2" MaxLength="1" />
+    <Property Name="INDISTERIAL" Type="varchar2" MaxLength="1" />
+    <Property Name="REST_HOUSE" Type="varchar2" MaxLength="1" />
+    <Property Name="UNPAVED_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="MID_ISLAND_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="SIDE_CURB_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="LIGHTING_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="PAV_MARKERS_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="INTERSECTION" Type="varchar2" MaxLength="1" />
+    <Property Name="PUBLICS" Type="varchar2" MaxLength="1" />
+    <Property Name="AG_MID_ISLAND_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="AG_SID_ISLAND_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="DRINAGE_CB_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="SEWAGE_MH_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="ELECT_MH_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="STC_MH_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="WATER_VALVE_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="HOUSES" Type="varchar2" MaxLength="1" />
+    <Property Name="BRDG_TUNEL_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="UNPAVED_LENGTH" Type="number" Precision="5" Scale="2" />
+    <Property Name="SIDEISLAND_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="SIDEISLAND_WIDTH" Type="number" Precision="5" Scale="2" />
+    <Property Name="DRINAGE_MH_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="BRDG_TUNEL_TYPE" Type="varchar2" MaxLength="70" />
+    <Property Name="SIDE_CURB_WIDTH" Type="number" Precision="5" Scale="2" />
+    <Property Name="AG_SEC_ISLAND_TRUE" Type="varchar2" MaxLength="1" />
+    <Property Name="SEC_DIRECTION" Type="varchar2" MaxLength="2" />
+    <Property Name="MUNICIPALITY" Type="varchar2" MaxLength="50" />
+    <Property Name="DISTRICT" Type="varchar2" MaxLength="75" />
+    <Property Name="SUBDISTRICT" Type="varchar2" MaxLength="75" />
+    <Property Name="SEC_LENGTH" Type="number" Precision="8" Scale="2" />
+    <Property Name="SEC_WIDTH" Type="number" Precision="8" Scale="2" />
+    <Property Name="SECTION_ID" Type="number" Nullable="false" />
+    <Property Name="MAIN_STREET_ID" Type="number" />
+    <Property Name="NTERSECTION_TRAFFIC_LIGHT" Type="varchar2" MaxLength="1" />
+    <Property Name="INTERSECTION_OPEN_ISLAND" Type="varchar2" MaxLength="1" />
+    <Property Name="POP_FACTOR" Type="number" Nullable="false" />
+    <Property Name="TOURISM_FACTOR" Type="number" Nullable="false" />
+    <Property Name="ENTRANCE_FACTOR" Type="number" Nullable="false" />
+    <Property Name="TRAFFIC_FACTOR" Type="number" Nullable="false" />
+    <Property Name="COMPLETE_FACTOR" Type="number" Nullable="false" />
+    <Property Name="GIS_SECTION_WIDTH" Type="number" Precision="8" Scale="2" />
+    <Property Name="INTERSECTION_TRAFFIC_LIGHT" Type="varchar2" MaxLength="1" />
+    <Property Name="PARKING_METHOD_ID" Type="number" />
+    <Property Name="ENTRANCE" Type="number" Nullable="false" />
+    <Property Name="REGION_ID" Type="number" />
+    <Property Name="DRILLINGS_STC" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="DRILLINGS_ELEC" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="DRILLINGS_WATER" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="DRILLINGS_SEWAGE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="DRILLINGS_STC_LENGTH" Type="number" Precision="8" Scale="2" />
+    <Property Name="DRILLINGS_ELEC_LENGTH" Type="number" Precision="8" Scale="2" />
+    <Property Name="DRILLINGS_WATER_LENGTH" Type="number" Precision="8" Scale="2" />
+    <Property Name="DRILLINGS_SEWAG_LENGTH" Type="number" Precision="8" Scale="2" />
+    <Property Name="IS_R4" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="IS_R3" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="R4_DATE" Type="date" />
+    <Property Name="R3_DATE" Type="date" />
+    <Property Name="NO_PERMIT_TILL_DATE" Type="date" />
+    <Property Name="DRAIN_CB_FAIR" Type="number" />
+    <Property Name="DRAIN_CB_POOR" Type="number" />
+    <Property Name="DRAIN_MH_FAIR" Type="number" />
+    <Property Name="DRAIN_MH_POOR" Type="number" />
+    <Property Name="ELEC_MH_FAIR" Type="number" />
+    <Property Name="ELEC_MH_POOR" Type="number" />
+    <Property Name="STC_MH_FAIR" Type="number" />
+    <Property Name="STC_MH_POOR" Type="number" />
+    <Property Name="SEWAGE_MH_FAIR" Type="number" />
+    <Property Name="SEWAGE_MH_POOR" Type="number" />
+    <Property Name="WATER_MH_FAIR" Type="number" />
+    <Property Name="WATER_MH_POOR" Type="number" />
+    <Property Name="MID_ISLAND_GOOD" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="MID_ISLAND_FAIR" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="MID_ISLAND_POOR" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SIDE_CURB_GOOD" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SIDE_CURB_FAIR" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SIDE_CURB_POOR" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="LIGHTING_COUNT" Type="number" />
+    <Property Name="LIGHTING_GOOD" Type="varchar2" MaxLength="1" />
+    <Property Name="LIGHTING_PROPERTY_CONFLICT" Type="varchar2" MaxLength="1" />
+    <Property Name="MEGACOM_COUNT" Type="number" />
+    <Property Name="MOBY_COUNT" Type="number" />
+    <Property Name="UNIPOLE_COUNT" Type="number" />
+    <Property Name="LIGHTING_CONTROLS_COUNT" Type="number" />
+    <Property Name="MULTILEVEL" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="MARKER_CERAMIC" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="MARKER_PAINT" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SID_ISLAND_GOOD" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SID_ISLAND_FAIR" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="SID_ISLAND_POOR" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="PAVED_BY_MUNIC" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="NOT_PAVED_BY_DETAILS" Type="varchar2" MaxLength="500" />
+    <Property Name="OWNED_BY_MUNIC" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="OWNED_DETAILS" Type="varchar2" MaxLength="500" />
+    <Property Name="LIGHT_FAIR" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="LIGHT_POOR" Type="varchar2" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <Association Name="INTERSECTIONS_R01">
+    <End Role="MAIN_STREETS" Type="JpmmsModel.Store.MAIN_STREETS" Multiplicity="0..1" />
+    <End Role="INTERSECTIONS" Type="JpmmsModel.Store.INTERSECTIONS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAIN_STREETS">
+        <PropertyRef Name="MAIN_ST_ID" />
+      </Principal>
+      <Dependent Role="INTERSECTIONS">
+        <PropertyRef Name="MAIN_STREET_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SECTIONS_R01">
+    <End Role="MAIN_STREETS" Type="JpmmsModel.Store.MAIN_STREETS" Multiplicity="0..1" />
+    <End Role="SECTIONS" Type="JpmmsModel.Store.SECTIONS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAIN_STREETS">
+        <PropertyRef Name="MAIN_ST_ID" />
+      </Principal>
+      <Dependent Role="SECTIONS">
+        <PropertyRef Name="MAIN_STREET_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0015404">
+    <End Role="INTERSECTIONS" Type="JpmmsModel.Store.INTERSECTIONS" Multiplicity="0..1" />
+    <End Role="INTERSECTION_SAMPLES" Type="JpmmsModel.Store.INTERSECTION_SAMPLES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INTERSECTIONS">
+        <PropertyRef Name="INTERSECTION_ID" />
+      </Principal>
+      <Dependent Role="INTERSECTION_SAMPLES">
+        <PropertyRef Name="INTERSECTION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0015471">
+    <End Role="LANE" Type="JpmmsModel.Store.LANE" Multiplicity="0..1" />
+    <End Role="LANE_SAMPLES" Type="JpmmsModel.Store.LANE_SAMPLES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LANE">
+        <PropertyRef Name="LANE_ID" />
+      </Principal>
+      <Dependent Role="LANE_SAMPLES">
+        <PropertyRef Name="LANE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0015480">
+    <End Role="SECTIONS" Type="JpmmsModel.Store.SECTIONS" Multiplicity="0..1" />
+    <End Role="LANE" Type="JpmmsModel.Store.LANE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SECTIONS">
+        <PropertyRef Name="SECTION_ID" />
+      </Principal>
+      <Dependent Role="LANE">
+        <PropertyRef Name="SECTION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

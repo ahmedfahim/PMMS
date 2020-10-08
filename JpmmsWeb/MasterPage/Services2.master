@@ -1,0 +1,123 @@
+<%@ Master Language="VB" CodeFile="Services2.master.vb" Inherits="MasterPage_Services2" %>
+
+<%@ Register Src="../Controls/Footer.ascx" TagName="Footer" TagPrefix="uc2" %>
+<%@ Register Src="../Controls/Header.ascx" TagName="Header" TagPrefix="uc1" %>
+<%@ Register Src="../Controls/right_menu.ascx" TagName="right_menu" TagPrefix="uc5" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="rtl" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1256" />
+    <title>أمانة محافظة جدة</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="../Css/GeneralStyle.css" type="text/css" />
+    <script type="text/javascript">
+        window.history.forward();
+        function noBack() { window.history.forward(); }
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-27367052-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</head>
+<body onload="noBack();" onpageshow="if (event.persisted) noBack();">
+    <form id="form2" runat="server">
+    <!--Header Table Start -->
+    <uc1:Header ID="Header1" runat="server" />
+    <!--Header Table End -->
+    <!--Page Body Table Start -->
+    <table align="center" cellpadding="0" cellspacing="0" style="width: 980px; height: 500px;
+        background-color: #FFFFFF; border-collapse: collapse;">
+        <!--Page Body Row Start -->
+        <tr>
+            <td width="7px" style="background-color: #E6E6E6">
+            </td>
+            <td valign="top" style="width: 967px; height: 100%;">
+                <table align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse;
+                    width: 100%; height: 100%">
+                    <tr>
+                        <td valign="top" width="175px" height="100%" style="padding: 0px 8px 0px 0px;">
+                            <uc5:right_menu ID="right_menu1" runat="server" />
+                        </td>
+                        <td valign="top" height="100%" width="792px">
+                            <table class="BodyBox" align="center" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="HeaderRightCorner">
+                                    </td>
+                                    <td class="HeaderRepeat">
+                                        &nbsp;
+                                    </td>
+                                    <td class="HeaderLeftCorner">
+                                    </td>
+                                </tr>
+                                <!--Title Page Bar -->
+                                <tr>
+                                    <td class="TitleRight">
+                                    </td>
+                                    <td valign="top">
+                                        <table class="Title" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="TitleRepeat">
+                                                    <div>
+                                                        <p>
+                                                            <asp:Label ID="lbl_Title" runat="server"></asp:Label>
+                                                        </p>
+                                                    </div>
+                                                </td>
+                                                <td width="100%">
+                                                    <div class="TitleBG">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td class="TitleLeft">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="BodyRightRepeat">
+                                    </td>
+                                    <td class="Body">
+                                        <!--Page Content-->
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </td>
+                                    <td class="BodyLeftRepeat">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="FooterRightCorner">
+                                    </td>
+                                    <td class="FooterRepeat">
+                                    </td>
+                                    <td class="FooterLeftCorner">
+                                    </td>
+                                </tr>
+                            </table>
+                            &nbsp;
+                        </td>
+                    </tr>
+                </table>
+                <br />
+            </td>
+            <td width="6px" style="background-color: #E6E6E6">
+            </td>
+        </tr>
+        <!--Page Body Row End -->
+    </table>
+    <!--Page Body Table End -->
+    <!--Footer Table Start -->
+    <uc2:Footer ID="Footer1" runat="server" />
+    <!--Footer Table End -->
+    </form>
+</body>
+</html>

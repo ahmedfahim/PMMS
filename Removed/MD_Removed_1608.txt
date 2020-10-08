@@ -1,0 +1,321 @@
+﻿  double sampleArea = 0;
+            double sumMaintDArea = 0;
+            double sampleMaintArea = 0;
+            bool hasDecisions = false;
+
+            DataTable dtSmpDist, dtSmpUDI;
+            MaintDecision maintD;
+            MaintDecision[] laneMaintD;
+
+
+            laneMaintD = new MaintDecision[10];
+            for (int i = 1; i <= 9; i++)
+            {
+                laneMaintD[i] = new MaintDecision();
+                laneMaintD[i].AffectedSamples = new Dictionary<int, int>();
+            }
+
+
+            //affectedSamples = new ArrayList();
+            //sampleMaintD = new MaintDecision[10];
+            //for (int i = 1; i <= 9; i++)
+            //    sampleMaintD[i] = 0;
+
+
+            string sql = string.Format("select SECTION_ID, SECTION_NO, LANE_TYPE, SAMPLE_NO, SAMPLE_AREA, SURVEY_NO, UDI_VALUE, STREET_ID, LANE_ID, SAMPLE_ID, " +
+                " to_char(SURVEY_DATE,'DD/MM/YYYY','NLS_CALENDAR=''GREGORIAN''') as SURVEY_DATE, to_char(UDI_DATE,'DD/MM/YYYY','NLS_CALENDAR=''GREGORIAN''') as UDI_DATE " +
+                " from UDI_SECTION_SAMPLE where LANE_ID={0} and SURVEY_NO={1} order by SECTION_NO, LANE_TYPE, SAMPLE_NO  ", laneInfoDr["LANE_ID"].ToString(), surveyNum);
+
+            Shared.LogMdStatment(sql);
+            dtSmpUDI = db.ExecuteQuery(sql);
+            foreach (DataRow drSmpUDI in dtSmpUDI.Rows)
+            {
+                sampleArea = double.Parse(drSmpUDI["SAMPLE_AREA"].ToString());
+                if (double.Parse(drSmpUDI["UDI_VALUE"].ToString()) < UDI_LIMIT_SM)
+                {
+                    // sample UDI < 70: mill and repave the whole sample
+                    //int mdID = (int)MaintenanceDecisions.Mill_Repave_5cm;
+                    laneMaintD[(int)MaintenanceDecisions.Mill_Repave_5cm].MaintArea += sampleArea;
+                    laneMaintD[(int)MaintenanceDecisions.Mill_Repave_5cm].AffectedSamples.Add(int.Parse(drSmpUDI["SAMPLE_ID"].ToString()), int.Parse(drSmpUDI["UDI_VALUE"].ToString()));
+
+                    laneMaintD[(int)MaintenanceDecisions.DoNothing].AffectedSamples.Remove(int.Parse(drSmpUDI["SAMPLE_ID"].ToString()));
+                    hasDecisions = true;
+                }
+                else
+                {
+                    // sample UDI >= 70: check maintenance decisions for sample distresses
+                    sql = string.Format("select DIST_CODE, DIST_SEVERITY, DIST_AREA, DIST_DENSITY from V_LANE_SAMPLE_DECISIONS where SAMPLE_ID={0} and SURVEY_NO={1} ",
+                        drSmpUDI["SAMPLE_ID"].ToString(), surveyNum);
+
+                    Shared.LogMdStatment(sql);
+                    dtSmpDist = db.ExecuteQuery(sql);
+                    foreach (DataRow drDist in dtSmpDist.Rows)
+                    {
+                        maintD = deciding.GetMaintDecision(int.Parse(drDist["DIST_CODE"].ToString()), drDist["DIST_SEVERITY"].ToString()[0],
+                            double.Parse(drDist["DIST_DENSITY"].ToString()), double.Parse(drDist["DIST_AREA"].ToString()));
+
+                        sampleMaintArea += maintD.MaintArea;
+                        if (maintD.MaintDecisionID != 0 && maintD.MaintArea < (sampleArea / 2))
+                        {
+                            laneMaintD[maintD.MaintDecisionID].MaintArea += maintD.MaintArea;
+                            laneMaintD[maintD.MaintDecisionID].AffectedSamples.Remove(int.Parse(drSmpUDI["SAMPLE_ID"].ToString()));
+                            laneMaintD[maintD.MaintDecisionID].AffectedSamples.Add(int.Parse(drSmpUDI["SAMPLE_ID"].ToString()), int.Parse(drSmpUDI["UDI_VALUE"].ToString()));
+
+                            if (maintD.MaintDecisionID != 1)
+                            {
+                                laneMaintD[(int)MaintenanceDecisions.DoNothing].AffectedSamples.Remove(int.Parse(drSmpUDI["SAMPLE_ID"].ToString()));
+                                hasDecisions = true;
+                            }
+                        }
+                        else
+                        {
+                            //laneMaintD = new MaintDecision[10];
+                            sumMaintDArea += sampleArea;
+
+                            //laneMaintD[(int)MaintenanceDecisions.DoNothing].AffectedSamples.Remove(int.Parse(drSmpUDI["SAMPLE_ID"].ToString()));
+                            //for (int i = 1; i <= 9; i++)
+                            //    laneMaintD[i].AffectedSamples = new Dictionary<int, int>(); //new ArrayList();
+
+
+                            laneMaintD[(int)MaintenanceDecisions.Mill_Repave_5cm].MaintArea += sampleArea;
+                            laneMaintD[(int)MaintenanceDecisions.Mill_Repave_5cm].AffectedSamples.Add(int.Parse(drSmpUDI["SAMPLE_ID"].ToString()), int.Parse(drSmpUDI["UDI_VALUE"].ToString()));
+
+                            //if (maintD.MaintDecisionID != 0)
+                            laneMaintD[maintD.MaintDecisionID].AffectedSamples.Remove(int.Parse(drSmpUDI["SAMPLE_ID"].ToString()));
+
+                            laneMaintD[(int)MaintenanceDecisions.DoNothing].AffectedSamples.Remove(int.Parse(drSmpUDI["SAMPLE_ID"].ToString()));
+                            //laneMaintD[maintD.MaintDecisionID].AffectedSamples.Add(int.Parse(drSmpUDI["SAMPLE_ID"].ToString()), int.Parse(drSmpUDI["UDI_VALUE"].ToString()));
+                            hasDecisions = true;
+                            break;
+                        }
+                    }
+
+
+                    //for (int i = 1; i <= 9; i++)
+                    //    laneMaintD[i] += sampleMaintD[i];
+                }
+            }
+
+
+            // check maintenance area not exceeding 50% of lane_area
+            for (int i = 9; i >= 1; i--)            //(int i = 1; i <= 9; i++)
+            {
+                //if (i == 1 && hasDecisions)
+                //    continue;
+
+
+                if (laneMaintD[i].MaintArea > laneArea / 2)
+                {
+                    laneMaintD[i].SampleWise = false;
+                    //laneMaintD[i].MaintArea = laneArea;
+                    foreach (DataRow drSample in dtSmpUDI.Rows)
+                        laneMaintD[(int)MaintenanceDecisions.DoNothing].AffectedSamples.Remove(int.Parse(drSample["SAMPLE_ID"].ToString()));
+
+
+                    // save maintenance decision per lane
+                    //                                                                              0              1         2           3           4           5                     6                 7     8         9    10   11 
+                    sql = string.Format("Insert Into MAINTENANCE_DECISIONS (RECORD_ID, RECOMMENDED_DECISION_ID, LANE_ID, MAINT_AREA, SURVEY_DATE, UDI_DATE, SURVEY_NO, USING_UDI, STREET_ID, THICKNESS, UDI, SECTION_ID, IRI, FWD, GPR) " +
+                           " Values(SEQ_MAINTENANCE_DECISION.nextval, {0}, {1}, {2}, To_date('{3}', 'DD/MM/YYYY'), To_date('{4}', 'DD/MM/YYYY'), {5}, 1, " +
+                           " {6}, (select THICKNESS from MAINT_DECISIONS where RECOMMENDED_DECISION_ID={0}), {7}, {8}, {9}, {10}, {11}) ",
+                           i, laneInfoDr["LANE_ID"].ToString(), laneArea.ToString("0.00"), laneInfoDr["SURVEY_DATE"].ToString(), laneInfoDr["UDI_DATE"].ToString(), surveyNum,
+                           m_MAIN_ST_ID, laneInfoDr["UDI_VALUE"].ToString(), laneInfoDr["SECTION_ID"].ToString(), iri_value, fwd_value, gpr_value);
+
+                    Shared.LogMdStatment(sql);
+                    rows += db.ExecuteNonQuery(sql);
+                    continue;
+
+
+                    //foreach (DataRow drSample in dtSmpUDI.Rows)
+                    //{
+                    //    laneMaintD[(int)MaintenanceDecisions.DoNothing].AffectedSamples.Remove(int.Parse(drSample["SAMPLE_ID"].ToString()));
+
+                    //    laneMaintD[i].AffectedSamples.Remove(int.Parse(drSample["SAMPLE_ID"].ToString()));
+                    //    laneMaintD[i].AffectedSamples.Add(int.Parse(drSample["SAMPLE_ID"].ToString()), int.Parse(drSample["UDI_VALUE"].ToString()));
+                    //}
+                }
+
+
+                // save lane maintenance decision to DB
+                // (i == 1 && sampleMaintArea > 0) ||
+                if ((i != 1 && laneMaintD[i].MaintArea == 0))
+                    continue;
+                else
+                {
+                    foreach (KeyValuePair<int, int> s in laneMaintD[i].AffectedSamples)
+                    {
+                        //                                                                              0              1         2           3           4           5                     6                 7     8            9        10   11   12
+                        sql = string.Format("Insert Into MAINTENANCE_DECISIONS (RECORD_ID, RECOMMENDED_DECISION_ID, LANE_ID, MAINT_AREA, SURVEY_DATE, UDI_DATE, SURVEY_NO, USING_UDI, STREET_ID, THICKNESS, UDI, SECTION_ID, SAMPLE_ID, IRI, FWD, GPR) " +
+                            " Values(SEQ_MAINTENANCE_DECISION.nextval, {0}, {1}, {2}, To_date('{3}', 'DD/MM/YYYY'), To_date('{4}', 'DD/MM/YYYY'), " +
+                            " {5}, 1, {6}, (select THICKNESS from MAINT_DECISIONS where RECOMMENDED_DECISION_ID={0}), {7}, {8}, {9}, {10},  {11}, {12}) ", // MAIN_ST_ID
+                            i, laneInfoDr["LANE_ID"].ToString(), laneMaintD[i].MaintArea.ToString("0.00"), laneInfoDr["SURVEY_DATE"].ToString(), laneInfoDr["UDI_DATE"].ToString(),
+                            surveyNum, m_MAIN_ST_ID, s.Value, laneInfoDr["SECTION_ID"].ToString(), s.Key, iri_value, fwd_value, gpr_value);
+
+                        Shared.LogMdStatment(sql);
+                        rows += db.ExecuteNonQuery(sql);
+                    }
+                }
+            }
+
+---------------------------------
+
+  //if (maintD.MaintDecisionID != 1)
+                                //{
+                                //    sampMaintDec.Add(new SampleMaintDecision(int.Parse(drSmpUDI["SAMPLE_ID"].ToString()), maintD.MaintDecisionID,
+                                //        int.Parse(drSmpUDI["UDI_VALUE"].ToString()), sampleArea));
+                                //}
+                                //else if (maintD.MaintDecisionID == 1 && !doNothingAdded)
+                                //{
+                                //    doNothingAdded = true;
+                                //    sampMaintDec.Add(new SampleMaintDecision(int.Parse(drSmpUDI["SAMPLE_ID"].ToString()), maintD.MaintDecisionID,
+                                //       int.Parse(drSmpUDI["UDI_VALUE"].ToString()), sampleArea));
+                                //}
+                                //else
+                                //    continue;
+-------------------------------
+
+ //ArrayList[] MdAr = new ArrayList[10];
+
+            //SampleMaintDecision md;
+            //List<SampleMaintDecision> sampMaintDec = new List<SampleMaintDecision>();
+			  //MdAr[mdNum].Add(new SampleMaintDecision(int.Parse(drSmpUDI["SAMPLE_ID"].ToString()), mdNum, int.Parse(drSmpUDI["UDI_VALUE"].ToString()), sampleArea));
+                    //sampMaintDec.Add(new SampleMaintDecision(int.Parse(drSmpUDI["SAMPLE_ID"].ToString()), (int)MaintenanceDecisions.Mill_Repave_5cm,
+                    //    int.Parse(drSmpUDI["UDI_VALUE"].ToString()), sampleArea));
+-------------------
+
+   //doNothing &= (maintD.MaintDecisionID == 1);
+                        //if (!doNothing && maintD.MaintDecisionID == 1)
+                        //{
+                        //    filter = string.Format("sample_id={0} and maint_no=1 ", int.Parse(drSmpUDI["SAMPLE_ID"].ToString()));
+                        //    foreach (DataRow dr in dtSampMds.Select(filter))
+                        //        dtSampMds.Rows.Remove(dr);
+
+                        //    continue;
+                        //}
+
+   //MdAr[maintD.MaintDecisionID].Add(new SampleMaintDecision(int.Parse(drSmpUDI["SAMPLE_ID"].ToString()), maintD.MaintDecisionID,
+                            //int.Parse(drSmpUDI["UDI_VALUE"].ToString()), sampleArea));
+                            //var md=sampMaintDec.Where(i=> i.MaintDecisionID ==
+--------------------
+  //MdAr[maintD.MaintDecisionID].Add(new SampleMaintDecision(int.Parse(drSmpUDI["SAMPLE_ID"].ToString()), maintD.MaintDecisionID,
+                            //int.Parse(drSmpUDI["UDI_VALUE"].ToString()), maintD.MaintArea));
+-------------
+
+  //for (int i = 9; i >= 1; i--)
+                    //{
+                    //    if ((i != 1 && laneMaintArea[i] != 0) || (i == 1 && !doNothingAdded))
+                    //    {
+                    //        sampMaintDec.Add(new SampleMaintDecision(int.Parse(drSmpUDI["SAMPLE_ID"].ToString()), i, int.Parse(drSmpUDI["UDI_VALUE"].ToString()),
+                    //            laneMaintArea[i]));
+
+                    //        if (i == 1)
+                    //            doNothingAdded = true;
+                    //    }                        
+                    //    else
+                    //        continue;
+                    //}
+--------------------
+//bool doNothingAdded = true;
+//if (i == 1 && !doNothing)
+                    //    continue;
+
+                    //double sampleMaintDecArea = 0;
+                    //foreach (SampleMaintDecision smpMd in MdAr[i])
+                    //    sampleMaintDecArea += smpMd.MaintArea;
+                    //if (i == 1 && !doNothing)
+                    //    continue;
+
+                    // save maintenanceDecision for affected samples only
+                    //var listMD = (from md in sampMaintDec where md.MaintDecisionID.Equals(i) select md);
+                    //foreach (SampleMaintDecision smpMd in listMD)
+                    //{
+                    //    // prepare to save
+                    //  
+                    //}
+------------------------
+
+//#region Getting UDI
+
+        ////Get UDI Value
+        //public double GET_LANE_UDI(int LANE_ID, int surveyNum)
+        //{
+        //    double UDI = 0;
+
+        //    string SQL = string.Format("Select UDI_VALUE from UDI_LANES where LANE_ID={0} order by LANE_ID ", LANE_ID);
+        //    Shared.LogMdStatment(SQL);
+        //    DataTable dt = db.ExecuteQuery(SQL);
+        //    if (dt.Rows.Count > 0)
+        //        UDI = double.Parse(dt.Rows[0][0].ToString());
+
+        //    return UDI;
+        //}
+
+        //public double GET_LANE_SAMPLES_UDI(int SMP_ID, int surveyNum)
+        //{
+        //    double UDI = 0;
+
+        //    string SQL = string.Format("Select UDI_VALUE from GV_SAMPLES_UDI where SAMPLE_ID={0} group by SAMPLE_ID ", SMP_ID);
+        //    Shared.LogMdStatment(SQL);
+        //    DataTable dt = db.ExecuteQuery(SQL);
+        //    if (dt.Rows.Count > 0)
+        //        UDI = double.Parse(dt.Rows[0][0].ToString());
+
+        //    return UDI;
+        //}
+
+        //public double GET_INTERSECTION_UDI(int Inter_ID, int surveyNum)
+        //{
+        //    double UDI = 0;
+
+        //    // INTER_NO='{0}' 
+        //    string SQL = string.Format("Select UDI_VALUE from UDI_INTERSECTION where INTERSECTION_ID={0} group by INTER_NO ", Inter_ID);
+        //    Shared.LogMdStatment(SQL);
+        //    DataTable dt = db.ExecuteQuery(SQL);
+        //    if (dt.Rows.Count > 0)
+        //        UDI = double.Parse(dt.Rows[0][0].ToString());
+
+        //    return UDI;
+        //}
+
+        //public double GET_INTERSECTION_SAMPLES_UDI(int SMP_ID, int surveyNum)
+        //{
+        //    double UDI = 0;
+
+        //    string SQL = string.Format("Select UDI_VALUE from GV_INTERSECTION_SMP_UDI where INTER_SAMP_ID={0} group by INTER_SAMP_ID ", SMP_ID);
+        //    Shared.LogMdStatment(SQL);
+        //    DataTable dt = db.ExecuteQuery(SQL);
+        //    if (dt.Rows.Count > 0)
+        //        UDI = double.Parse(dt.Rows[0][0].ToString());
+
+        //    return UDI;
+        //}
+
+        //public double GET_SEC_ST_UDI(int SEC_ST_ID, int surveyNum)
+        //{
+        //    double UDI = 0;
+
+        //    string SQL = string.Format("Select UDI_VALUE from GV_SEC_ST_UDI where STREET_ID={0} group by STREET_ID ", SEC_ST_ID); // SECOND_ID
+        //    Shared.LogMdStatment(SQL);
+        //    DataTable dt = db.ExecuteQuery(SQL);
+        //    if (dt.Rows.Count > 0)
+        //        UDI = double.Parse(dt.Rows[0][0].ToString());
+
+        //    return UDI;
+        //}
+
+        //#endregion
+----------------------
+
+//public double GET_LANE_IRI(int LANE_ID)
+        //{
+        //    double iri = -1;
+
+        //    string SQL = string.Format("Select round(avg(IRI), 2) as IRI from IRI_LANE where LANE_ID={0} group by LANE_ID ", LANE_ID);
+        //    Shared.LogMdStatment(SQL);
+        //    DataTable dt = db.ExecuteQuery(SQL);
+        //    if (dt.Rows.Count > 0)
+        //        iri = double.Parse(dt.Rows[0][0].ToString());
+
+        //    return iri;
+        //}
+----------------
+

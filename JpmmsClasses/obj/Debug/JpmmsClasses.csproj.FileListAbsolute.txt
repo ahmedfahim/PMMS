@@ -1,0 +1,37 @@
+D:\Waleed\GEH Working\JPmmsWeb08Final\JpmmsClasses\bin\Debug\JpmmsClasses.dll.config
+D:\Waleed\GEH Working\JPmmsWeb08Final\JpmmsClasses\bin\Debug\JpmmsClasses.dll
+D:\Waleed\GEH Working\JPmmsWeb08Final\JpmmsClasses\bin\Debug\JpmmsClasses.pdb
+D:\Waleed\GEH Working\JPmmsWeb08Final\JpmmsClasses\bin\Debug\Oracle.DataAccess.dll
+D:\Waleed\GEH Working\JPmmsWeb08Final\JpmmsClasses\bin\Debug\System.Data.OracleClient.dll
+D:\Waleed\GEH Working\JPmmsWeb08Final\JpmmsClasses\obj\Debug\JpmmsClasses.csprojResolveAssemblyReference.cache
+D:\Waleed\GEH Working\JPmmsWeb08Final\JpmmsClasses\obj\Debug\JpmmsClasses.dll
+D:\Waleed\GEH Working\JPmmsWeb08Final\JpmmsClasses\obj\Debug\JpmmsClasses.pdb
+D:\Waleed\Projects\JpmmsWeb\JpmmsClasses\bin\Debug\JpmmsClasses.dll.config
+D:\Waleed\Projects\JpmmsWeb\JpmmsClasses\bin\Debug\JpmmsClasses.dll
+D:\Waleed\Projects\JpmmsWeb\JpmmsClasses\bin\Debug\JpmmsClasses.pdb
+D:\Waleed\Projects\JpmmsWeb\JpmmsClasses\bin\Debug\Oracle.DataAccess.dll
+D:\Waleed\Projects\JpmmsWeb\JpmmsClasses\bin\Debug\System.Data.OracleClient.dll
+D:\Waleed\Projects\JpmmsWeb\JpmmsClasses\obj\Debug\JpmmsClasses.csprojResolveAssemblyReference.cache
+D:\Waleed\Projects\JpmmsWeb\JpmmsClasses\obj\Debug\JpmmsClasses.dll
+D:\Waleed\Projects\JpmmsWeb\JpmmsClasses\obj\Debug\JpmmsClasses.pdb
+E:\On My Laptop\JpmmsWeb\JpmmsClasses\bin\Debug\JpmmsClasses.dll.config
+E:\On My Laptop\JpmmsWeb\JpmmsClasses\bin\Debug\JpmmsClasses.dll
+E:\On My Laptop\JpmmsWeb\JpmmsClasses\bin\Debug\JpmmsClasses.pdb
+E:\On My Laptop\JpmmsWeb\JpmmsClasses\bin\Debug\System.Data.OracleClient.dll
+E:\On My Laptop\JpmmsWeb\JpmmsClasses\obj\Debug\ResolveAssemblyReference.cache
+E:\On My Laptop\JpmmsWeb\JpmmsClasses\obj\Debug\JpmmsClasses.dll
+E:\On My Laptop\JpmmsWeb\JpmmsClasses\obj\Debug\JpmmsClasses.pdb
+C:\Sources\Source Codes\JpmmsWeb\JpmmsClasses\bin\Debug\JpmmsClasses.dll.config
+C:\Sources\Source Codes\JpmmsWeb\JpmmsClasses\bin\Debug\JpmmsClasses.dll
+C:\Sources\Source Codes\JpmmsWeb\JpmmsClasses\bin\Debug\JpmmsClasses.pdb
+C:\Sources\Source Codes\JpmmsWeb\JpmmsClasses\bin\Debug\System.Data.OracleClient.dll
+C:\Sources\Source Codes\JpmmsWeb\JpmmsClasses\obj\Debug\JpmmsClasses.csprojResolveAssemblyReference.cache
+C:\Sources\Source Codes\JpmmsWeb\JpmmsClasses\obj\Debug\JpmmsClasses.dll
+C:\Sources\Source Codes\JpmmsWeb\JpmmsClasses\obj\Debug\JpmmsClasses.pdb
+E:\inetpub\wwwroot\Source Codes\JpmmsWeb\JpmmsClasses\bin\Debug\JpmmsClasses.dll.config
+E:\inetpub\wwwroot\Source Codes\JpmmsWeb\JpmmsClasses\bin\Debug\JpmmsClasses.dll
+E:\inetpub\wwwroot\Source Codes\JpmmsWeb\JpmmsClasses\bin\Debug\JpmmsClasses.pdb
+E:\inetpub\wwwroot\Source Codes\JpmmsWeb\JpmmsClasses\bin\Debug\System.Data.OracleClient.dll
+E:\inetpub\wwwroot\Source Codes\JpmmsWeb\JpmmsClasses\obj\Debug\JpmmsClasses.dll
+E:\inetpub\wwwroot\Source Codes\JpmmsWeb\JpmmsClasses\obj\Debug\JpmmsClasses.pdb
+E:\inetpub\wwwroot\Source Codes\JpmmsWeb\JpmmsClasses\bin\Debug\Oracle.DataAccess.dll

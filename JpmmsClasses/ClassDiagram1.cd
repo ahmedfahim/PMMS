@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="JpmmsClasses.BL.DistressEntry.DistressEntry">
+    <Position X="23.25" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAIRAAgAQggQgAJBiAACUBAgAAIAAARwYAIKAEAEAAA=</HashCode>
+      <FileName>BL\DistressEntry\DistressEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.DistressEntry.DistressShared">
+    <Position X="9.25" Y="22" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAIAAAAAAAAAAQAAABABBAAAAAAAAAAAAEA=</HashCode>
+      <FileName>BL\DistressEntry\DistressShared.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.DistressSurvey">
+    <Position X="31.75" Y="0.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEEAgGEAgUAGAAAAAIABAAEAYIAxAJIAAAQAMBESA=</HashCode>
+      <FileName>BL\DistressEntry\DistressSurvey.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Distress">
+    <Position X="19.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>gAQAAEAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>BL\Lookups\Distress.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.BillOfQuantities">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>BL\BillOfQuantities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Bridge">
+    <Position X="0.5" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAkAAABAQAAAEAAAAAAAAAQEAAAAAAAAAAAAKAAA=</HashCode>
+      <FileName>BL\Bridge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.BridgeTunnelEvaluation">
+    <Position X="3" Y="9.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAYAAAAAACAAAAABAAAAEAAAQAAAAAgAAQ=</HashCode>
+      <FileName>BL\BridgeTunnelEvaluation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.FwdReport">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BL\FwdReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.GprReport">
+    <Position X="19.5" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>BL\GprReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.ImagesGallery">
+    <Position X="0.5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAQAAQAAAAAAEAAQAQAAAAAAAgAAAAAAACAAA=</HashCode>
+      <FileName>BL\ImagesGallery.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Intersection">
+    <Position X="23" Y="16.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAQAAQAAQAAEABAKBBgAAAAAAAAAAAABAgAAA=</HashCode>
+      <FileName>BL\Intersection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.IntersectionSamples">
+    <Position X="6.5" Y="2.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAEBAAAAUAAAAAAAAAAAAAIAACA=</HashCode>
+      <FileName>BL\IntersectionSamples.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.IriReport">
+    <Position X="12.25" Y="9.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BL\IriReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Lane">
+    <Position X="4.25" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAQAAAABAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>BL\Lane.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.LaneSample">
+    <Position X="23.5" Y="13.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQIAABAQAAAAAAABAAAAAAAAgAAAQAAAAAAAAAA=</HashCode>
+      <FileName>BL\LaneSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.MainStreet">
+    <Position X="29.5" Y="8.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>ioQEIABAAAAQAAAgIABAAAAAAAAAAAAAAAODgCAgBQA=</HashCode>
+      <FileName>BL\MainStreet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.MainStreetSection">
+    <Position X="11.75" Y="4.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAQAAAAAAABgaAAAaQAEAAAAAEgAAAgAIA=</HashCode>
+      <FileName>BL\MainStreetSection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.MaintDecisionCosting">
+    <Position X="27" Y="0.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAEAAAQAQAAAAAAAAAAAAAgAAAAAAgAAAAgAAQ=</HashCode>
+      <FileName>BL\MaintDecisionCosting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.MaintenanceDecisions">
+    <Position X="18.5" Y="4.75" Width="4.5" />
+    <NestedTypes>
+      <Enum Name="JpmmsClasses.BL.MaintenanceDecisions.MaintenaceDecision" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BL\MaintenanceDecisions.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAkwAAEAQERAwAAAAACVoAQACGgAAAADggAAAAAAAQ=</HashCode>
+      <FileName>BL\MaintenanceDecisions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.MaintenanceOrders">
+    <Position X="3" Y="5.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAEBAAgAQCAAAAQAIAAAAAAEAAAAAggkAAAAgAAA=</HashCode>
+      <FileName>BL\MaintenanceOrders.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.MaintenancePriorities">
+    <Position X="30.25" Y="14.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAkAAgDAAAYACAQAECAAAAAAAAAAIAAEAAAAAEAhAA=</HashCode>
+      <FileName>BL\MaintenancePriorities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Municpiality">
+    <Position X="10.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAABIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BL\Municpiality.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.QcCheck">
+    <Position X="2.75" Y="13.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAFEAAggRpAgCQACABAIAQAEAAAARAAAIAAAgAAA=</HashCode>
+      <FileName>BL\QcCheck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.R4Streets">
+    <Position X="0.5" Y="10" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAJgREAAAAAAAAAAAAAEBAMADAAAAAAAAAAA=</HashCode>
+      <FileName>BL\R4Streets.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Region">
+    <Position X="5.5" Y="9.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>gECAAAEQCCAwgIIChAAQACAAAAEAACgCIACABAACgGA=</HashCode>
+      <FileName>BL\Region.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.RegionsUDI">
+    <Position X="20" Y="14.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAABAAQAAAAAAAAAAAAAAAAAAQAAAAAABAIAgA=</HashCode>
+      <FileName>BL\RegionsUDI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.RuttingReport">
+    <Position X="20" Y="12.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ACCAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BL\RuttingReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.SecondaryStreets">
+    <Position X="14.5" Y="5.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEAAAQAQAgAAABAAAADAAAAgAAAAAAAAAgAIA=</HashCode>
+      <FileName>BL\SecondaryStreets.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.SkidReport">
+    <Position X="0.5" Y="14.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BL\SkidReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Surveyor">
+    <Position X="0.5" Y="16" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAIEAAAAAQAAIAAAAAAAAAAAEAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>BL\Surveyor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.SurveyorSubmitJob">
+    <Position X="9" Y="11" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>CAQEAEABQAAQEAAAAAAAAAAAAQEAAAAAAgAAIAACAAQ=</HashCode>
+      <FileName>BL\SurveyorSubmitJob.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.TrafficCounting">
+    <Position X="8" Y="19" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>BL\TrafficCounting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.TrafficEnhances">
+    <Position X="18.5" Y="21" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAQgAEgAQAAQCAAgAAAAAQAQAAAAAAAAgkgAgAECAAg=</HashCode>
+      <FileName>BL\TrafficEnhances.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Tunnel">
+    <Position X="17.75" Y="12.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAIAAUAAAAAAAQAAAAAAMAAAAAAAAAABAAAAg=</HashCode>
+      <FileName>BL\Tunnel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Lookups.BridgeTunnelLookups">
+    <Position X="26.25" Y="17.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAJQAAQQgAABAAAAAAQAAAAAAAACAAAAAAgAQA=</HashCode>
+      <FileName>BL\Lookups\BridgeTunnelLookups.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Lookups.Contractor">
+    <Position X="7.25" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAGAAAAAQAAAAAAQAAEAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BL\Lookups\Contractor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Lookups.DistressSeverity">
+    <Position X="20.75" Y="17" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>BL\Lookups\DistressSeverity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Lookups.IntersectControlType">
+    <Position X="6" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>BL\Lookups\IntersectControlType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Lookups.IntersectType">
+    <Position X="17.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAABAgAAAAAAAAA=</HashCode>
+      <FileName>BL\Lookups\IntersectType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Lookups.MaintDecisionPricing">
+    <Position X="15.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>oAAABAAAAAAQAAAAAABAAAAAAAEAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>BL\Lookups\MaintDecisionPricing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Lookups.MaintMaterial">
+    <Position X="9.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAQAAAAAAAAAAAAAAEAAAAAAgAAgAAAAAA=</HashCode>
+      <FileName>BL\Lookups\MaintMaterial.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Lookups.MaintOperations">
+    <Position X="10" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAQAAAAAAAAAAAAAAEAAAAAAgAAgAAAAAA=</HashCode>
+      <FileName>BL\Lookups\MaintOperations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Lookups.ParkingMethods">
+    <Position X="17.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>BL\Lookups\ParkingMethods.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Lookups.SubMuniciplaity">
+    <Position X="15.75" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>BL\Lookups\SubMuniciplaity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Lookups.SystemUsers">
+    <Position X="12.75" Y="14.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAQAAAAAEAAAAAAAAEAAAAAIkAQAAAEAAA=</HashCode>
+      <FileName>BL\Lookups\SystemUsers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Lookups.UserLogonDetails">
+    <Position X="18.5" Y="18.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgACAAAAAAAEQCAAAAAAAA=</HashCode>
+      <FileName>BL\Lookups\SystemUsers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Lookups.Unit">
+    <Position X="13" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAQAAAAAAAAAAAAAAEAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>BL\Lookups\Unit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Removed.TrafficEnhances">
+    <Position X="4.75" Y="21.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAQAAAAAAAAACAAAQECAAACAgAAAAAgAAI=</HashCode>
+      <FileName>BL\Removed\TrafficEnhances.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.UDI.IntersectionUDI">
+    <Position X="14.75" Y="3.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAQAAAAAAAABAGAAAAgAAAABAAAAAAAAAA=</HashCode>
+      <FileName>BL\UDI\IntersectionUDI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.UDI.RegionSecondaryStUDI">
+    <Position X="14.25" Y="22.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAACAEQAAAAAAAAAAgAAAAAASCAAIAAAAAAAQA=</HashCode>
+      <FileName>BL\UDI\RegionSecondaryStUDI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.UDI.SectionsUDI">
+    <Position X="15" Y="18.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAgAABAQAQAEAAACAgAAAAAgAAABgAAQAAAAAAAAA=</HashCode>
+      <FileName>BL\UDI\SectionsUDI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.UDI.UdiShared">
+    <Position X="12.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAIAEAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>BL\UDI\UdiShared.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.UDI.UdiRecord">
+    <Position X="10.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>BL\UDI\UdiShared.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Tests.JpmmsCharting">
+    <Position X="3.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAACAAAAABAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BL\Utils\Charting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.BL.Utils.TunnelBridges">
+    <Position X="9.5" Y="15.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAQAAAAAAAAAQAAAAIAAAAAAAAAARACAAA=</HashCode>
+      <FileName>BL\Utils\TunnelBridges.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OracleDatabaseClass">
+    <Position X="27.25" Y="3.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAwAAgABIAAAAyAAACAAFBAAQAAAAABAAACAAAAAAA=</HashCode>
+      <FileName>DB\OracleDatabaseClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EncryptionClass">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Shared\EncryptionClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Feedback">
+    <Position X="26.25" Y="8.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AhQwgTkBgiEgCAIEEAQAAAAMQAwAoQgASAAAhAAIACA=</HashCode>
+      <FileName>Shared\Feedback.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImagesClass">
+    <Position X="14.75" Y="9.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABQAAAAIAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Shared\ImagesClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Policy">
+    <Position X="15.5" Y="13.25" Width="1.75" />
+    <NestedTypes>
+      <Enum Name="Policy.Privilege" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Shared\Policy.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Policy.Operation" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Shared\Policy.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAEACAAAAAAAAAACAQgAg=</HashCode>
+      <FileName>Shared\Policy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared">
+    <Position X="0.5" Y="19.25" Width="4" />
+    <TypeIdentifier>
+      <HashCode>gAAAAhAAAAAIxAAgCgIBAAAAAIBAAABgAIQgAAIAAIg=</HashCode>
+      <FileName>Shared\Shared.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.Dates">
+    <Position X="23.5" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAAEIAAAAAEAAWAAABAgAQAABAEAAAAIQABIgAAIAAA=</HashCode>
+      <FileName>Shared\Dates.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JpmmsClasses.ThreadResults">
+    <Position X="6.25" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAABAAAAABAAAAAAAAAgAAAAAAAAQACA=</HashCode>
+      <FileName>Shared\ThreadResults.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="JpmmsClasses.BL.UDI.PavementStatusReport">
+    <Position X="12.5" Y="17.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAQACAAAAAICAAAAQACABAIAAAABAAAAAAAEBA=</HashCode>
+      <FileName>BL\UDI\UdiShared.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="JpmmsClasses.BL.RoadType">
+    <Position X="18" Y="15.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAEAAAAAAAAAAAAAAAIEAAAA=</HashCode>
+      <FileName>BL\ImagesGallery.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="JpmmsClasses.BL.JobType">
+    <Position X="15.25" Y="11.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAgAAAAAAAAAAAAIEAAAA=</HashCode>
+      <FileName>BL\SurveyorSubmitJob.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
